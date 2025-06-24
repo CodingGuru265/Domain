@@ -92,7 +92,7 @@
 
 
     <!-- Background Image Section with Overlay -->
-    <div class="background-container-music">
+    <div class="background-container-news">
         <div class="overlay"></div> <!-- Gradient Overlay -->
         <div class="text-container">
             <div class="home-link playfair text-5xl md:text-7xl font-bold mb-6 animate-float">DPP News</div>
@@ -106,30 +106,8 @@
         <!-- Search and Categories Section -->
         <div class="mb-12">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <!-- Search Bar -->
-                <div class="w-full md:w-1/3 mb-4 md:mb-0">
-                    <div class="relative">
-                        <input type="text" placeholder="Search news..."
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Category Pills -->
-                <div class="flex flex-wrap justify-center md:justify-end gap-2">
-                    <a href="#"
-                        class="category-pill bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">All</a>
-                    <a href="#"
-                        class="category-pill bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-1 rounded-full text-sm font-medium transition-all">Technology</a>
-                    <a href="#"
-                        class="category-pill bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-1 rounded-full text-sm font-medium transition-all">Business</a>
-                    <a href="#"
-                        class="category-pill bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-1 rounded-full text-sm font-medium transition-all">Sports</a>
-                    <a href="#"
-                        class="category-pill bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-1 rounded-full text-sm font-medium transition-all">Entertainment</a>
-                </div>
+              
             </div>
         </div>
 

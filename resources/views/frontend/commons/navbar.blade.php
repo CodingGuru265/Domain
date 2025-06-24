@@ -49,8 +49,7 @@
                         class="block px-4 py-2 hover:bg-[var(--theme-color)]">Code of Conduct & Ethics</a></li>
             </ul>
         </li>
-        <li><a href="{{ route('loading-screen') }}?redirect={{ route('membership') }}" class="nav-link">Become a
-                Member</a></li>
+      
         <li class="relative group">
             <a href="#" class="nav-link">Media</a>
             <ul

@@ -52,14 +52,7 @@
                     <li><a href="{{ route('events') }}" class="block p-2 text-white hover:bg-blue-500">Event Gallery</a></li>
                 </ul>
             </li>
-
-            <!-- Become a Member -->
-            <li>
-                <a href="{{ route('membership') }}" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
-                    <i class="fas fa-user-plus mr-2"></i>
-                    <span>Become a Member</span>
-                </a>
-            </li>
+           
 
             <!-- Contacts -->
             <li>
@@ -79,3 +72,19 @@
     </div>
 </aside>
 
+<script>
+    function toggleDropdown(id) {
+        const element = document.getElementById(id);
+        const arrow = document.getElementById(`${id}-arrow`);
+
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+            arrow.classList.remove('fa-chevron-right');
+            arrow.classList.add('fa-chevron-down');
+        } else {
+            element.classList.add('hidden');
+            arrow.classList.remove('fa-chevron-down');
+            arrow.classList.add('fa-chevron-right');
+        }
+    }
+</script>

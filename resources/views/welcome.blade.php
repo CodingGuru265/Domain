@@ -267,9 +267,9 @@
             <div class="w-full md:w-1/2 h-[400px] overflow-y-auto bg-gray-100 rounded-lg p-6 shadow-lg">
                 @forelse ($music as $track)
                     <div class="mb-6 border-b border-gray-300 pb-4">
-                        <h3 class="text-lg font-semibold text-blue-700">{{ $track->title }}</h3>
+                        <h3 class="text-lg font-semibold text-[var(--theme-color)]">{{ $track->title }}</h3>
                         <p class="text-sm  mb-2">
-                            By <span class="font-medium">{{ $track->artist }}</span>
+                            By <span class="font-medium text-[var(--theme-color)]">{{ $track->artist }}</span>
                             — <span class="italic">{{ $track->category }}</span>
                         </p>
                         <audio controls class="w-full rounded text-blue-600 accent-blue-600">

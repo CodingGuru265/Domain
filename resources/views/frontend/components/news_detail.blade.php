@@ -13,16 +13,17 @@
     </div>
     <main class="container mx-auto px-4 py-10 lg:py-16">
         <!-- News Detail Header -->
-        <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-800 mb-6">{{ $news->title }}</h1>
+        <h1 class="text-4xl lg:text-3xl  tracking-tight text-[var(--theme-color)] mb-6">{{ $news->title }}</h1>
 
         <!-- News Content and Image Side-by-Side -->
         <div class="flex flex-col lg:flex-row gap-8 mb-12">
             @if ($news->featured_image)
-                <div class="lg:w-1/2 w-full rounded-lg overflow-hidden shadow-sm">
+                <div class="lg:w-1/2 w-full h-96vh rounded-lg overflow-hidden shadow-sm">
                     <img src="{{ asset('storage/' . $news->featured_image) }}" alt="Featured image"
                         class="w-full h-full object-cover rounded-lg">
                 </div>
             @endif
+
 
             <div class="lg:w-1/2 w-full text-gray-700 leading-relaxed space-y-6 text-[1.05rem]">
                 {!! nl2br(e($news->content)) !!}

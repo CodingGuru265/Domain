@@ -19,7 +19,7 @@
             <h2 class="text-3xl font-bold mt-2 text-gray-600">Visit the <span class="text-[var(--theme-color)]">DPP
                     Headquarters</span></h2>
             <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
-                Our headquarters is conveniently located in Area 4, Lilongwe, serving as the central hub for all party
+                Our headquarters is conveniently located in New Naperi, Blantyre, serving as the central hub for all party
                 activities and member engagement.
             </p>
         </div>
@@ -28,9 +28,15 @@
         <div class="flex flex-col lg:flex-row gap-6">
             <!-- Map Container -->
             <div class="w-full lg:w-2/3 rounded-xl overflow-hidden map-container">
-                <iframe width="100%" height="450" style="border:0"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15322.520211381722!2d33.765906744775386!3d-13.960619899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x191d3629eb8e2afb%3A0x69723e53ce4b7d61!2sDPP%20Headquarters!5e0!3m2!1sen!2sus!4v1680028291409!5m2!1sen!2sus"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+             
+
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7138.838845996219!2d35.014456651067505!3d-15.809720601358386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smw!4v1750773124423!5m2!1sen!2smw" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
@@ -44,9 +50,10 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg text-gray-700">Physical Address</h3>
-                            <p class="text-gray-600 mt-1">DPP Headquarters</p>
-                            <p class="text-gray-600">Area 4, Presidential Way</p>
-                            <p class="text-gray-600">Lilongwe, Malawi</p>
+                            <p class="text-gray-600 mt-1">DPP Secretariat</p>
+                            <p class="text-gray-600">New Naperi</p>
+                            <p class="text-gray-600">Blantyre, Malawi</p>
+                            <p class="text-gray-600">P.O.BOX 1618, Blantyre</p>
                         </div>
                     </div>
                 </div>
@@ -59,8 +66,8 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg text-gray-700">Contact Information</h3>
-                            <p class="text-gray-600 mt-1">Phone: +265 1 774 646</p>
-                            <p class="text-gray-600">Email: info@dpp.com</p>
+                            <p class="text-gray-600 mt-1">Phone: +265 992 759 667 / 999 492 653</p>
+                            <p class="text-gray-600">Email: dppsecretariate@gmail.com</p>
 
 
                             <div class="flex justify-center space-x-7 mt-2">
