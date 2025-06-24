@@ -126,11 +126,6 @@
             <p class="slide-in highlighted-text">Our party is powered by contributions <span
                     class="text-[var(--theme-color)]">from supporters.</span></p>
 
-            <button class="join-btn slide-in bg-[var(--theme-color)] rounded">
-
-                <a href="{{ route('loading-screen') }}?redirect={{ route('membership') }}"> Join Us </a>
-                <span>&#8594;</span>
-            </button>
             <div class="stats">
                 <div class="stat-item slide-in">
                     <i class="icon fas fa-users"></i>
@@ -214,10 +209,7 @@
                             Volunteer</span> </h3>
                     <p class="mt-4 text-lg">Join our efforts in making a positive change. Volunteer today to help
                         support our causes and make a difference in the community.</p>
-                    <button onclick="window.location.href='{{ route('loading-screen') }}?redirect={{ route('volunteer') }}'"
-                        class="mt-6 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-                        Sign Up to Volunteer
-                    </button>
+                   
                 </div>
             </div>
         </div>
