@@ -294,7 +294,7 @@
                     duration: 1,
                     scrollTrigger: {
                         trigger: musicTitle,
-                        start: "top 80%", // Start animation when the title is 80% in view
+                        start: "top 80%",
                         toggleActions: "play none none none"
                     }
                 });
@@ -307,7 +307,7 @@
                     y: 30,
                     opacity: 0,
                     duration: 1,
-                    delay: 0.3, // Slight delay after the title animation
+                    delay: 0.3, 
                     scrollTrigger: {
                         trigger: musicSubtitle,
                         start: "top 80%",
@@ -320,7 +320,7 @@
             const musicImage = document.getElementById('music-image');
             if (musicImage) {
                 gsap.from(musicImage, {
-                    x: -100, // Slide in from the left
+                    x: -100,
                     opacity: 0,
                     duration: 1.5,
                     ease: "power2.out",
