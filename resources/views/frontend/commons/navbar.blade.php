@@ -22,7 +22,7 @@
     <ul class="hidden md:flex space-x-6 items-center ubuntu-regular">
 
         <li class="relative group">
-            <a href="{{ url('/') }}" class="nav-link">Home</a>
+            <a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="nav-link">Home</a>
         </li>
         <li class="relative group">
             <a href="#" class="nav-link">Documents</a>
@@ -62,7 +62,9 @@
                         News</a></li>
             </ul>
         </li>
-        <li><a href="{{ route('contact') }}" class="nav-link">Contacts</a></li>
+        <li><a href="{{ route('loading-screen') }}?redirect={{ route('contact') }}" class="nav-link">Contacts</a></li>
+
+        <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="nav-link block">About</a></li>
         <li class="nav-link flex-shrink-0">
             <a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
                 class="bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-2 px-6 rounded-full whitespace-nowrap">
@@ -111,9 +113,17 @@
             </details>
         </li>
         <li><a href="{{ route('contact') }}" class="nav-link block">Contacts</a></li>
-        <li><a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
+
+
+         <li><a href="{{ route('about') }}" class="nav-link block">About</a></li>
+
+        <li>
+               <a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
                 class="block bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-2 px-6 rounded-full text-center">Donate
-                to Party</a></li>
+                to Party</a>
+        </li>
+
+      
     </ul>
 </nav>
 

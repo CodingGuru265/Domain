@@ -28,55 +28,70 @@
       
         <div class="container mx-auto px- relative z-10">
           <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-            <!-- Left column - Image and title -->
-            <div class="history-section w-full md:w-2/4 flex flex-col items-center">
-              <div class="relative">
-                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[var(--custom-red)] shadow-2xl transform hover:scale-105 transition duration-500 mb-6">
-                    <img src="/assets/images/Bingu.png" alt="Bingu wa Mutharika" class="w-full h-full object-cover transform scale-x-[-1]" />
+  <!-- Left column - Image and title -->
+  <div class="history-section w-full md:w-2/4 flex flex-col items-center">
+    <div class="relative">
+      <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[var(--custom-red)] shadow-2xl transform hover:scale-105 transition duration-500 mb-6">
+        <img src="/assets/images/Bingu.png" alt="Bingu wa Mutharika" class="w-full h-full object-cover transform scale-x-[-1]" />
+      </div>
+      <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-[var(--custom-red)] flex items-center justify-center shadow-lg">
+        <span class="text-[var(--custom-white)] font-bold text-lg">Founder</span>
+      </div>
+    </div>
+    <h2 class="history-information text-3xl md:text-3xl sm:text-2xl font-bold mb-2 text-center mt-6 text-[var(--theme-color)]">Bingu wa Mutharika</h2>
+    <h3 class="text-xl text-[var(--custom-red)] font-semibold italic mb-4 text-center">"The Lion of Malawi"</h3>
+  </div>
 
-                </div>
-                <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-[var(--custom-red)] flex items-center justify-center shadow-lg">
-                  <span class="text-[var(--custom-white)] font-bold text-lg">Founder</span>
-                </div>
-              </div>
-              <h2 class="history-information text-3xl md:text-3xl sm:text-2xl font-bold mb-2 text-center mt-6 text-[var(--theme-color)]">Bingu wa Mutharika</h2>
-              <h3 class="text-xl text-[var(--custom-red)] font-semibold italic mb-4 text-center">"The Lion of Malawi"</h3>
-            </div>
-      
-            <!-- Right column - History content -->
-            <div class="w-full md:w-3/4 ">
-              <div class="  bg-opacity-60 rounded-lg p-8 backdrop-blur-sm border border[var(--theme-color)] shadow-xl">
-                <h1 class="text-[var(--custom-black)] text-4xl md:text-5xl font-bold mb-10 relative">
-                  <span class="text-[var(--theme-color)]">DPP</span> History
-                  <div class="h-1 w-24 bg-[var(--theme-color)] mt-2"></div>
-                </h1>
-                
-                <div class="history-information space-y-6 timeline-content">
-                  <div class="timeline-item">
-                    <div class="year">2005</div>
-                    <p class="text-[var(--custom-black)] py-4 v">The Democratic Progresive Party (DPP) was founded by Bingu wa Mutharika after he left the United Democratic Front (UDF). As a sitting president who had been elected under the UDF ticket, Mutharika formed the DPP to pursue his anti-corruption agenda without political interference.</p>
-                  </div>
-                  
-                  <div class="history-information timeline-item">
-                    <div class="year">2009</div>
-                    <p class="text-[var(--custom-black)] py-4 px-2">Under Bingu wa Mutharika's leadership, the DPP won a landslide victory in the general elections, securing a parliamentary majority. This victory cemented Mutharika's position as one of Malawi's most influential political figures.</p>
-                  </div>
-                  
-                  <div class=" history-information timeline-item">
-                    <div class="year">2010-2012</div>
-                    <p class="text-[var(--custom-black)] py-4 px-2">Bingu wa Mutharika, often called "The Lion of Malawi" for his bold economic policies and fierce leadership style, transformed Malawi's agricultural sector through subsidy programs that turned the country from food deficit to surplus. His development initiatives earned international recognition despite growing domestic criticism in his later years.</p>
-                  </div>
-                  
-                  <div class="history-information timeline-item">
-                    <div class="year">April 2012</div>
-                    <p class="text-[var(--custom-black)] py-4 px-2">Bingu wa Mutharika passed away while in office, leaving a complex legacy of economic transformation, infrastructure development, and democratic challenges. The party leadership was later assumed by his brother, Peter Mutharika.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-            </div>
-          </div>
+  <!-- Right column - History content -->
+  <div class="w-full md:w-3/4 ">
+    <div class="bg-opacity-60 rounded-lg p-8 backdrop-blur-sm border border[var(--theme-color)] shadow-xl">
+      <h1 class="text-[var(--custom-black)] text-4xl md:text-5xl font-bold mb-10 relative">
+        <span class="text-[var(--theme-color)]">DPP</span> History
+        <div class="h-1 w-24 bg-[var(--theme-color)] mt-2"></div>
+      </h1>
+
+      <div class="history-information space-y-6 timeline-content">
+        <div class="timeline-item">
+          <div class="year">2005</div>
+          <p class="text-[var(--custom-black)] py-4 v">
+            The Democratic Progressive Party (DPP) was founded by Bingu wa Mutharika after leaving the UDF to pursue anti-corruption reforms and promote self-reliance, economic growth, and rural development.
+          </p>
+        </div>
+
+        <div class="history-information timeline-item">
+          <div class="year">2009</div>
+          <p class="text-[var(--custom-black)] py-4 px-2">
+            The DPP won a landslide victory in the 2009 elections, gaining both the presidency and a strong parliamentary majority, reflecting national support across regional divides.
+          </p>
+        </div>
+
+        <div class=" history-information timeline-item">
+          <div class="year">2010–2012</div>
+          <p class="text-[var(--custom-black)] py-4 px-2">
+            Under Bingu’s leadership, Malawi achieved food security and rapid economic growth. Infrastructure, healthcare, and education improved, and Malawi became one of the fastest-growing economies globally.
+          </p>
+        </div>
+
+        <div class="history-information timeline-item">
+          <div class="year">April 2012</div>
+          <p class="text-[var(--custom-black)] py-4 px-2">
+            President Bingu wa Mutharika died in office, marking a turning point for the DPP. His brother Peter Mutharika later took over the party's leadership, beginning a period of restructuring and revival.
+          </p>
+        </div>
+      </div>
+
+
+        <!-- Read More Button -->
+        <div class="mt-8 text-right">
+          <a href="{{ route('loading-screen') }}?redirect={{ route('full_history') }}" class="inline-block bg-[var(--custom-red)] text-white font-semibold px-6 py-2 rounded-full shadow hover:bg-red-700 transition duration-300">
+            Read More
+          </a>
+        </div>
+
+    </div>
+  </div>
+</div>
+
 
           <!-- Infinite Auto-Scroll Carousel Container -->
 <div class="carousel-container relative overflow-hidden w-full my-12">

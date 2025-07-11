@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // LOAD THE HISTORY
-
+  
     fetch("/partials/history")
 
     .then(response => response.text())

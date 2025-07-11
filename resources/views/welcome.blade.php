@@ -160,60 +160,95 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
             <div
                 class="group bg-transparent border border-gray p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-heartbeat text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Healthcare</h3>
-                <p class="mt-2">Ensuring accessible and quality healthcare for all.</p>
+                <i class="fas fa-seedling text-4xl mb-4"></i>
+                <h3 class="text-2xl font-semibold">Food Security</h3>
+                <p class="mt-2">Most emphasized, symbolized by the four maize cobs, and directly tied to national development and identity.We prioritize food security as a fundamental and most important aspect of economic development.</p>
             </div>
             <div
                 class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-graduation-cap text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Education</h3>
-                <p class="mt-2">Providing free and quality education for a brighter future.</p>
+                <i class="fas fa-chart-line text-4xl mb-4"></i>
+                <h3 class="text-2xl font-semibold">Economic Growth & Wealth Creation</h3>
+                <p class="mt-2">Discussed under vision, mission, and aims. Focuses on job creation, macroeconomic growth, industrialization, export production, and reducing poverty.</p>
             </div>
             <div
                 class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-leaf text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Environment</h3>
-                <p class="mt-2">Promoting sustainability and protecting natural resources.</p>
+                <i class="fas fa-building text-4xl mb-4"></i>
+                <h3 class="text-2xl font-semibold">Infrastructure Development</h3>
+                <p class="mt-2">Clearly stated in the opening paragraph as a foundational belief of the party. Emphasized as long-term and necessary for national transformation.</p>
             </div>
             <div
                 class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-graduation-cap text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Education</h3>
-                <p class="mt-2">Providing free and quality education for a brighter future.</p>
+                <i class="fas fa-people-group text-4xl mb-4"></i>
+                <h3 class="text-2xl font-semibold">Unity and Peace</h3>
+                <p class="mt-2">Strongly emphasized in the pledge, with calls for national unity across tribe, region, and political belief. Seen as a precondition for prosperity.</p>
             </div>
             <div
                 class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-leaf text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Environment</h3>
-                <p class="mt-2">Promoting sustainability and protecting natural resources.</p>
+                <i class="fas fa-scale-balanced text-4xl mb-4"></i>
+                <h3 class="text-2xl font-semibold">Human Rights and Rule of Law</h3>
+                <p class="mt-2">Directly mentioned under the aims, and reiterated as part of DPP’s mission to ensure dignity, justice, and civil liberties.</p>
             </div>
         </div>
     </section>
 
-    <!-- FLOATING CONTAINER WITH IMAGE AND TEXT -->
-    <section class="relative z-10">
-        <div class="container mx-auto px-10">
-            <!-- Parent div for the entire section with customized width and height -->
-            <div class="relative flex flex-col md:flex-row items-center justify-between bg-white text-black rounded-lg shadow-lg mx-auto"
-                style="margin-top: -5%; overflow: hidden;">
-                <!-- Image on the Top for small screens and Left for medium and large screens -->
-                <div class="w-full relative h-full" id="floating-image">
-                    <img src="{{ asset('assets/images/rally.jpg') }}" alt="Volunteer"
-                        class="rounded-lg shadow-md object-cover w-full h-full md:h-[500px]">
+
+    <!-- FLOATING CONTAINER WITH IMAGE AND MOTIVATIONAL TEXT -->
+<section class="relative z-10">
+    <div class="container mx-auto px-10">
+        <!-- Parent div for the entire section with customized width and height -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between bg-white text-black rounded-lg shadow-lg mx-auto"
+            style="margin-top: -5%; overflow: hidden;">
+            <!-- Image on the Top for small screens and Left for medium and large screens -->
+            <div class="w-full relative h-full" id="floating-image">
+                <img src="{{ asset('assets/images/rally.jpg') }}" alt="DPP Rally"
+                    class="rounded-lg shadow-md object-cover w-full h-full md:h-[500px]">
+            </div>
+            <!-- Motivational Text & Items on the Right -->
+            <div class="w-full pl-6 text-black text-center md:text-left mt-4 md:mt-0 py-4 px-4 flex flex-col justify-between"
+                id="floating-text">
+                <h3 class="text-3xl font-semibold mb-6">Join the <span class="text-[var(--theme-color)]">Movement</span></h3>
+                
+                <!-- Motivational Items List -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
+                        <span class="text-lg font-medium">Unity in Diversity</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
+                        <span class="text-lg font-medium">Progress Through Partnership</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
+                        <span class="text-lg font-medium">Democracy for All</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
+                        <span class="text-lg font-medium">Empowering Communities</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
+                        <span class="text-lg font-medium">Building Tomorrow</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
+                        <span class="text-lg font-medium">Strength in Numbers</span>
+                    </div>
                 </div>
-                <!-- Text & Button below for small screens and Right for medium and large screens -->
-                <div class="w-full pl-6 text-black text-center md:text-left mt-4 md:mt-0 py-4 px-4 flex flex-col justify-between"
-                    id="floating-text">
-                    <h3 class="text-3xl font-semibold">Become a <span class="text-[var(--theme-color)]">
-                            Volunteer</span> </h3>
-                    <p class="mt-4 text-lg">Join our efforts in making a positive change. Volunteer today to help
-                        support our causes and make a difference in the community.</p>
-                   
+                
+                <!-- Call to Action -->
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <p class="text-base text-gray-600 italic">Together we stand, together we thrive</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- DPP Leaders -->
     <section class="py-10 bg-gray text-center">

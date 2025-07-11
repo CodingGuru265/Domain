@@ -137,7 +137,7 @@
 
             <div class="donation-features">
                 <!-- Monetary Donations -->
-                <div class="donation-feature">
+                <div class="donation-feature"> 
                     <div class="feature-icon monetary">
                         <i class="fas fa-coins"></i>
                     </div>

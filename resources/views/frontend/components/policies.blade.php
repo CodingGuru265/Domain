@@ -228,7 +228,7 @@
         </div>
 
         <!-- Milestone Items -->
-        <div class="space-y-12 md:space-y-16 relative">
+        {{-- <div class="space-y-12 md:space-y-16 relative">
 
             <!-- Milestone 1 (Odd: Text on Left, Image on Right) -->
             <div class="relative flex flex-col md:flex-row items-center">
@@ -463,7 +463,83 @@
                 </div>
             </div>
 
+        </div> --}}
+
+        <div class="space-y-12 md:space-y-16 relative">
+
+    <!-- Milestone 1 (Odd: Text on Left, Image on Right) -->
+    <div class="relative flex flex-col md:flex-row items-center">
+        <!-- Text Content (Left) -->
+        <div class="w-full md:w-1/2 md:pr-8 text-right order-1">
+            <div class="flex items-center justify-end md:justify-start md:flex-row-reverse space-x-2 relative">
+                <!-- Mobile Inline Dot -->
+                <span class="block w-4 h-4 bg-white border-4 border-[var(--dpp-red)] rounded-full md:hidden"></span>
+                <!-- Year Badge -->
+                <span class="inline-block px-4 py-2 bg-[var(--dpp-blue)] text-white text-sm font-bold rounded-full relative">
+                    1998
+                    <!-- Desktop Dot with perfect spacing -->
+                    <span class="hidden md:block absolute -left-5 top-1/2 transform -translate-y-1/2">
+                        <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                        <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-[var(--dpp-red)] rounded-full"></span>
+                    </span>
+                </span>
+            </div>
+            <h3 class="playfair text-xl md:text-2xl font-bold text-[var(--dpp-dark)] mt-2">
+                Foundation
+            </h3>
+            <p class="text-gray-600 text-sm md:text-base">
+                The DPP established its presence as a progressive force committed to democratic reforms and
+                innovation.
+            </p>
         </div>
+
+        <!-- Image Content (Right) -->
+        <div class="w-full md:w-1/2 md:pl-8 order-2">
+            <img src="/assets/images/Bingu.png" alt="Foundation" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+        </div>
+    </div>
+
+    <!-- Milestone 2 (Even: Image on Left, Text on Right) -->
+    <div class="relative flex flex-col md:flex-row items-center">
+        <!-- Text Content (Right) -->
+        <div class="w-full md:w-1/2 md:pl-8 text-left order-1 md:order-2">
+            <div class="flex items-center justify-start space-x-2 relative">
+                <!-- Year Badge -->
+                <span class="inline-block px-4 py-2 bg-[var(--dpp-blue)] text-white text-sm font-bold rounded-full relative">
+                    2000
+                    <!-- Desktop Dot with perfect spacing -->
+                    <span class="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2">
+                        <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                        <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-[var(--dpp-red)] rounded-full"></span>
+                    </span>
+                </span>
+                <!-- Mobile Inline Dot -->
+                <span class="block w-4 h-4 bg-white border-4 border-[var(--dpp-red)] rounded-full md:hidden"></span>
+            </div>
+            <h3 class="playfair text-xl md:text-2xl font-bold text-[var(--dpp-dark)] mt-2">
+                First Presidential Victory
+            </h3>
+            <p class="text-gray-600 text-sm md:text-base">
+                A historic win in the presidential election marked a turning point, shifting the political
+                landscape toward greater inclusivity.
+            </p>
+        </div>
+
+        <!-- Image Content (Left) -->
+        <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
+            <img src="/assets/images/rally.jpg" alt="First Presidential Victory" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+        </div>
+    </div>
+
+    <!-- Milestone 3 (Odd: Text on Left, Image on Right) -->
+    <div class="relative flex flex-col md:flex-row items-center">
+        <!-- Text Content (Left) -->
+        <div class="w-full md:w-1/2 md:pr-8 text-right order-1">
+            <div class="flex items-center justify-end md:justify-start md:flex-row-reverse space-x-2 relative">
+                <!-- Mobile Inline Dot -->
+                <span class="block w-4 h-4 bg-white border-4 border-[var(--dpp-red)] rounded-full md:hidden"></span>
+                <!-- Year Badge -->
+                <span class="inline-block px-4 py-2 bg-[var(--dpp-blue)] text-white text-sm font-bold rounded-full relative
     </div>
 </section>
 @endsection

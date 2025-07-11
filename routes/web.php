@@ -16,9 +16,13 @@ use App\Http\Controllers\ThemeController;
 Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/full_history', function () {
+    return view('partials.full_history');
+})->name('full_history');
+
+Route::get('/about', function () {
+    return view('frontend.components.about');
+})->name('about');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
