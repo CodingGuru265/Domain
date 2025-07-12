@@ -4,19 +4,194 @@
 
 @section('content')
 <div class="min-h-screen bg-gray-50">
-    <!-- Hero Section with Parallax Effect -->
-    <div class="relative h-96 overflow-hidden bg-blue-900">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-30"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Democratic Progressive Party</h1>
-            <p class="text-xl md:text-2xl text-blue-100 mb-8">Building a Better Malawi Together</p>
-            <div class="animate-bounce">
-                <span class="inline-block bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-lg font-bold uppercase tracking-wide shadow-lg">
-                    DPP Woyeee! Malawi Woyeee!!!
-                </span>
+
+<!-- ABOUT DPP TIMELINE SECTION -->
+<section class="py-16 md:py-24 bg-gray-50 relative">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <!-- Header -->
+        <div class="text-center mb-12 md:mb-20">
+            <span class="inline-block px-4 py-1 bg-blue-900 text-white text-sm font-semibold rounded-full mb-4">
+                About DPP
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-6">
+                A Journey of <span class="text-yellow-500">Beliefs & Vision</span>
+            </h2>
+            <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        <!-- Vertical Timeline Line -->
+        <div class="hidden md:block absolute left-1/2 top-48 bottom-0 w-1 bg-gradient-to-b from-blue-900 to-blue-700 transform -translate-x-1/2 z-0">
+            <div class="absolute inset-0 bg-[length:4px_8px] bg-repeat-y bg-center" 
+                style="background-image: radial-gradient(circle, white 2px, transparent 2px)"></div>
+        </div>
+
+        <!-- TIMELINE ITEMS -->
+        <div class="space-y-12 md:space-y-16 relative z-10">
+
+            <!-- Milestone 1: Foundation -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pr-8 text-right order-1">
+                    <div class="flex items-center justify-end md:justify-start md:flex-row-reverse space-x-2 relative">
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Foundation
+                            <span class="hidden md:block absolute -left-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">Birth of the DPP</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Founded in 2005 by His Excellency Late Prof. Bingu wa Mutharika, the DPP was established to restore citizens’ trust in governance and drive national development.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8 order-2">
+                    <img src="/assets/images/Bingu.png" alt="DPP Foundation" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
             </div>
+
+            <!-- Milestone 2: Philosophy -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pl-8 text-left order-1 md:order-2">
+                    <div class="flex items-center justify-start space-x-2 relative">
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Philosophy
+                            <span class="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">Guiding Beliefs</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Rooted in social democracy and Ubuntu, DPP promotes people-centered development, progressive liberalism, and the dignity of every Malawian.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
+                    <img src="assets/images/rally.jpg" alt="DPP Values" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
+            </div>
+
+            <!-- Milestone 3: Unity -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pr-8 text-right order-1">
+                    <div class="flex items-center justify-end md:justify-start md:flex-row-reverse space-x-2 relative">
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Unity
+                            <span class="hidden md:block absolute -left-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">National Unity Pledge</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        DPP unites all Malawians regardless of tribe, region, or belief—building peace, tolerance, and harmony as the foundation for prosperity.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8 order-2">
+                    <img src="assets/images/flagmw.webp" alt="Unity" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
+            </div>
+
+            <!-- Milestone 4: Vision -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pl-8 text-left order-1 md:order-2">
+                    <div class="flex items-center justify-start space-x-2 relative">
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Vision
+                            <span class="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">Transforming Malawi</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Our vision is to make Malawi a producing and exporting nation—adding value to agriculture, minerals, and natural wealth for national prosperity.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
+                    <img src="assets/images/light-bulb-electricity.jpg" alt="Vision" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
+            </div>
+
+            <!-- Milestone 5: Pillars -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pr-8 text-right order-1">
+                    <div class="flex items-center justify-end md:justify-start md:flex-row-reverse space-x-2 relative">
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Pillars
+                            <span class="hidden md:block absolute -left-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">Prosperity, Justice & Security</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        DPP is anchored on three core pillars: Prosperity, Justice, and Security—fueled by patriotism, integrity, and hard work.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8 order-2">
+                    <img src="assets/images/unity.jpg" alt="Pillars" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
+            </div>
+
+            <!-- Milestone 6: Symbolism -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pl-8 text-left order-1 md:order-2">
+                    <div class="flex items-center justify-start space-x-2 relative">
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Symbolism
+                            <span class="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">Maize Cobs & Blue</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        The four maize cobs represent national food security across all regions. The color blue reflects our unity, peace, and visionary leadership.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
+                    <img src="assets/images/peter-1.jpeg" alt="DPP Symbolism" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
+            </div>
+
+            <!-- Milestone 7: Rallying Call -->
+            <div class="relative flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 md:pr-8 text-right order-1">
+                    <div class="flex items-center justify-end md:justify-start md:flex-row-reverse space-x-2 relative">
+                        <span class="block w-4 h-4 bg-white border-4 border-yellow-500 rounded-full md:hidden"></span>
+                        <span class="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-bold rounded-full relative">
+                            Rallying Call
+                            <span class="hidden md:block absolute -left-6 top-1/2 transform -translate-y-1/2">
+                                <span class="absolute inset-0 w-6 h-6 bg-white/30 rounded-full"></span>
+                                <span class="absolute inset-0 m-auto w-5 h-5 bg-white border-4 border-yellow-500 rounded-full"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mt-2">DPP Woyeee!</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        “DPP Woyeee! Malawi Woyeee!!!” – A patriotic cry of pride, unity, and progress, echoing the heartbeat of the Democratic Progressive Party.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8 order-2">
+                    <img src="assets/images/rally.jpg" alt="Rally" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
 
     <!-- Main Content Container -->
     <div class="container mx-auto px-4 py-16 max-w-6xl">
@@ -51,7 +226,7 @@
         <!-- Three Pillars Section -->
         <section class="mb-20">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-blue-900 mb-4">Our Guiding Pillars</h2>
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">The Three Guiding Pillars</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
             </div>
             
@@ -107,196 +282,169 @@
             </div>
         </section>
 
-        {{-- <!-- Vision & Mission Section -->
-        <section class="mb-20">
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Vision -->
-                <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-8 rounded-xl text-white shadow-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                            </svg>
+
+                        <!-- Vision & Mission Section -->
+                <section class="mb-16">
+
+                    <div class="space-y-12">
+                        <!-- Vision -->
+                        <div class="relative bg-white p-8 rounded-xl shadow-sm border-t-8 border-blue-900">
+                            <div class="absolute -top-6 left-6 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-4 pl-4">Our Vision</h3>
+                            <p class="text-gray-700 pl-4">
+                                To see our country resume economic growth fast enough to bring about prosperity, to reduce poverty significantly, and to make life better for everyone; to produce enough food for all; to see that our country transforms from being a predominantly importing and consuming country to being a predominantly producing and exporting country; and to gradually emerge as an industrial nation capable of transforming our agricultural commodities, other raw materials and minerals, so as to create new wealth for our people.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-bold">Our Vision</h3>
-                    </div>
-                    <p class="leading-relaxed">
-                        To see our country resume economic growth fast enough to bring about prosperity, to reduce poverty significantly, and to make life better for everyone; to produce enough food for all; to see that our country transforms from being a predominantly importing and consuming country to being a predominantly producing and exporting country; and to gradually emerge as an industrial nation capable of transforming our agricultural commodities, other raw materials and minerals, so as to create new wealth for our people.
-                    </p>
-                </div>
-                
-                <!-- Mission -->
-                <div class="bg-white p-8 rounded-xl border-2 border-yellow-500 shadow-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
-                            </svg>
+
+                        <!-- Mission -->
+                        <div class="relative bg-blue-50 p-8 rounded-xl shadow-sm border-t-8 border-yellow-500">
+                            <div class="absolute -top-6 left-6 w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                    <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-4 pl-4">Our Mission</h3>
+                            <p class="text-gray-700 pl-4">
+                                To instill confidence in the economy and to persuade Malawians to believe in ourselves that we can achieve macroeconomic growth and reduce poverty through sound financial management and fiscal prudence; to create more jobs; to redistribute incomes by promoting significant domestic savings; foreign financing and investment in our agricultural processing, industrial production and manufacturing; and to thereby increase the supply of quality goods and services for the domestic and international markets.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-bold text-blue-900">Our Mission</h3>
                     </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        To instill confidence in the economy and to persuade Malawians to believe in ourselves that we can achieve macroeconomic growth and reduce poverty through sound financial management and fiscal prudence; to create more jobs; to redistribute incomes by promoting significant domestic savings; foreign financing and investment in our agricultural processing, industrial production and manufacturing; and to thereby increase the supply of quality goods and services for the domestic and international markets.
-                    </p>
-                </div>
-            </div>
-        </section> --}}
+                </section>
 
 
 
 
-        <!-- Vision & Mission Section -->
-<section class="mb-16">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-blue-900 mb-2">Vision & Mission</h2>
-        <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
-    </div>
 
-    <div class="space-y-12">
-        <!-- Vision -->
-        <div class="relative bg-white p-8 rounded-xl shadow-sm border-t-8 border-blue-900">
-            <div class="absolute -top-6 left-6 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center shadow-md">
-                <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-blue-900 mb-4 pl-4">Our Vision</h3>
-            <p class="text-gray-700 pl-4">
-                To see our country resume economic growth fast enough to bring about prosperity, to reduce poverty significantly, and to make life better for everyone; to produce enough food for all; to see that our country transforms from being a predominantly importing and consuming country to being a predominantly producing and exporting country; and to gradually emerge as an industrial nation capable of transforming our agricultural commodities, other raw materials and minerals, so as to create new wealth for our people.
-            </p>
-        </div>
-
-        <!-- Mission -->
-        <div class="relative bg-blue-50 p-8 rounded-xl shadow-sm border-t-8 border-yellow-500">
-            <div class="absolute -top-6 left-6 w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center shadow-md">
-                <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                    <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
-                </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-blue-900 mb-4 pl-4">Our Mission</h3>
-            <p class="text-gray-700 pl-4">
-                To instill confidence in the economy and to persuade Malawians to believe in ourselves that we can achieve macroeconomic growth and reduce poverty through sound financial management and fiscal prudence; to create more jobs; to redistribute incomes by promoting significant domestic savings; foreign financing and investment in our agricultural processing, industrial production and manufacturing; and to thereby increase the supply of quality goods and services for the domestic and international markets.
-            </p>
-        </div>
-    </div>
-</section>
-
-   <!-- Aims Section -->
+   <!-- Aims Carousel Section -->
 <section class="mb-20">
     <div class="text-center mb-12">
         <h2 class="text-4xl font-bold text-blue-900 mb-4">Our Aims</h2>
         <div class="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">We are committed to building a prosperous Malawi through these fundamental objectives</p>
     </div>
-    
-    <div class="grid md:grid-cols-2 gap-8">
-        <!-- Column 1 -->
-        <div class="space-y-6">
+
+    <div class="relative overflow-hidden">
+        <!-- Carousel Container -->
+        <div class="aims-carousel flex gap-6 py-4">
             <!-- Aim 1 -->
-            <div class="flex items-start group">
-                <div class="relative mr-5">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all">
-                        <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="absolute -inset-2 border-2 border-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none"></div>
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-2">Economic Empowerment</h3>
-                    <p class="text-gray-700">Fighting poverty through sustainable economic programs and opportunities</p>
-                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">Economic Empowerment</h3>
+                <p class="text-gray-700">Fighting poverty through sustainable economic programs and opportunities</p>
             </div>
             
             <!-- Aim 2 -->
-            <div class="flex items-start group">
-                <div class="relative mr-5">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all">
-                        <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                        </svg>
-                    </div>
-                    <div class="absolute -inset-2 border-2 border-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none"></div>
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-2">Agricultural Development</h3>
-                    <p class="text-gray-700">Developing agriculture and attaining national food security</p>
-                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">Agricultural Development</h3>
+                <p class="text-gray-700">Developing agriculture and attaining national food security</p>
             </div>
             
             <!-- Aim 3 -->
-            <div class="flex items-start group">
-                <div class="relative mr-5">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all">
-                        <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="absolute -inset-2 border-2 border-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none"></div>
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-2">Wealth Creation</h3>
-                    <p class="text-gray-700">Creating new wealth for all people of Malawi</p>
-                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">Wealth Creation</h3>
+                <p class="text-gray-700">Creating new wealth for all people of Malawi</p>
             </div>
-        </div>
-        
-        <!-- Column 2 -->
-        <div class="space-y-6">
+            
             <!-- Aim 4 -->
-            <div class="flex items-start group">
-                <div class="relative mr-5">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all">
-                        <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="absolute -inset-2 border-2 border-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none"></div>
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-2">National Unity</h3>
-                    <p class="text-gray-700">Uniting the people of Malawi across all regions and backgrounds</p>
-                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">National Unity</h3>
+                <p class="text-gray-700">Uniting the people of Malawi across all regions</p>
             </div>
             
             <!-- Aim 5 -->
-            <div class="flex items-start group">
-                <div class="relative mr-5">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all">
-                        <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="absolute -inset-2 border-2 border-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none"></div>
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                    </svg>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-2">Human Rights</h3>
-                    <p class="text-gray-700">Guaranteeing human rights and civil liberties for all citizens</p>
-                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">Human Rights</h3>
+                <p class="text-gray-700">Guaranteeing human rights and civil liberties</p>
             </div>
             
             <!-- Aim 6 -->
-            <div class="flex items-start group">
-                <div class="relative mr-5">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all">
-                        <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="absolute -inset-2 border-2 border-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none"></div>
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                    </svg>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-2">National Security</h3>
-                    <p class="text-gray-700">Ensuring security, peace and stability across the nation</p>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">National Security</h3>
+                <p class="text-gray-700">Ensuring security, peace and stability nationwide</p>
+            </div>
+            
+            <!-- Duplicate items for infinite loop effect -->
+            <div class="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
                 </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2">Economic Empowerment</h3>
+                <p class="text-gray-700">Fighting poverty through sustainable economic programs and opportunities</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .aims-carousel {
+        animation: scroll 30s linear infinite;
+        width: calc(250px * 12); /* Adjust based on number of items */
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 6)); /* Half of total width */
+        }
+    }
+    
+    .aims-carousel:hover {
+        animation-play-state: paused;
+    }
+</style>
+
+<script>
+    // Optional: JavaScript to handle the infinite loop more smoothly
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.aims-carousel');
+        const items = document.querySelectorAll('.aims-carousel > div');
+        
+        // Clone items for infinite loop
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+    });
+</script>
 
         <!-- Symbolism Section -->
         <section class="mb-20">
@@ -340,7 +488,7 @@
         </section>
 
         <!-- Pledge Section -->
-        <section class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl p-12 text-center text-white shadow-2xl">
+        <section class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl p-12 text-center  shadow-2xl">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold mb-8">Our Pledge to Malawi</h2>
                 <div class="text-xl leading-relaxed mb-8">
