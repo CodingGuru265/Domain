@@ -1,49 +1,4 @@
 
-// JavaScript 
-
-    // 🎵 Array of Songs
-    const songs = [
-      
-        {
-            title: "Lozani zanu",
-            artist: "Dan Lu",
-            image: "/assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg",
-            url: "/assets/Music/Dan Lu  Feat APM  - Lozani Zanu(Official Music Video)(MP3_160K).mp3"
-        },
-
-        {
-            title: "Mose wa Lero",
-            artist: "Phungu Joseph Nkasa",
-            image: "/assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg",
-            url: "/assets/Music/Phungu Joseph Nkasa - Mose wa lero(MP3_160K).mp3"
-        },
-        {
-            title: "Abetcha loya",
-            artist: "Sendera Sisters",
-            image: "/assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg",
-            url: "/assets/Music/DPP SENDERA SISTERS_ ABETCHA LOYA(MP3_160K).mp3"
-        },
-        {
-            title: "Agwazi Sendera",
-            artist: "Sendera Sisters",
-            image: "/assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg",
-            url: "/assets/Music/Angwazi Sendezani(MP3_160K).mp3"
-        },
-        {
-            title: "Ayamba Kale",
-            artist: "Sendera Sisters",
-            image: "/assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg",
-            url: "/assets/Music/DPP SENDERA SISTERS_ AYAMBA KALE(MP3_160K).mp3"
-        },
-        {
-            title: "Malawi Moto Moto",
-            artist: "Sendera Sisters",
-            image: "/assets/images/music/portrait-happy-young-woman.jpg",
-            url: "/assets/Music/DPP Moto Moto Eya_ Malawi Moto Moto Eya(MP3_160K).mp3"
-        },
-    ];
-
-    
 
 
 // 🎼 Function to Load Songs

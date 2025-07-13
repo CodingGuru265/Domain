@@ -24,6 +24,10 @@ Route::get('/about', function () {
     return view('frontend.components.about');
 })->name('about');
 
+Route::get('/apm', function () {
+    return view('frontend.components.apm');
+})->name('apm');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

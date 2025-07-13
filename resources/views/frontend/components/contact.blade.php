@@ -293,7 +293,7 @@
             </div>
         </div>
     </div>
-
+{{-- 
     <!-- Contact Form Section - UI Only -->
     <div class="w-full px-4 py-16 max-w-7xl mx-auto bg-gray-50">
         <div class="text-center mb-12">
@@ -338,6 +338,70 @@
                 </button>
             </div>
         </div>
+    </div> --}}
+
+
+
+
+<form id="contactForm" action="https://formsubmit.co/priscakaliati74@gmail.com" method="POST" class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+    <!-- Remove _next since we'll handle submission manually -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Contact Form Submission">
+    <input type="hidden" name="_template" value="table">
+
+    <!-- Your existing form fields -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- ... (keep all your fields) ... -->
     </div>
+
+    <div class="mt-8">
+        <button type="submit" class="w-full bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+            Send Message
+        </button>
+    </div>
+</form>
+
+<!-- Popup Modal (hidden by default) -->
+<div id="successPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+        <h3 class="text-xl font-bold text-green-600">Success!</h3>
+        <p class="mt-2">Your message has been sent. We'll contact you soon.</p>
+        <button onclick="closePopup()" class="mt-4 bg-[var(--theme-color)] text-white px-4 py-2 rounded-lg">
+            Close
+        </button>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("successPopup");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Prevent default redirect
+        
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                popup.classList.remove("hidden"); // Show popup
+                form.reset(); // Clear form
+            } else {
+                alert("Error: Please try again.");
+            }
+        } catch (error) {
+            alert("Error: " + error.message);
+        }
+    });
+
+    function closePopup() {
+        popup.classList.add("hidden");
+    }
+</script>
 
 @endsection

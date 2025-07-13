@@ -37,7 +37,7 @@
                         </ul>
                     </li>
                     <li><a href="{{ route('code_of_conduct') }}" class="block p-2 text-white hover:bg-blue-500">Code of Conduct and Ethics</a></li>
-                    <li><a href="{{ url ('/') }}" class="block p-2 text-white hover:bg-blue-500">Party Policies and Ideology</a></li>
+                   
                 </ul>
             </li>
 
@@ -59,6 +59,13 @@
                 <a href="{{ route('contact') }}" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
                     <i class="fas fa-address-book mr-2"></i>
                     <span>Contacts</span>
+                </a>
+            </li>
+
+              <li>
+                <a href="{{ route('about') }}" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
+                    <i class="fas fa-info mr-2"></i>
+                    <span>About</span>
                 </a>
             </li>
         </ul>
