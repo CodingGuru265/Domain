@@ -42,7 +42,7 @@
                 <p class="text-2xl md:text-3xl mb-2 text-white font-light">DPP Party Music</p>
                 <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                     Vibes Feel the rhythm, enjoy the beats, and celebrate with the 
-                    <span class="text-yellow-300 font-bold animate-bounce">best</span> tunes!
+                    <span class="text-yellow-300 font-bold animate-bounce">best </span> tunes!
                 </p>
             </div>
             
