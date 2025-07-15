@@ -13,7 +13,7 @@ Follow these steps to set up the project locally:
 
 ```sh
 # Clone the repository
-git clone https://github.com/ishmaiah-ih/dpp.git
+git clone https://github.com/PriscaKS/Domain.git
 # go inside the project folder
 cd dpp
 
