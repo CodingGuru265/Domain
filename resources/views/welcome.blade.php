@@ -2,41 +2,44 @@
 
 @section('content')
 
+<!-- LANDING PAGE -->
 
-    <!-- Landing Section -->
-    <section id="home" class="relative flex flex-col md:flex-row justify-center items-center text-center" style="background-image: url('{{ asset('assets/images/bg-home.jpeg') }}');
-             background-size: cover;
-             background-position: center;
-             background-repeat: no-repeat;
-             min-height: 100vh;">
 
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-[var(--custom-black)] opacity-50"></div>
-
-        <!-- Text Content -->
-        <div class="text-[var(--custom-white)] p-10 max-w-3xl pt-20 relative z-10" id="heroText">
-            <h1 class="text-4xl md:text-6xl font-bold text-[var(--custom-white)]">
-                <span class="text-[var(--theme-color)]">Together</span>, We Can Make a Change We Want to See in the
-                World
+<!-- Landing Section -->
+<section id="home"
+    class="relative flex flex-col md:flex-row items-center md:items-stretch text-left"
+    style="background-image: url('{{ asset('/assets/images/landimage.jpg') }}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           min-height: 100vh;">
+ 
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 z-10" style="background: linear-gradient(to right, rgba(5, 116, 247, 0.7), rgba(230, 30, 43, 0.7));"></div>
+      
+    <!-- Image Content -->
+    <div class="w-full md:w-5/12 h-[400px] md:h-screen relative z-20">
+        <img src="{{ asset('/assets/images/leaders/APM  1.png') }}" alt="Candidate"
+            class="w-full h-full object-cover">
+    </div>
+     
+    <!-- Text Content -->
+    <div class="w-full md:w-7/12 flex items-start justify-start px-6 md:px-6 pt-20 md:pt-32 relative z-20 text-[var(--custom-white)]">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                <span class="text-[var(--theme-color)]">Together</span>, We Can Make a Change We Want to See in the World
             </h1>
-            <p class="mt-4 text-lg text-[var(--custom-white)]">
+            <p class="mt-4 text-lg">
                 At the heart of democracy lies the power of the people.
                 By contributing to our mission, you become an essential
                 part of driving positive change, shaping policies, and creating a
                 brighter future for everyone.
             </p>
-            <a href="#about"
-                class="mt-6 inline-block bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-[var(--custom-white)] font-bold py-2 px-6 rounded-full">
-                Learn More
-            </a>
         </div>
+    </div>
+     
+</section>
 
-        <!-- Image Content for All Screens -->
-        <div class="mt-6 md:mt-0 lg:block relative z-40" id="imageContainer"
-            style="width: 100vw; height: 100vh; padding: 0; margin: 0 auto; overflow-x: hidden;">
-            <img src="{{ asset('assets/images/peter_home.png') }}" alt="Candidate" class="w-full h-full object-cover">
-        </div>
-    </section>
 
     <!-- END LANDING PAGE -->
 
@@ -118,6 +121,7 @@
             </div>
         </section>
     </div>
+    
     <!-- BECOME A VOLUNTEER -->
     <section class="volunteer-section">
         <div class="overlay"></div>

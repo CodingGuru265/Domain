@@ -12,8 +12,17 @@
         <li class="relative group">
             <a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="nav-link">Home</a>
         </li>
+
+        
         <li class="relative group">
-            <a href="#" class="nav-link">Documents</a>
+             <a href="{{ route('loading-screen') }}?redirect={{ route('news') }}" class="block px-4 py-2">
+                        News</a>
+            
+        </li>
+
+
+          <li class="relative group">
+            <a href="#" class="nav-link">Manifesto</a>
             <ul
                 class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[230px]">
                 <li class="relative group/manifesto">
@@ -35,19 +44,15 @@
                         class="block px-4 py-2 hover:bg-[var(--theme-color)]">Code of Conduct & Ethics</a></li>
             </ul>
         </li>
-      
-        <li class="relative group">
-            <a href="#" class="nav-link">Media</a>
-            <ul
-                class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[150px]">
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-4 py-2">DPP
-                        Music</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('events') }}"
-                        class="block px-4 py-2">Event Gallery</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('news') }}" class="block px-4 py-2">DPP
-                        News</a></li>
-            </ul>
+
+       
+
+         <li class="relative group">
+            <a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-4 py-2">Playlist</a>
+            
         </li>
+
+      
         <li><a href="{{ route('loading-screen') }}?redirect={{ route('contact') }}" class="nav-link">Contacts</a></li>
 
         <li class="relative group">
@@ -63,10 +68,11 @@
         <li class="nav-link flex-shrink-0">
             <a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
                 class="bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-2 px-6 rounded-full whitespace-nowrap">
-                Donate to Party
+                Donate  to Party
             </a>
         </li>
     </ul>
+   
 
     <!-- HAMBURGER -->
     <button id="menu-toggle" class="text-2xl md:hidden">

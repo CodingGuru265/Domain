@@ -50,7 +50,7 @@
   
 
 :root {
-    --nav-bg-color:#00113fe8;
+    --nav-bg-color:#0574F7;
     --theme-color: #258bc9;
     --hover-theme-color: #2b8fce;
     --custom-orange: #258ac99f;
@@ -229,7 +229,7 @@ input[type="range"]::-ms-thumb {
   
     .volunteer-section {
         position: relative;
-        background: url('/assets/images/flagmw.webp') no-repeat center center/cover;
+        background: url('/assets/images/women.png') no-repeat center center/cover;
         min-height: 50vh; /* Increased height to prevent overlap */
         display: flex;
         align-items: center;
@@ -246,7 +246,7 @@ input[type="range"]::-ms-thumb {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to right, rgba(11, 10, 35, 0.9) 70%, rgba(255, 0, 0, 0.5));
+        background: linear-gradient(to right, #0574F7 70%, #E61E2B);
     }
 
     .content {
