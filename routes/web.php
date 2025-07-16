@@ -85,3 +85,17 @@ Route::get('/partials/history', function () {
 // ThemeController
 
 Route::post('/toggle-theme', [ThemeController::class, 'toggle'])->name('toggle.theme');
+
+// Music file serving route
+Route::get('/music-file/{filename}', function ($filename) {
+    $path = storage_path('app/public/music_files/' . $filename);
+    
+    if (!file_exists($path)) {
+        abort(404);
+    }
+    
+    return response()->file($path, [
+        'Content-Type' => 'audio/mpeg',
+        'Accept-Ranges' => 'bytes'
+    ]);
+})->name('music.file');
