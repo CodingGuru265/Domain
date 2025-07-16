@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function revealOnScroll() {
+    if (!section) return; // Guard against missing section
+    
     let windowHeight = window.innerHeight;
     let sectionTop = section.getBoundingClientRect().top;
 
@@ -250,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('carouselTrack');
 
   if (!track) {
-    console.error('Carousel track not found!');
+    // Carousel track not found - this is normal on pages without carousel
     return;
   }
 
@@ -423,15 +425,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Wait for footer to load (if it's fetched dynamically)
   const footerContainer = document.getElementById("footer-container");
   if (footerContainer) {
-    const observer = new MutationObserver(() => {
-      if (footerContainer.innerHTML.trim() !== "") {
-        animateFooter();
-        observer.disconnect();
-      }
-    });
-    observer.observe(footerContainer, { childList: true, subtree: true });
+    // Check if footer content is already loaded
+    if (footerContainer.innerHTML.trim() !== "") {
+      animateFooter();
+    } else {
+      const observer = new MutationObserver(() => {
+        if (footerContainer.innerHTML.trim() !== "") {
+          animateFooter();
+          observer.disconnect();
+        }
+      });
+      observer.observe(footerContainer, { childList: true, subtree: true });
+    }
   } else {
-    animateFooter(); // Run immediately if footer is already present
+    // Footer container not found - this is normal on some pages
+    return;
   }
 });
 //END FOOTER ANIMATION  
@@ -443,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.getElementById("imageContainer");
 
     if (!heroText || !imageContainer) {
-      console.warn("Hero text or image container not found.");
+      // Hero elements not found - this is normal on pages without landing section
       return;
     }
 
