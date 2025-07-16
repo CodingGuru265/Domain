@@ -405,8 +405,8 @@ input[type="range"]::-ms-thumb {
     .background-container-documents {
         position: relative;
         width: 100%;
-        height: 400px; /* Adjust the height of your section */
-        background-image: url('/assets/images/docs/doc.webp'); 
+        height: 300px; 
+        background-image: url('/assets/images/APMM.png'); 
         background-size: cover;
         background-position: center;
         display: flex;

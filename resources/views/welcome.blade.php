@@ -4,41 +4,124 @@
 
 <!-- LANDING PAGE -->
 
-
 <!-- Landing Section -->
 <section id="home"
-    class="relative flex flex-col md:flex-row items-center md:items-stretch text-left"
+    class="relative flex flex-col-reverse md:flex-row items-center md:items-stretch text-left"
     style="background-image: url('{{ asset('/assets/images/landimage.jpg') }}');
            background-size: cover;
            background-position: center;
            background-repeat: no-repeat;
            min-height: 100vh;">
- 
+
     <!-- Gradient Overlay -->
     <div class="absolute inset-0 z-10" style="background: linear-gradient(to right, rgba(5, 116, 247, 0.7), rgba(230, 30, 43, 0.7));"></div>
-      
-    <!-- Image Content -->
-    <div class="w-full md:w-5/12 h-[400px] md:h-screen relative z-20">
+
+
+    <!-- APM Image: Bottom on mobile, left on desktop -->
+    <div class="w-full md:w-5/12 relative z-20 overflow-hidden flex-shrink-0">
         <img src="{{ asset('/assets/images/leaders/APM  1.png') }}" alt="Candidate"
-            class="w-full h-full object-cover">
+            class="w-full h-full object-cover hover:scale-105 transform transition-transform duration-300 origin-right">
     </div>
-     
-    <!-- Text Content -->
-    <div class="w-full md:w-7/12 flex items-start justify-start px-6 md:px-6 pt-20 md:pt-32 relative z-20 text-[var(--custom-white)]">
-        <div class="max-w-2xl">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                <span class="text-[var(--theme-color)]">Together</span>, We Can Make a Change We Want to See in the World
-            </h1>
-            <p class="mt-4 text-lg">
-                At the heart of democracy lies the power of the people.
-                By contributing to our mission, you become an essential
-                part of driving positive change, shaping policies, and creating a
-                brighter future for everyone.
-            </p>
+
+    <!-- Carousel Section -->
+    <div class="relative md:w-7/12 w-full overflow-hidden z-20 md:mr-20">
+        <!-- Full-width relative wrapper for positioning buttons -->
+        <div class="relative min-h-[80vh] md:h-[600px]">
+            <!-- Slide 1 -->
+            <div class="absolute inset-0 flex duration-700 ease-in-out" data-carousel-item>
+                <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                            Together, We Can Make a Change we want to see in the World
+                        </h1>
+                        <p class="mt-4 text-lg md:px-12">
+                            At the heart of democracy lies the power of the people.
+                            By contributing to our mission, you become an essential
+                            part of driving positive change in Malawi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="absolute inset-0 flex duration-700 ease-in-out opacity-0" data-carousel-item>
+                <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
+                    <div class="max-w-2xl mx-auto text-center h-full flex items-center">
+                        <img src="{{ asset('/assets/images/image 2.png') }}" 
+                             alt="Join Us Visual"
+                             class="max-h-full max-w-full object-contain">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="absolute inset-0 flex duration-700 ease-in-out opacity-0" data-carousel-item>
+                <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                            The Return to proven Leadership
+                        </h1>
+                        <p class="mt-4 text-lg md:px-12">
+                            From grassroots initiatives to national campaigns, your contribution fuels
+                            real change.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons: pushed away from text -->
+            <button type="button" class="absolute top-1/2 -translate-y-1/2 left-6 md:left-10 z-30 flex items-center justify-center w-14 h-10 bg-white/30 rounded-full hover:bg-white/50 transition-all" data-carousel-prev>
+                ❮
+            </button>
+            <button type="button" class="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 z-30 flex items-center justify-center w-14 h-10 bg-white/30 rounded-full hover:bg-white/50 transition-all" data-carousel-next>
+                ❯
+            </button>
+
+            <!-- Dots Navigation -->
+            <div class="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 space-x-2">
+                <button type="button" class="w-3 h-3 rounded-full bg-white" data-carousel-dot data-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50" data-carousel-dot data-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50" data-carousel-dot data-slide-to="2"></button>
+            </div>
         </div>
     </div>
-     
+
+    <!-- Custom Styles -->
+    <style>
+        [data-carousel-item] {
+            transition: opacity 0.7s ease-in-out;
+        }
+
+        .max-w-2xl {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1rem;
+        }
+    </style>
 </section>
+
+
+<style>
+[data-carousel-item] {
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* Perfect centering */
+.max-w-2xl {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem; /* Adjust as needed */
+}
+
+/* Adjusted button spacing */
+.left-4 {
+  left: 4rem; /* increased from 2rem */
+}
+.right-4 {
+  right: 4rem; /* increased from 2rem */
+}
+</style>
+
 
 
     <!-- END LANDING PAGE -->
@@ -52,7 +135,7 @@
                 <div class="relative flex justify-center overflow-hidden">
                     <!-- Updated Image Source -->
                     <img src="{{ asset('assets/images/peter-1.jpeg') }}" alt="Candidate"
-                        class="w-full sm:w-[28rem] md:w-[32rem] lg:w-[36rem] rounded-lg transform transition-transform duration-1000 ease-out">
+                        class="w-full  sm:w-[28rem] md:w-[32rem] lg:w-[45rem] rounded-lg transform transition-transform duration-1000 ease-out">
 
                     <!-- Overlay -->
                     <div
@@ -63,65 +146,175 @@
                     </div>
                 </div>
 
-                <!-- Goals Section -->
+                            <!-- Goals Section -->
                 <div class="text-left">
-                    <p class="text-4xl font-semibold text-[var(--custom-black)] mt-2" id="about-statement-animation">
-                        Welcome to the Democratic Progressive Party <span class="text-[var(--theme-color)]">(DPP)</span>
-                        <br><span class="text-[var(--theme-color)]">DPP Woyeee!!! Malawi Woyeee!!!</span>
-                    </p>
-                    <p class="text-xl text-[var(--custom-black)] mt-2">
-                        <!-- Add content here if needed -->
-                    </p>
-                    <h3 class="text-2xl font-semibold text-[var(--theme-color)] mt-6">
+                  <h3 class="text-2xl font-semibold text-[var(--theme-color)] mt-6 py-4">
                         Key Agenda:
                     </h3>
+                    <div style="
+                        display: inline-block;
+                        padding: 0.5rem 1rem;
+                        background: linear-gradient(to right, #0574F7, #E61E2B);
+                        border-radius: 30px;
+                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                    ">
+                        <h3 style="
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            color: white;
+                            margin: 0;
+                        ">
+                            Our Pillars for Developement
+                        </h3>
+                    </div>
+                    
+                  
                     <ul class="mt-6 space-y-4 text-lg text-[var(--custom-black)]">
                         <li class="flex items-center" id="agenda-goal-1">
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-[var(--custom-black)] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Quality Education for All
+                            Agricultural Productivity and Commercialization
                         </li>
                         <li class="flex items-center" id="agenda-goal-2">
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-[var(--custom-black)] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Economic Justice & Wealth Redistribution
+                            industrialization
                         </li>
                         <li class="flex items-center" id="agenda-goal-3">
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-[var(--custom-black)] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Nationalization of Key Sectors (Agriculture, Mining, Energy)
+                            Uburnisation
                         </li>
                         <li class="flex items-center" id="agenda-goal-4">
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-[var(--custom-black)] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Investing in Infrastructure to Build Stronger Communities
+                            Decentralisation
                         </li>
-                        <li class="flex items-center" id="agenda-goal-5">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-[var(--custom-black)] font-bold mr-3" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Closing Economic Disparities
-                        </li>
+                     
                     </ul>
+
+                    <hr class="my-6 border-t border-gray-300">
+
+                    {{-- ENABLERS --}}
+
+                        <div style="
+                        display: inline-block;
+                        padding: 0.5rem 1rem;
+                        background: linear-gradient(to right, #0574F7, #E61E2B);
+                        border-radius: 30px;
+                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                    ">
+                        <h3 style="
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            color: white;
+                            margin: 0;
+                        ">
+                            Enablers
+                        </h3>
+                    </div>
+                    
+                  
+                    <ul class="mt-6 space-y-4 text-lg text-[var(--custom-black)]">
+                        <li class="flex items-center" id="agenda-goal-1">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Mindset Change
+                        </li>
+                        <li class="flex items-center" id="agenda-goal-2">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Rule of Law, Governance and Corruption
+                        </li>
+                        <li class="flex items-center" id="agenda-goal-3">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Public Service Perfomance
+                        </li>
+                        <li class="flex items-center" id="agenda-goal-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        Private Sectors, Industry and Trade
+                        </li>
+
+                          <li class="flex items-center" id="agenda-goal-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                       Human Capital Development
+                        </li>
+
+                          <li class="flex items-center" id="agenda-goal-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                       Disadvantaged Persons, Elderly and People with special needs
+                        </li>
+
+                        <li class="flex items-center" id="agenda-goal-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        Environmental Sustainability and Disaster Risk
+                        </li>
+
+                        <li class="flex items-center" id="agenda-goal-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        Non-State Actors:Media, Civil Society & Religious Organisations
+                        </li>
+
+                      <li class="flex items-center" id="agenda-goal-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                       Creative Arts
+                        </li>
+                     
+                    </ul>
+
+
                 </div>
+                
             </div>
         </section>
     </div>
-    
+
     <!-- BECOME A VOLUNTEER -->
     <section class="volunteer-section">
         <div class="overlay"></div>
@@ -130,32 +323,78 @@
             <p class="slide-in highlighted-text">Our party is powered by contributions <span
                     class="text-[var(--theme-color)]">from supporters.</span></p>
 
-            <div class="stats">
-                <div class="stat-item slide-in">
-                    <i class="icon fas fa-users"></i>
-                    <h3><span class="counter" data-target="2500">0</span>+</h3>
-                    <p>Active Volunteers</p>
+            <div class="stats grid grid-cols-2 md:grid-cols-4 gap-">
+                
+                <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
+                    <!-- Icon inside perfectly centered circle -->
+                    <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
+                        <!-- Example using Heroicons (adjust as needed) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+
+                    <div class="px-2">
+                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="2500">0</span>+</h3>
+                        <p class="text-white text-xs">Number of Candidates</p>
+                    </div>
                 </div>
-                <div class="stat-item slide-in">
-                    <i class="icon fas fa-bullhorn"></i>
-                    <h3><span class="counter" data-target="120">0</span>+</h3>
-                    <p>Campaigns</p>
+
+                         <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
+                    <!-- Icon inside perfectly centered circle -->
+                    <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
+                        <!-- Example using Heroicons (adjust as needed) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+
+                    <div class="px-2">
+                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="2500">0</span>+</h3>
+                        <p class="text-white text-xs">Number of Women Candidate</p>
+                    </div>
                 </div>
-                <div class="stat-item slide-in">
-                    <i class="icon fas fa-map-marked-alt"></i>
-                    <h3><span class="counter" data-target="50">0</span>+</h3>
-                    <p>Area Coverage</p>
+
+
+                         <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
+                    <!-- Icon inside perfectly centered circle -->
+                    <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
+                        <!-- Example using Heroicons (adjust as needed) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+
+                    <div class="px-2">
+                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="2500">0</span>+</h3>
+                        <p class="text-white text-xs">Number of Youths</p>
+                    </div>
                 </div>
-                <div class="stat-item slide-in">
-                    <i class="icon fas fa-tasks"></i>
-                    <h3><span class="counter" data-target="300">0</span>+</h3>
-                    <p>Projects Done</p>
-                </div>
+
+
+
+                    <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
+                        <!-- Icon inside perfectly centered circle -->
+                        <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+
+                        <div class="px-2">
+                            <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="2500">0</span>+</h3>
+                            <p class="text-white text-xs">Number of Projects Done</p>
+                        </div>
+                    </div>
+
+
             </div>
         </div>
     </section>
 
-    <!-- FOCUS AREA -->
+
+
+    {{-- <!-- FOCUS AREA -->
     <section class="focus-areas relative py-24 bg-[var(--theme-color)] text-white text-center">
         <p class="text-sm uppercase">Focus Area</p>
         <h2 class="text-4xl font-bold mt-2">How We Plan to Achieve a Better Country</h2>
@@ -193,68 +432,130 @@
                 <p class="mt-2">Directly mentioned under the aims, and reiterated as part of DPP’s mission to ensure dignity, justice, and civil liberties.</p>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <!-- FLOATING CONTAINER WITH IMAGE AND MOTIVATIONAL TEXT -->
-<section class="relative z-10">
-    <div class="container mx-auto px-10">
-        <!-- Parent div for the entire section with customized width and height -->
-        <div class="relative flex flex-col md:flex-row items-center justify-between bg-white text-black rounded-lg shadow-lg mx-auto"
-            style="margin-top: -5%; overflow: hidden;">
-            <!-- Image on the Top for small screens and Left for medium and large screens -->
-            <div class="w-full relative h-full" id="floating-image">
-                <img src="{{ asset('assets/images/rally.jpg') }}" alt="DPP Rally"
-                    class="rounded-lg shadow-md object-cover w-full h-full md:h-[500px]">
-            </div>
-            <!-- Motivational Text & Items on the Right -->
-            <div class="w-full pl-6 text-black text-center md:text-left mt-4 md:mt-0 py-4 px-4 flex flex-col justify-between"
-                id="floating-text">
-                <h3 class="text-3xl font-semibold mb-6">Join the <span class="text-[var(--theme-color)]">Movement</span></h3>
-                
-                <!-- Motivational Items List -->
-                <div class="space-y-4">
-                    <div class="flex items-center justify-center md:justify-start">
-                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
-                        <span class="text-lg font-medium">Unity in Diversity</span>
-                    </div>
-                    
-                    <div class="flex items-center justify-center md:justify-start">
-                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
-                        <span class="text-lg font-medium">Progress Through Partnership</span>
-                    </div>
-                    
-                    <div class="flex items-center justify-center md:justify-start">
-                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
-                        <span class="text-lg font-medium">Democracy for All</span>
-                    </div>
-                    
-                    <div class="flex items-center justify-center md:justify-start">
-                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
-                        <span class="text-lg font-medium">Empowering Communities</span>
-                    </div>
-                    
-                    <div class="flex items-center justify-center md:justify-start">
-                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
-                        <span class="text-lg font-medium">Building Tomorrow</span>
-                    </div>
-                    
-                    <div class="flex items-center justify-center md:justify-start">
-                        <div class="w-2 h-2 bg-[var(--theme-color)] rounded-full mr-3"></div>
-                        <span class="text-lg font-medium">Strength in Numbers</span>
-                    </div>
+
+<section class="focus-areas relative py-24 bg-[#0574F7] text-white text-center">
+    <p class="text-sm uppercase">Focus Area</p>
+    <h2 class="text-4xl font-bold mt-2">How We Plan to Achieve a Better Country</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
+     
+      
+        {{-- Food Security --}}
+       <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row h-full">
+                <!-- Image -->
+                <div class="w-full md:w-1/3 h-48 md:h-auto">
+                    <img src="/assets/images/food security.png" alt="Food Security"
+                        class="w-full h-full object-cover rounded-md">
                 </div>
-                
-                <!-- Call to Action -->
-                <div class="mt-6 pt-4 border-t border-gray-200">
-                    <p class="text-base text-gray-600 italic">Together we stand, together we thrive</p>
+
+                <!-- Content -->
+                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
+                    <h3 class="text-xl text-white font-semibold mb-2">Food Security</h3>
+                    <p class="text-sm text-white">
+                        We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.
+                    </p>
                 </div>
             </div>
         </div>
+
+        {{-- Economic growth--}}
+        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row h-full">
+                
+                <!-- Image -->
+                <div class="w-full md:w-1/3 h-48 md:h-auto">
+                    <img src="/assets/images/economic.png" alt="Economic Growth"
+                        class="w-full h-full object-cover rounded-md">
+                </div>
+
+                <!-- Content -->
+                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
+                    <h3 class="text-xl text-white font-semibold mb-2">Economic Growth & Wealth Creation</h3>
+                    <p class="text-sm text-white">
+                        Discussed under vision, mission, and aims. Focuses on job creation, macroeconomic growth, industrialization, export production, and reducing poverty.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        {{-- infrastructure development --}}
+        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row h-full">
+
+                <!-- Image -->
+                <div class="w-full md:w-1/3 h-48 md:h-auto">
+                    <img src="/assets/images/infrastructure.jpg" alt="Infrastructure Development"
+                        class="w-full h-full object-cover rounded-md">
+                </div>
+
+                <!-- Content -->
+                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
+                    <h3 class="text-xl text-white font-semibold mb-2">Infrastructure Development</h3>
+                    <p class="text-sm text-white">
+                        We’re building tomorrow — roads, bridges, schools, and power systems that connect people, fuel businesses, and drive Malawi into the future with lasting progress.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        {{-- unity and peace --}}
+
+        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row h-full">
+
+                <!-- Image -->
+                <div class="w-full md:w-1/3 h-48 md:h-auto">
+                    <img src="/assets/images/unity-peace.jpg" alt="Unity and Peace"
+                        class="w-full h-full object-cover rounded-md">
+                </div>
+
+                <!-- Content -->
+                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
+                    <h3 class="text-xl text-white font-semibold mb-2">Unity and Peace</h3>
+                    <p class="text-sm text-white">
+                        We believe progress begins with unity. Across tribes, beliefs, and regions — we stand together in peace to shape a stable, inclusive, and forward-moving Malawi.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        {{-- human rights and rule of law --}}
+
+        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row h-full">
+
+                <!-- Image -->
+                <div class="w-full md:w-1/3 h-48 md:h-auto">
+                    <img src="/assets/images/human-rights.jpg" alt="Human Rights and Rule of Law"
+                        class="w-full h-full object-cover rounded-md">
+                </div>
+
+                <!-- Content -->
+                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
+                    <h3 class="text-xl text-white font-semibold mb-2">Human Rights & Rule of Law</h3>
+                    <p class="text-sm text-white">
+                        Justice and dignity for every citizen. We uphold freedoms, protect the vulnerable, and enforce the rule of law so that every Malawian lives with respect and fairness.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+      
     </div>
 </section>
 
-    <!-- DPP Leaders -->
+
+    {{-- <!-- DPP Leaders -->
     <section class="py-10 bg-gray text-center">
         <p class="text-lg text-[var(--theme-color)] mt-2">Meet Our Leaders</p>
 
@@ -272,9 +573,9 @@
                 </div>
             @endforeach
         </div>
-    </section>
+    </section> --}}
 
-    {{-- music section --}}
+    {{-- music section
     <section class="py-10 bg-white px-10">
         <div class="py-4 flex flex-col items-center justify-center text-center h-full">
             <h2 class="text-md text-[var(--theme-color)] font-bold" id="music-title">DPP Music Vibes</h2>
@@ -314,11 +615,113 @@
             </div>
         </div>
     </section>
-    <div class="w-full" id="history-container"></div>
+    
+    <!-- END MUSIC SECTION --> --}}
+
+<div class="w-full" id="history-container"></div>
+<div class="w-full" style="background: linear-gradient(135deg, #0574F7 0%, #E61E2B 100%);">
+  <div class="flex flex-col md:flex-row items-stretch w-full">
+    
+    <!-- First Image (APM 1) - On desktop: Left | On mobile: Bottom -->
+    <div class="w-full order-2 md:order-1 md:w-1/2 overflow-hidden rounded-r-xl md:rounded-xl">
+      <img src="{{ asset('/assets/images/leaders/APM  1.png') }}"
+           alt="DPP Mission Image"
+           class="w-full h-full min-h-[200px] md:min-h-[300px] object-cover transition-transform hover:scale-105 duration-500">
+    </div>
+
+    <!-- Second Image (APM Vote) - On desktop: Right | On mobile: Top (shadow removed on mobile) -->
+    <div class="w-full order-1 md:order-2 md:w-2/5 md:ml-6 mt-6 md:mt-0 overflow-hidden rounded-xl md:shadow-2xl flex items-center justify-center">
+      <img src="{{ asset('/assets/images/APM_vote.png') }}" 
+           alt="Malawi Development Image"
+           class="max-w-[500px] w-full h-auto object-contain mx-auto transition-transform hover:scale-105 duration-500  !h-[350px] md:!h-auto">
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
 @endsection
 
 
 @push('scripts')
+
+{{-- Landing page script --}}
+<script>
+// Same JavaScript as before
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('[data-carousel-item]');
+  const dots = document.querySelectorAll('[data-carousel-dot]');
+  const prevButton = document.querySelector('[data-carousel-prev]');
+  const nextButton = document.querySelector('[data-carousel-next]');
+  
+  let currentIndex = 0;
+  let intervalId;
+
+  function showSlide(index) {
+    items.forEach((item, i) => {
+      item.classList.toggle('opacity-0', i !== index);
+      item.classList.toggle('z-10', i === index);
+    });
+    
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-white/50', i !== index);
+      dot.classList.toggle('bg-white', i === index);
+    });
+    
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    showSlide((currentIndex + 1) % items.length);
+  }
+
+  function prevSlide() {
+    showSlide((currentIndex - 1 + items.length) % items.length);
+  }
+
+  function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 10000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(intervalId);
+  }
+
+  // Event Listeners
+  nextButton.addEventListener('click', () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  prevButton.addEventListener('click', () => {
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      stopAutoSlide();
+      showSlide(parseInt(dot.getAttribute('data-slide-to')));
+      startAutoSlide();
+    });
+  });
+
+  // Initialize
+  showSlide(0);
+  startAutoSlide();
+
+  // Pause on hover
+  const carousel = document.querySelector('[data-carousel]');
+  carousel.addEventListener('mouseenter', stopAutoSlide);
+  carousel.addEventListener('mouseleave', startAutoSlide);
+});
+</script>
+{{-- end of landing page --}}
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Register GSAP plugins
