@@ -4,6 +4,13 @@
 // 🎼 Function to Load Songs
 function loadMusicList() {
     const musicListContainer = document.getElementById("musicList");
+    
+    // Check if music list container exists
+    if (!musicListContainer) {
+        // Music list container not found - this is normal if using the new music component
+        return;
+    }
+    
     musicListContainer.innerHTML = ""; // Clear previous content
 
     songs.forEach((song, index) => {
