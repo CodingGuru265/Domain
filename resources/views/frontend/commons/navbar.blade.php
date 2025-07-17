@@ -24,7 +24,7 @@
           {{-- <li class="relative group">
                 <a href="#" class="nav-link">Manifesto</a>
                 <ul
-                    class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[230px]">
+                    class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[280px]">
                     <li class="relative group/manifesto">
                         <a href="#"
                             class="block px-4 py-2 flex items-center justify-between hover:bg-[var(--theme-color)]"
@@ -42,134 +42,129 @@
                     </li>
                 </ul>
             </li> --}}
-            
-
-
-       
-
-
+        
             {{-- start manifesto --}}
             <li class="relative group">
                 <a href="#" class="nav-link">Manifesto</a>
-                <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[260px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px] max-h-[80vh] overflow-y-auto scrollbar-transparent">
+                <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[280px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
                     
                     <li class="relative group/chapter4">
-                        <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
+                        <a href="#" class="block px-3 py-2 flex items-center justify-between hover:bg-[var(--theme-color)] rounded">
                             Pillars of Development 
-                            <span class="ml-2 transform group-hover/chapter4:rotate-90 transition-all duration-300">
+                            <span class="ml-2 transform group-hover/chapter4:rotate-0 transition-all duration-300">
                                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                 </svg>
                             </span>
                         </a>
-                        <ul class="absolute left-0 top-full w-full opacity-0 invisible group-hover/chapter4:opacity-100 group-hover/chapter4:visible bg-[var(--nav-bg-color)] text-white p-2 rounded-md shadow-lg space-y-1 z-50 transition-all duration-200 ease-in-out transform group-hover/chapter4:translate-y-0 translate-y-[-10px] max-h-[50vh] overflow-y-auto scrollbar-transparent">
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Agricultural productivity</a></li>
-                            
-                            <li class="relative group/industrial">
-                                <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
-                                    Industrialisation 
-                                    <span class="ml-2 transform group-hover/industrial:rotate-90 transition-all duration-300">
-                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        
+                        <!-- Enhanced popup for Pillars of Development -->
+                        <div class="submenu-right absolute opacity-0 invisible group-hover/chapter4:opacity-100 group-hover/chapter4:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[380px] transition-all duration-200 ease-in-out transform group-hover/chapter4:translate-y-0 translate-y-[-10px]">
+                            <div class="space-y-2 text-sm">
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Agricultural productivity</strong>
+                                </div>
+                                
+                                <div class="relative group/industrial">
+                                    <div class="popup-item p-1 rounded flex items-center justify-between cursor-pointer">
+                                        <strong>Industrialisation</strong>
+                                        <svg class="w-3 h-3 transform group-hover/industrial:rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                         </svg>
-                                    </span>
-                                </a>
-                                <ul class="absolute left-full top-0 w-full opacity-0 invisible group-hover/industrial:opacity-100 group-hover/industrial:visible bg-[var(--nav-bg-color)] text-white p-2 rounded-md shadow-lg space-y-1 z-[60] transition-all duration-200 ease-in-out transform group-hover/industrial:translate-y-0 translate-y-[-10px] max-h-[40vh] overflow-y-auto scrollbar-transparent">
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Mining</a></li>
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Transport infrastructure</a></li>
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Energy</a></li>
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">ICT and artificial intelligence</a></li>
-                                </ul>
-                            </li>
-                            
-                            <li class="relative group/urban">
-                                <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
-                                    Urbanisation 
-                                    <span class="ml-2 transform group-hover/urban:rotate-90 transition-all duration-300">
-                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    </div>
+                                    <!-- Nested submenu for Industrialisation -->
+                                    <div class="submenu-right absolute opacity-0 invisible group-hover/industrial:opacity-100 group-hover/industrial:visible popup-content text-white p-3 rounded-md shadow-lg z-80 w-[320px] transition-all duration-200 ease-in-out transform group-hover/industrial:translate-y-0 translate-y-[-10px]">
+                                        <div class="space-y-1 text-xs">
+                                            <div class="popup-item p-2 rounded">Mining</div>
+                                            <div class="popup-item p-2 rounded">Transport infrastructure</div>
+                                            <div class="popup-item p-2 rounded">Energy</div>
+                                            <div class="popup-item p-2 rounded">ICT and artificial intelligence</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative group/urban">
+                                    <div class="popup-item p-1 rounded flex items-center justify-between cursor-pointer">
+                                        <strong>Urbanisation</strong>
+                                        <svg class="w-3 h-3 transform group-hover/urban:rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                         </svg>
-                                    </span>
-                                </a>
-                                <ul class="absolute left-full top-0 w-full opacity-0 invisible group-hover/urban:opacity-100 group-hover/urban:visible bg-[var(--nav-bg-color)] text-white p-2 rounded-md shadow-lg space-y-1 z-[60] transition-all duration-200 ease-in-out transform group-hover/urban:translate-y-0 translate-y-[-10px] max-h-[40vh] overflow-y-auto scrollbar-transparent">
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Tourism</a></li>
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Creation of secondary cities</a></li>
-                                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Land, housing and water services</a></li>
-                                </ul>
-                            </li>
-                            
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Decentralisation</a></li>
-                        </ul>
+                                    </div>
+                                    <!-- Nested submenu for Urbanisation -->
+                                    <div class="submenu-right absolute opacity-0 invisible group-hover/urban:opacity-100 group-hover/urban:visible popup-content text-white p-3 rounded-md shadow-lg z-80 w-[280px] transition-all duration-200 ease-in-out transform group-hover/urban:translate-y-0 translate-y-[-10px]">
+                                        <div class="space-y-1 text-xs">
+                                            <div class="popup-item p-2 rounded">Tourism</div>
+                                            <div class="popup-item p-2 rounded">Creation of secondary cities</div>
+                                            <div class="popup-item p-2 rounded">Land, housing and water services</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Decentralisation</strong>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     
                     <li class="relative group/chapter5">
-                        <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
+                        <a href="#" class="block px-3 py-1 flex items-center justify-between hover:bg-[var(--theme-color)] rounded">
                             Enablers 
-                            <span class="ml-2 transform group-hover/chapter5:rotate-90 transition-all duration-300">
+                            <span class="ml-2 transform group-hover/chapter5:rotate-0 transition-all duration-300">
                                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                 </svg>
                             </span>
                         </a>
-                        <ul class="absolute left-full top-0 w-full opacity-0 invisible group-hover/chapter5:opacity-100 group-hover/chapter5:visible bg-[var(--nav-bg-color)] text-white p-2 rounded-md shadow-lg space-y-1 z-[60] transition-all duration-200 ease-in-out transform group-hover/chapter5:translate-y-0 translate-y-[-10px] max-h-[50vh] overflow-y-auto scrollbar-transparent">
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Mindset change</a></li>
-                            
-                            <li class="relative group/governance">
-                                <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
-                                    Rule of law, governance and corruption 
-                                    <span class="ml-2 transform group-hover/governance:rotate-90 transition-all duration-300">
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Public service performance</a></li>
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Private sector, industry and trade</a></li>
-                            
-                            <li class="relative group/human">
-                                <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
-                                    Human capital development 
-                                    <span class="ml-2 transform group-hover/human:rotate-90 transition-all duration-300">
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            <li class="relative group/environment">
-                                <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)]">
-                                    Environmental sustainability and disaster risk management 
-                                    <span class="ml-2 transform group-hover/environment:rotate-90 transition-all duration-300">
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Non-state actors: Media, civil society & religious organisations</a></li>
-                            <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Creative arts</a></li>
-                        </ul>
+                        
+                        <!-- Enhanced popup for Enablers -->
+                        <div class="submenu-right absolute opacity-0 invisible group-hover/chapter5:opacity-100 group-hover/chapter5:visible popup-content text-white p-1 rounded-md shadow-lg z-60 w-[420px] transition-all duration-200 ease-in-out transform group-hover/chapter5:translate-y-0 translate-y-[-10px]">
+                            <div class="space-y-1 text-sm">
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Mindset change</strong>
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Rule of law, governance and corruption</strong>
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Public service performance</strong>
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Private sector, industry and trade</strong> 
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Human capital development</strong> 
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Environmental sustainability and disaster risk management</strong>
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Non-state actors</strong> 
+                                </div>
+                                
+                                <div class="popup-item p-1 rounded">
+                                    <strong>Creative arts</strong>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     
-                    <li><a href="#" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Full Manifesto</a></li>
+                    <li class="border-t border-gray-600 pt-2 mt-2">
+                        <a href="#" class="block px-3 py-1 hover:bg-[var(--theme-color)] rounded font-semibold">
+                            2025 Full Manifesto
+                        </a>
+                    </li>
                 </ul>
             </li>
 
             <style>
-                /* Custom scrollbar - completely invisible until hover */
-                .scrollbar-transparent {
-                    scrollbar-width: thin;
-                    scrollbar-color: transparent transparent;
-                }
-                .scrollbar-transparent:hover {
-                    scrollbar-color: rgba(255,255,255,0.15) transparent;
-                }
-                .scrollbar-transparent::-webkit-scrollbar {
-                    width: 6px;
-                    background: transparent;
-                }
-                .scrollbar-transparent::-webkit-scrollbar-thumb {
-                    background: transparent;
-                    border-radius: 3px;
-                }
-                .scrollbar-transparent:hover::-webkit-scrollbar-thumb {
-                    background: rgba(255,255,255,0.15);
-                }
+
                 
                 /* Enhanced dropdown positioning */
                 .group\/industrial:hover .group-hover\/industrial\:left-full {
@@ -188,6 +183,36 @@
                 .z-\[60\] {
                     z-index: 60;
                 }
+                
+                /* Enhanced popup styling */
+                .popup-content {
+                    background: linear-gradient(135deg,rgba(118, 73, 145, 0.7) 0%,rgba(118, 73, 145, 0.7) 100%);
+                    border: 1px solid rgba(230, 30, 43, 0.2);
+                    box-shadow: 0 10px 30px rgba(213, 22, 22, 0.3);
+                }
+
+                .popup-title {
+                    color: var(--theme-color);
+                    border-bottom: 1px solid rgba(230, 30, 43, 0.2);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                }
+
+                .popup-item {
+                    transition: all 0.2s ease;
+                    border-left: 2px solid transparent;
+                }
+
+                .popup-item:hover {
+                    background: rgba(230, 30, 43, 0.1);
+                    border-left-color: var(--theme-color);
+                }
+                
+                /* Enhanced dropdown positioning for right-side submenus */
+                .submenu-right {
+                    left: calc(100% + 8px);
+                    top: 0;
+                }
             </style>
 
 
@@ -198,35 +223,42 @@
 
 
             <li class="relative group">
-            <a href="#" class="nav-link block px-4 py-2">Playlist</a>
-            <ul class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[150px]">
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-4 py-2">Songs</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('videos') }}" class="block px-4 py-2">Videos</a></li>
-            </ul>
-        </li>
+                <a href="#" class="nav-link">Playlist</a>
+                <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[200px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
+                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">Songs</a></li>
+                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('videos') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">Videos</a></li>
+                </ul>
+            </li>
 
         
 
         {{-- ARCHIVES --}}
         <li class="relative group">
             <a href="#" class="nav-link">Archives</a>
-            <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-auto min-w-[240px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
+            <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[280px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
                 
-                {{-- <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">APM</a></li> --}}
-
                 <!-- Previous Manifestos Dropdown -->
                 <li class="relative group/manifestos">
-                    <a href="#" class="block px-3 py-1.5 flex items-center justify-between hover:bg-[var(--theme-color)] whitespace-nowrap">
+                    <a href="#" class="block px-3 py-2 flex items-center justify-between hover:bg-[var(--theme-color)] rounded">
                         Previous Manifestos
-                        <span class="ml-2 transform group-hover/manifestos:rotate-90 transition-all duration-300">
+                        <span class="ml-2 transform group-hover/manifestos:rotate-0 transition-all duration-300">
                             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                             </svg>
                         </span>
                     </a>
-                    <ul class="absolute left-0 top-full w-full opacity-0 invisible group-hover/manifestos:opacity-100 group-hover/manifestos:visible bg-[var(--nav-bg-color)] text-white p-2 rounded-md shadow-lg space-y-1 z-50 transition-all duration-200 ease-in-out transform group-hover/manifestos:translate-y-0 translate-y-[-10px]">
-                        <li><a href="{{ route('loading-screen') }}?redirect={{ route('manifesto2019') }}" class="block px-3 py-1.5 hover:bg-[var(--theme-color)]">Manifesto 2019</a></li>
-                    </ul>
+                    
+                    <!-- Enhanced popup for Previous Manifestos -->
+                    <div class="submenu-right absolute opacity-0 invisible group-hover/manifestos:opacity-100 group-hover/manifestos:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[320px] transition-all duration-200 ease-in-out transform group-hover/manifestos:translate-y-0 translate-y-[-10px]">
+                        <h3 class="popup-title pb-2 mb-3">Previous Manifestos</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="popup-item p-2 rounded">
+                                <a href="{{ route('loading-screen') }}?redirect={{ route('manifesto2019') }}" class="block">
+                                    <strong>Manifesto 2019</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </li>
@@ -234,11 +266,9 @@
         {{-- ABOUT --}}
         <li class="relative group">
             <a href="#" class="nav-link">About</a>
-            <ul
-                class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[150px]">
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block px-4 py-2">DPP</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}"class="block px-4 py-2">APM</a></li>
-            
+            <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[200px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">DPP</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">APM</a></li>
             </ul>
         </li>
 
@@ -385,7 +415,7 @@
     <li>
         <a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
            class="block bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-2 px-6 rounded-full text-center">
-           Donate to Party
+           Donate
         </a>
     </li>
 

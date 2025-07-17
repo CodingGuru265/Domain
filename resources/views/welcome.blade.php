@@ -129,8 +129,8 @@
     <!-- ABOUT SECTION -->
 
     <div class="main-content">
-        <section id="about-section" class="w-full flex items-start py-16 px-10 bg-[var(--custom-white)]">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-auto h-auto">
+        <section id="about-section" class="w-full flex items-start py-5 px-10 bg-[var(--custom-white)]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-auto h-auto">
               <!-- Image Section -->
                 <div class="relative flex justify-center overflow-hidden max-w-[700px] w-full mx-auto">
                     <img src="{{ asset('assets/images/peter-1.jpeg') }}" alt="Candidate"
@@ -293,7 +293,7 @@
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                        Non-State Actors:Media, Civil Society & Religious Organisations
+                            Non-State Actors:Media, Civil Society & Religious Organisations
                         </li>
 
                       <li class="flex items-center" id="agenda-goal-4">
@@ -359,7 +359,7 @@
             <p class="slide-in highlighted-text">Our party is powered by contributions <span
                     class="text-[var(--theme-color)]">from supporters.</span></p>
 
-            <div class="stats grid grid-cols-2 md:grid-cols-4 gap-">
+            <div class="stats flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
                 
                 <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
 
@@ -371,8 +371,8 @@
                     </div>
 
                     <div class="px-2">
-                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="2500">0</span>+</h3>
-                        <p class="text-white text-xs">Number of Candidates</p>
+                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="222">0</span>+</h3>
+                        <p class="text-white text-xs">Number of Shadow Mps</p>
                     </div>
                 </div>
 
@@ -504,9 +504,8 @@
 
     
     {{-- FOCUS AREAS  --}}
-<section class="focus-areas relative bg-white py-8  text-white text-center">
-
-    <h2 class="text-4xl dpp_blue font-bold mt-2">Focus Area</h2>
+<section class="focus-areas relative py-5 bg-[#0574F7] text-white text-center">
+    <h2 class="text-4xl font-bold mt-2">Focus Area</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
      
@@ -656,7 +655,7 @@
     </section> --}}
 
     {{-- music section
-    <section class="py-10 bg-white px-10">
+    <section class="py-5 bg-white px-10">
         <div class="py-4 flex flex-col items-center justify-center text-center h-full">
             <h2 class="text-md text-[var(--theme-color)] font-bold" id="music-title">DPP Music Vibes</h2>
             <p class="text-lg text-[var(--custom-black)] mt-2" id="music-subtitle">
