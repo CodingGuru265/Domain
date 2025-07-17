@@ -427,77 +427,96 @@
 
 
     <div class="dpp_background"  >
-        <div class="pt-10 pb-20 ">
+        <div class="pt-10 pb-10 ">
             <!--h1 class="text-center font-extralight text-white text-4xl md:text-3xl mb-8">Focus Areas</h1-->
             <h1 class="text-center font-bold text-white text-4xl md:text-4xl">How We Plan to Achieve a Better Country</h1>
-            <div class="grid grid-cols-1 md:grid-cols-3 mt-8 gaps-4 gap-4 p-4">
-                <div class="bg-white m-8 md:m-12 rounded-2xl">
-                    <div class="grid grid-cols-5">
-                        <div class="col-span-2">
-                            <img class="p-2" src="assets/images/healthcare.png" />
-                        </div>
-                        <div class="col-span-3 pt-10 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Healthcare</h1>
-                            <h4>Ensuring accessible and quality healthcare for all.</h4>
-                        </div>
+                <div class="grid grid-cols-3 gap-8 mx-8 md:mx-12 my-8">
+                      <!-- Reusable card component -->
+                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img class="p-2 max-w-full h-auto" src="assets/images/healthcare.png" alt="healthcare" />
+                    </div>
+                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                        <h1 class="font-bold text-2xl text-center text-dpp_blue">Healthcare</h1>
+                        <h4 class="mt-2 text-gray-700 text-center">
+                            Ensuring accessible and quality healthcare for all.
+                        </h4>
+                    </div>
                     </div>
                 </div>
-                <div class="bg-white m-8 md:m-12 rounded-2xl">
-                    <div class="grid grid-cols-5">
-                        <div class="col-span-2">
-                            <img class="p-2" src="assets/images/education.png" />
-                        </div>
-                        <div class="col-span-3 pt-10 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Education</h1>
-                            <h4>Widening access to education for all, with special emphasis on girls and people with disabilities</h4>
-                        </div>
+                <!-- Reusable card component -->
+                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img class="p-2 max-w-full h-auto" src="assets/images/education.png" alt="Education" />
+                    </div>
+                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                        <h1 class="font-bold text-2xl text-center text-dpp_blue">Education</h1>
+                        <h4 class="mt-2 text-gray-700 text-center">
+                        Widening access to education for all, with special emphasis on girls and people with disabilities.
+                        </h4>
+                    </div>
                     </div>
                 </div>
-                <div class="bg-white m-8 md:m-12 rounded-2xl">
-                    <div class="grid grid-cols-5">
-                        <div class="col-span-2">
-                            <img class="p-2" src="assets/images/agriculture.png" />
-                        </div>
-                        <div class="col-span-3 pt-10 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Agriculture</h1>
-                            <h4>Ensuring accessible and quality healthcare for all.</h4>
-                        </div>
+
+                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img class="p-2 max-w-full h-auto" src="assets/images/agriculture.png" alt="Agriculture" />
+                    </div>
+                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                        <h1 class="font-bold text-2xl text-center text-dpp_blue">Agriculture</h1>
+                        <h4 class="mt-2 text-gray-700 text-center">
+                        Transforming agriculture into a modern, diversified, and resilient sector to increase productivity and improve rural livelihoods.
+                        </h4>
+                    </div>
                     </div>
                 </div>
-                <div class="bg-white mx-8 mb-10 md:mb-0 md:mx-12 rounded-2xl">
-                    <div class="grid grid-cols-5">
-                        <div class="col-span-2">
-                            <img class="p-2" src="assets/images/tourism.png" />
-                        </div>
-                        <div class="col-span-3 pt-8 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Tourism</h1>
-                            <h4>Making sure that Malawi produces enough food for her citizens and the region at large</h4>
-                        </div>
+
+                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img class="p-2 max-w-full h-auto" src="assets/images/tourism.png" alt="Tourism" />
+                    </div>
+                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                        <h1 class="font-bold text-2xl text-center text-dpp_blue">Tourism</h1>
+                        <h4 class="mt-2 text-gray-700 text-center">
+                        Promoting Malawi as a unique travel destination, with emphasis on cultural heritage, natural beauty, and community-based tourism.
+                        </h4>
+                    </div>
                     </div>
                 </div>
-                <div class="bg-white mx-8 mb-10 md:mb-0 md:mx-12 rounded-2xl">
-                    <div class="grid grid-cols-5">
-                        <div class="col-span-2">
-                            <img class="p-2" src="assets/images/economy.png" />
-                        </div>
-                        <div class="col-span-3 pt-10 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Economy</h1>
-                            <h4>Building a strong economy that supports robust social development and promote entrepreneurial activities</h4>
-                        </div>
+
+                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img class="p-2 max-w-full h-auto" src="assets/images/economy.png" alt="Economy" />
+                    </div>
+                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                        <h1 class="font-bold text-2xl text-center text-dpp_blue">Economy</h1>
+                        <h4 class="mt-2 text-gray-700 text-center">
+                        Building a strong economy that supports robust social development and promotes entrepreneurial activities.
+                        </h4>
+                    </div>
                     </div>
                 </div>
-                <div class="bg-white mx-8 mb-0 md:mb-0 md:mx-12 rounded-2xl">
-                    <div class="grid grid-cols-5">
-                        <div class="col-span-2">
-                            <img class="p-2" src="assets/images/healthcare.png" />
-                        </div>
-                        <div class="col-span-3 pt-10 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">ICT and AI</h1>
-                            <h4>Ensuring accessible and quality healthcare for all.</h4>
-                        </div>
+
+                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img class="p-2 max-w-full h-auto" src="assets/images/healthcare.png" alt="Healthcare" />
+                    </div>
+                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                        <h1 class="font-bold text-2xl text-center text-dpp_blue">ICT and AI</h1>
+                        <h4 class="mt-2 text-gray-700 text-center">
+                        Promoting inclusive access to digital technologies and AI, with emphasis on innovation, skills development, and locally driven solutions.
+                        </h4>
+                    </div>
                     </div>
                 </div>
-            </div>
+                </div>
+
         </div>
     </div>
     
