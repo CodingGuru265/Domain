@@ -430,9 +430,9 @@
         <div class="pt-10 pb-10 ">
             <!--h1 class="text-center font-extralight text-white text-4xl md:text-3xl mb-8">Focus Areas</h1-->
             <h1 class="text-center font-bold text-white text-4xl md:text-4xl">How We Plan to Achieve a Better Country</h1>
-                <div class="grid grid-cols-3 gap-8 mx-8 md:mx-12 my-8">
+                <div class="grid grid-cols-3 gap-4 mx-8 md:mx-12 my-8">
                       <!-- Reusable card component -->
-                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md ml-6 mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="assets/images/healthcare.png" alt="healthcare" />
@@ -446,10 +446,10 @@
                     </div>
                 </div>
                 <!-- Reusable card component -->
-                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md mr-4  p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/education.png" alt="Education" />
+                        <img class="p-2 max-w-full h-auto" src="assets/images/must_2.png" alt="Education" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Education</h1>
@@ -460,7 +460,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="assets/images/agriculture.png" alt="Agriculture" />
@@ -474,7 +474,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md p-4 ml-6 mr-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="assets/images/tourism.png" alt="Tourism" />
@@ -488,10 +488,10 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/economy.png" alt="Economy" />
+                        <img class="p-2 max-w-full h-auto" src="assets/images/rbm.png" alt="Economy" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Economy</h1>
@@ -502,10 +502,10 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/healthcare.png" alt="Healthcare" />
+                        <img class="p-2 max-w-full h-auto" src="assets/images/ai.png" alt="Healthcare" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">ICT and AI</h1>
