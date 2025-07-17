@@ -415,7 +415,7 @@
     <li>
         <a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
            class="block bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-2 px-6 rounded-full text-center">
-           Donate to Party
+           Donate
         </a>
     </li>
 

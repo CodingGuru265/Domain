@@ -73,7 +73,7 @@
         <!-- Donate -->
         <div class="mt-6">
             <button onclick="window.location.href='{{ route('donate') }}'" class="w-full bg-[var(--theme-color)] text-white py-2 rounded">
-                Donate to a Party
+                Donate
             </button>
         </div>
     </div>
