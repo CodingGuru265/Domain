@@ -65,9 +65,7 @@
                     <button id="fullscreen-btn" class="px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
                         <i class="fas fa-expand mr-2"></i>Fullscreen
                     </button>
-                    <button id="test-videos-btn" class="px-6 py-2 bg-yellow-500/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-yellow-500/30 transition-all duration-300 transform hover:scale-105">
-                        <i class="fas fa-bug mr-2"></i>Test Videos
-                    </button>
+
                 </div>
             </div>
         </div>
@@ -112,9 +110,9 @@
                         
                         <!-- Enhanced Video Player -->
                         <div class="flex flex-col lg:flex-row items-center gap-8">
-                            <div class="flex-1">
+                                                            <div class="flex-1">
                                 <div class="relative group/video">
-                                    <video controls class="w-full rounded-2xl shadow-2xl bg-black" 
+                                    <video controls class="w-full rounded-2xl shadow-2xl bg-black custom-video-player" 
                                            poster="{{ asset('assets/images/videos/thumbnail.png') }}"
                                            preload="metadata"
                                            crossorigin="anonymous">
@@ -123,7 +121,7 @@
                                     </video>
                                     
                                     <!-- Video Overlay -->
-                                    <div class="absolute inset-0 bg-black/20 rounded-2xl opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div class="absolute inset-0 bg-black/20 rounded-2xl opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer video-overlay">
                                         <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                                             <i class="fas fa-play text-white text-2xl"></i>
                                         </div>
@@ -132,6 +130,30 @@
                                     <!-- Video Duration Badge -->
                                     <div class="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-full px-3 py-1">
                                         <span class="text-white text-sm font-medium">HD</span>
+                                    </div>
+                                    
+                                    <!-- Custom Video Controls -->
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl custom-video-controls opacity-0 group-hover/video:opacity-100 transition-opacity duration-300">
+                                        <!-- Custom Progress Bar -->
+                                        <div class="relative mb-3 cursor-pointer" title="Click to seek">
+                                            <div class="bg-white/30 rounded-full h-2 overflow-hidden">
+                                                <div class="video-progress-bar h-2 rounded-full transition-all duration-300 relative" style="width: 0%; background: linear-gradient(to right, #0574F7, #E61E2B);">
+                                                    <div class="absolute inset-0 bg-white/30 animate-pulse"></div>
+                                                </div>
+                                            </div>
+                                            <input type="range" 
+                                                   class="absolute inset-0 w-full h-2 opacity-0 cursor-pointer z-10" 
+                                                   min="0" 
+                                                   max="100" 
+                                                   value="0"
+                                                   step="0.1">
+                                        </div>
+                                        
+                                        <!-- Time Display -->
+                                        <div class="flex items-center justify-between text-white text-sm">
+                                            <span class="video-current-time">0:00</span>
+                                            <span class="video-duration">0:00</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -144,16 +166,20 @@
                                 <!-- Video Stats -->
                                 <div class="flex items-center justify-center lg:justify-start space-x-6 mb-6">
                                     <div class="text-center">
-                                        <div class="text-2xl font-bold text-white">{{ $videoStats[$video]['views'] ?? 0 }}</div>
+                                        <div class="text-2xl font-bold text-white video-views" data-filename="{{ $video }}">{{ $videoStats[$video]['views'] ?? 0 }}</div>
                                         <div class="text-xs text-gray-300">Views</div>
                                     </div>
                                     <div class="text-center">
-                                        <div class="text-2xl font-bold text-white">{{ $videoStats[$video]['downloads'] ?? 0 }}</div>
+                                        <div class="text-2xl font-bold text-white video-downloads" data-filename="{{ $video }}">{{ $videoStats[$video]['downloads'] ?? 0 }}</div>
                                         <div class="text-xs text-gray-300">Downloads</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="text-2xl font-bold text-white">{{ rand(15, 25) }} MB</div>
                                         <div class="text-xs text-gray-300">Size</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-yellow-300 video-status" data-filename="{{ $video }}">Ready</div>
+                                        <div class="text-xs text-gray-300">Status</div>
                                     </div>
                                 </div>
                                 
@@ -163,7 +189,7 @@
                                         <i class="fas fa-download mr-2"></i>
                                         Download
                                     </a>
-                                    <button class="share-btn inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
+                                    <button class="share-btn inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20" data-video-title="{{ pathinfo($video, PATHINFO_FILENAME) }}" data-video-artist="Sendera Sisters">
                                         <i class="fas fa-share mr-2"></i>
                                         Share
                                     </button>
@@ -410,6 +436,15 @@
                 console.log('Play All button clicked');
                 const firstVideo = document.querySelector('video');
                 if (firstVideo) {
+                    console.log('First video details:', {
+                        src: firstVideo.querySelector('source')?.src,
+                        readyState: firstVideo.readyState,
+                        networkState: firstVideo.networkState,
+                        paused: firstVideo.paused,
+                        ended: firstVideo.ended,
+                        error: firstVideo.error
+                    });
+                    
                     firstVideo.play().then(() => {
                         console.log('First video started playing');
                         currentPlayingVideo = firstVideo;
@@ -435,62 +470,7 @@
                 }
             });
             
-            // Test functionality
-            document.getElementById('test-videos-btn').addEventListener('click', function() {
-                console.log('=== VIDEO TEST ===');
-                const videos = document.querySelectorAll('video');
-                console.log('Total videos found:', videos.length);
-                
-                // Test browser video support
-                console.log('Browser video support:', {
-                    canPlayMP4: document.createElement('video').canPlayType('video/mp4'),
-                    canPlayWebM: document.createElement('video').canPlayType('video/webm'),
-                    canPlayOGG: document.createElement('video').canPlayType('video/ogg')
-                });
-                
-                videos.forEach((video, index) => {
-                    const source = video.querySelector('source');
-                    console.log(`Video ${index + 1}:`, {
-                        src: source ? source.src : 'No source',
-                        readyState: video.readyState,
-                        networkState: video.networkState,
-                        duration: video.duration,
-                        currentTime: video.currentTime,
-                        paused: video.paused,
-                        ended: video.ended,
-                        error: video.error
-                    });
-                    
-                    // Test if video can be loaded
-                    if (source) {
-                        video.addEventListener('canplay', function() {
-                            console.log(`Video ${index + 1} can play`);
-                        });
-                        
-                        video.addEventListener('error', function(e) {
-                            console.error(`Video ${index + 1} error:`, e);
-                        });
-                        
-                        // Try to load the video
-                        video.load();
-                    }
-                });
-                
-                // Test first video
-                const firstVideo = document.querySelector('video');
-                if (firstVideo) {
-                    console.log('Testing first video...');
-                    firstVideo.play().then(() => {
-                        console.log('First video played successfully');
-                        setTimeout(() => {
-                            firstVideo.pause();
-                            console.log('First video paused after test');
-                        }, 2000);
-                    }).catch(error => {
-                        console.error('First video play failed:', error);
-                    });
-                }
-            });
+
             
             // Video event listeners
             videos.forEach((video, index) => {
@@ -500,19 +480,41 @@
                     networkState: video.networkState
                 });
                 
+                // Get custom controls elements
+                const progressBar = video.parentElement.querySelector('.video-progress-bar');
+                const progressInput = video.parentElement.querySelector('input[type="range"]');
+                const currentTimeSpan = video.parentElement.querySelector('.video-current-time');
+                const durationSpan = video.parentElement.querySelector('.video-duration');
+                const statusElement = document.querySelector(`.video-status[data-filename="${video.querySelector('source').src.split('/').pop()}"]`);
+                
                 // Load metadata
                 video.addEventListener('loadedmetadata', function() {
                     console.log(`Video ${index + 1} metadata loaded, duration:`, formatTime(video.duration));
+                    if (durationSpan) {
+                        durationSpan.textContent = formatTime(video.duration);
+                    }
                 });
                 
                 // Play event
                 video.addEventListener('play', function() {
                     console.log(`Video ${index + 1} started playing`);
                     
+                    // Update status
+                    if (statusElement) {
+                        statusElement.textContent = 'Playing';
+                        statusElement.className = 'text-lg font-bold text-green-400 video-status';
+                    }
+                    
                     // Pause all other videos
                     videos.forEach(otherVideo => {
                         if (otherVideo !== video) {
                             otherVideo.pause();
+                            // Reset other video statuses
+                            const otherStatusElement = document.querySelector(`.video-status[data-filename="${otherVideo.querySelector('source').src.split('/').pop()}"]`);
+                            if (otherStatusElement) {
+                                otherStatusElement.textContent = 'Ready';
+                                otherStatusElement.className = 'text-lg font-bold text-yellow-300 video-status';
+                            }
                         }
                     });
                     currentPlayingVideo = video;
@@ -536,9 +538,9 @@
                             if (data.success) {
                                 console.log('View tracked successfully:', data);
                                 // Update view count in UI
-                                const statsDiv = video.closest('.video-card').querySelectorAll('.text-center');
-                                if (statsDiv.length > 0) {
-                                    statsDiv[0].querySelector('div').textContent = data.views;
+                                const viewsElement = document.querySelector(`.video-views[data-filename="${filename}"]`);
+                                if (viewsElement) {
+                                    viewsElement.textContent = data.views;
                                 }
                                 const totalViewsElement = document.getElementById('total-views');
                                 if (totalViewsElement) {
@@ -555,11 +557,20 @@
                 // Pause event
                 video.addEventListener('pause', function() {
                     console.log(`Video ${index + 1} paused`);
+                    if (statusElement) {
+                        statusElement.textContent = 'Paused';
+                        statusElement.className = 'text-lg font-bold text-orange-400 video-status';
+                    }
                 });
                 
                 // Error event
                 video.addEventListener('error', function(e) {
                     console.error(`Video ${index + 1} error:`, e);
+                    console.error('Error details:', {
+                        error: video.error,
+                        errorCode: video.error ? video.error.code : 'No error code',
+                        errorMessage: video.error ? video.error.message : 'No error message'
+                    });
                 });
                 
                 // Can play event
@@ -567,11 +578,85 @@
                     console.log(`Video ${index + 1} can play`);
                 });
                 
+                // Loaded data event
+                video.addEventListener('loadeddata', function() {
+                    console.log(`Video ${index + 1} data loaded`);
+                });
+                
+                // Load start event
+                video.addEventListener('loadstart', function() {
+                    console.log(`Video ${index + 1} load started`);
+                });
+                
+                // Progress event
+                video.addEventListener('progress', function() {
+                    console.log(`Video ${index + 1} loading progress`);
+                });
+                
+                // Time update event for progress bar
+                video.addEventListener('timeupdate', function() {
+                    if (video.duration && !isNaN(video.duration)) {
+                        const progress = (video.currentTime / video.duration) * 100;
+                        if (progressBar) {
+                            progressBar.style.width = progress + '%';
+                        }
+                        if (progressInput) {
+                            progressInput.value = progress;
+                        }
+                        if (currentTimeSpan) {
+                            currentTimeSpan.textContent = formatTime(video.currentTime);
+                        }
+                    }
+                });
+                
+                // Progress bar interaction
+                if (progressInput) {
+                    progressInput.addEventListener('input', function() {
+                        if (video.duration && !isNaN(video.duration)) {
+                            const time = (this.value / 100) * video.duration;
+                            video.currentTime = time;
+                        }
+                    });
+                    
+                    progressInput.addEventListener('change', function() {
+                        if (video.duration && !isNaN(video.duration)) {
+                            const time = (this.value / 100) * video.duration;
+                            video.currentTime = time;
+                        }
+                    });
+                }
+                
+                // Click on progress bar background
+                if (progressBar && progressBar.parentElement) {
+                    progressBar.parentElement.addEventListener('click', function(e) {
+                        if (video.duration && !isNaN(video.duration)) {
+                            const rect = this.getBoundingClientRect();
+                            const clickX = e.clientX - rect.left;
+                            const percentage = (clickX / rect.width) * 100;
+                            const time = (percentage / 100) * video.duration;
+                            video.currentTime = time;
+                            if (progressInput) {
+                                progressInput.value = percentage;
+                            }
+                            if (progressBar) {
+                                progressBar.style.width = percentage + '%';
+                            }
+                        }
+                    });
+                }
+                
                 // Ended event
                 video.addEventListener('ended', function() {
                     console.log(`Video ${index + 1} ended`);
                     currentPlayingVideo = null;
+                    if (statusElement) {
+                        statusElement.textContent = 'Completed';
+                        statusElement.className = 'text-lg font-bold text-blue-400 video-status';
+                    }
                 });
+                
+                // Try to load the video
+                video.load();
             });
             
             // Helper function to format time
@@ -581,6 +666,22 @@
                 const secs = Math.floor(seconds % 60);
                 return `${mins}:${secs.toString().padStart(2, '0')}`;
             }
+            
+            // Test video file accessibility
+            videos.forEach((video, index) => {
+                const source = video.querySelector('source');
+                if (source) {
+                    const testImg = new Image();
+                    testImg.onload = function() {
+                        console.log(`Video ${index + 1} source is accessible`);
+                    };
+                    testImg.onerror = function() {
+                        console.error(`Video ${index + 1} source is not accessible:`, source.src);
+                    };
+                    // Try to load the video source as an image to test accessibility
+                    testImg.src = source.src;
+                }
+            });
 
             // Download tracking
             document.querySelectorAll('.download-btn').forEach(btn => {
@@ -601,9 +702,9 @@
                         if (data.success) {
                             console.log('Download tracked successfully:', data);
                             // Update download count in UI
-                            const statsDiv = this.closest('.video-card').querySelectorAll('.text-center');
-                            if (statsDiv.length > 1) {
-                                statsDiv[1].querySelector('div').textContent = data.downloads;
+                            const downloadsElement = document.querySelector(`.video-downloads[data-filename="${filename}"]`);
+                            if (downloadsElement) {
+                                downloadsElement.textContent = data.downloads;
                             }
                             const totalDownloadsElement = document.getElementById('total-downloads');
                             if (totalDownloadsElement) {
@@ -635,6 +736,70 @@
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = `perspective(1000) rotateX(0deg) rotateY(0deg) scale(1)`;
+                });
+            });
+            
+            // Video overlay play button functionality
+            document.querySelectorAll('.video-overlay').forEach(overlay => {
+                overlay.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const video = this.parentElement.querySelector('video');
+                    if (video) {
+                        console.log('Overlay play button clicked, attempting to play video');
+                        
+                        // Pause all other videos first
+                        document.querySelectorAll('video').forEach(otherVideo => {
+                            if (otherVideo !== video) {
+                                otherVideo.pause();
+                            }
+                        });
+                        
+                        // Try to play the video
+                        video.play().then(() => {
+                            console.log('Video played successfully via overlay');
+                        }).catch(error => {
+                            console.error('Error playing video via overlay:', error);
+                        });
+                    }
+                });
+            });
+            
+            // Share button functionality
+            document.querySelectorAll('.share-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const title = this.getAttribute('data-video-title');
+                    const artist = this.getAttribute('data-video-artist');
+                    const url = window.location.href;
+                    
+                    console.log('Share button clicked for:', title, 'by', artist);
+                    
+                    if (navigator.share) {
+                        navigator.share({
+                            title: title,
+                            text: `Watch ${title} by ${artist} on DPP Videos!`,
+                            url: url
+                        }).then(() => {
+                            console.log('Video shared successfully');
+                        }).catch(error => {
+                            console.error('Error sharing video:', error);
+                            // Fallback to clipboard
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copied to clipboard!');
+                            }).catch(() => {
+                                alert('Share not supported. Please copy this URL: ' + url);
+                            });
+                        });
+                    } else {
+                        navigator.clipboard.writeText(url).then(() => {
+                            console.log('Link copied to clipboard');
+                            alert('Link copied to clipboard!');
+                        }).catch(() => {
+                            console.log('Clipboard not supported, showing URL');
+                            alert('Share not supported. Please copy this URL: ' + url);
+                        });
+                    }
                 });
             });
         });
