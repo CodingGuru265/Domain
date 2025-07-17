@@ -88,7 +88,7 @@
         
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Section Header -->
-            <div class="text-center mb-16 animate-fade-in-up">
+            <div class="text-center mb-6 animate-fade-in-up">
                 <!-- <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl"> All Videos</h2> -->
                 <p class="text-xl text-blue-100 max-w-2xl mx-auto drop-shadow-lg">Watch, Share & download DPP's official music videos & more</p>
             </div>
