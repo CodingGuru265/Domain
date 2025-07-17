@@ -28,28 +28,30 @@
                 Quick Links
             </h3>
             <ul class="space-y-4">
-                <li>
-                    <a href="#about"
+              <li>
+                    <a href="https://www.facebook.com/share/1GBQjtjcai/?mibextid=wwXIfr" target="_blank"
                         class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
                         <span
                             class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
-                        About the Party
+                        Follow APM on Facebook
                     </a>
                 </li>
+
+                <li>
+                    <a href="https://x.com/apmutharika?s=11&t=mKnaaGmJjy-sr-HCaBH0hQ" target="_blank"
+                        class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
+                        <span
+                            class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
+                        Follow APM on Instagram
+                    </a>
+                </li>
+
                 <li>
                     <a href="{{ url('donate') }}"
                         class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
                         <span
                             class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
                         Make a Donation
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('contacts') }}"
-                        class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
-                        Contact Us
                     </a>
                 </li>
             </ul>
@@ -124,14 +126,14 @@
                         </h3>
 
                     <p class="mb-4 text-[var(--theme-color)]">
-                        We are committed to ensuring the welfare of all Malawians through progressive policies, economic
-                        empowerment, and sustainable development solutions.
+                     Empowering Malawians to believe, save, invest, and thrive—driving growth, creating jobs, and transforming our economy for all.
                     </p>
                 </div>
             </div>
             </div>
 
         </div>
+
 
         <!-- Footer Divider -->
         <div class="border-t border-white my-8"></div>
@@ -147,9 +149,6 @@
                     <li><a href="#terms"
                             class="text-white hover:text-[var(--theme-color)] transition-colors duration-300">Terms
                             of Service</a></li>
-                    <li><a href="#sitemap"
-                            class="text-white hover:text-[var(--theme-color)] transition-colors duration-300">Sitemap</a>
-                    </li>
                 </ul>
             </div>
         </div>

@@ -131,35 +131,34 @@
     <div class="main-content">
         <section id="about-section" class="w-full flex items-start py-16 px-10 bg-[var(--custom-white)]">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-auto h-auto">
-                <!-- Image Section -->
-                <div class="relative flex justify-center overflow-hidden">
-                    <!-- Updated Image Source -->
+              <!-- Image Section -->
+                <div class="relative flex justify-center overflow-hidden max-w-[700px] w-full mx-auto">
                     <img src="{{ asset('assets/images/peter-1.jpeg') }}" alt="Candidate"
-                        class="w-full  sm:w-[28rem] md:w-[32rem] lg:w-[45rem] rounded-lg transform transition-transform duration-1000 ease-out">
+                        class="max-w-full w-auto h-auto object-contain rounded-lg transition-transform duration-1000 ease-out">
 
                     <!-- Overlay -->
-                    <div
-                        class="absolute bottom-0 w-full h-1/4 bg-[var(--custom-orange)] rounded-b-lg flex items-center justify-center px-4">
+                    <div class="absolute bottom-0 w-full h-1/4 bg-[var(--custom-orange)] rounded-b-lg flex items-center justify-center px-4">
                         <p class="text-[var(--custom-white)] text-lg font-semibold text-center">
                             "Change begins with <span class="font-bold">YOU</span>. Together, we rise!"
                         </p>
                     </div>
                 </div>
 
+
                             <!-- Goals Section -->
                 <div class="text-left">
-                  <h3 class="text-2xl font-semibold text-[var(--theme-color)] mt-6 py-4">
+                  <h3 class="text-xl font-semibold text-[var(--theme-color)] mt-6 py-4">
                         Key Agenda:
                     </h3>
                     <div style="
                         display: inline-block;
-                        padding: 0.5rem 1rem;
+                        padding: 0.3rem 1rem;
                         background: linear-gradient(to right, #0574F7, #E61E2B);
                         border-radius: 30px;
                         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
                     ">
                         <h3 style="
-                            font-size: 1.5rem;
+                            font-size: 1.0rem;
                             font-weight: 600;
                             color: white;
                             margin: 0;
@@ -169,7 +168,7 @@
                     </div>
                     
                   
-                    <ul class="mt-6 space-y-4 text-lg text-[var(--custom-black)]">
+                    <ul class="mt-6 space-y-4 text-sm text-[var(--custom-black)]">
                         <li class="flex items-center" id="agenda-goal-1">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
@@ -211,13 +210,13 @@
 
                         <div style="
                         display: inline-block;
-                        padding: 0.5rem 1rem;
+                        padding: 0.3rem 1rem;
                         background: linear-gradient(to right, #0574F7, #E61E2B);
                         border-radius: 30px;
                         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
                     ">
                         <h3 style="
-                            font-size: 1.5rem;
+                            font-size: 1.0rem;
                             font-weight: 600;
                             color: white;
                             margin: 0;
@@ -227,7 +226,7 @@
                     </div>
                     
                   
-                    <ul class="mt-6 space-y-4 text-lg text-[var(--custom-black)]">
+                    <ul class="mt-6 space-y-4 text-sm text-[var(--custom-black)]">
                         <li class="flex items-center" id="agenda-goal-1">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 class="h-6 w-6 text-[#0574F7] font-bold mr-3" fill="none" viewBox="0 0 24 24"
@@ -392,50 +391,8 @@
         </div>
     </section>
 
-
-
-    {{-- <!-- FOCUS AREA -->
-    <section class="focus-areas relative py-24 bg-[var(--theme-color)] text-white text-center">
-        <p class="text-sm uppercase">Focus Area</p>
-        <h2 class="text-4xl font-bold mt-2">How We Plan to Achieve a Better Country</h2>
-
-        <!-- Focus Area Containers -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
-            <div
-                class="group bg-transparent border border-gray p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-seedling text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Food Security</h3>
-                <p class="mt-2">Most emphasized, symbolized by the four maize cobs, and directly tied to national development and identity.We prioritize food security as a fundamental and most important aspect of economic development.</p>
-            </div>
-            <div
-                class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-chart-line text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Economic Growth & Wealth Creation</h3>
-                <p class="mt-2">Discussed under vision, mission, and aims. Focuses on job creation, macroeconomic growth, industrialization, export production, and reducing poverty.</p>
-            </div>
-            <div
-                class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-building text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Infrastructure Development</h3>
-                <p class="mt-2">Clearly stated in the opening paragraph as a foundational belief of the party. Emphasized as long-term and necessary for national transformation.</p>
-            </div>
-            <div
-                class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-people-group text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Unity and Peace</h3>
-                <p class="mt-2">Strongly emphasized in the pledge, with calls for national unity across tribe, region, and political belief. Seen as a precondition for prosperity.</p>
-            </div>
-            <div
-                class="group bg-transparent border border-white p-6 rounded-lg text-center hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 focus-item">
-                <i class="fas fa-scale-balanced text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold">Human Rights and Rule of Law</h3>
-                <p class="mt-2">Directly mentioned under the aims, and reiterated as part of DPP’s mission to ensure dignity, justice, and civil liberties.</p>
-            </div>
-        </div>
-    </section> --}}
-
-
-
+    
+    {{-- FOCUS AREAS  --}}
 <section class="focus-areas relative py-24 bg-[#0574F7] text-white text-center">
     <p class="text-sm uppercase">Focus Area</p>
     <h2 class="text-4xl font-bold mt-2">How We Plan to Achieve a Better Country</h2>
@@ -618,29 +575,34 @@
     
     <!-- END MUSIC SECTION --> --}}
 
-<div class="w-full" id="history-container"></div>
-<div class="w-full" style="background: linear-gradient(135deg, #0574F7 0%, #E61E2B 100%);">
-  <div class="flex flex-col md:flex-row items-stretch w-full">
-    
-    <!-- First Image (APM 1) - On desktop: Left | On mobile: Bottom -->
-    <div class="w-full order-2 md:order-1 md:w-1/2 overflow-hidden rounded-r-xl md:rounded-xl">
-      <img src="{{ asset('/assets/images/leaders/APM  1.png') }}"
-           alt="DPP Mission Image"
-           class="w-full h-full min-h-[200px] md:min-h-[300px] object-cover transition-transform hover:scale-105 duration-500">
+
+
+    {{-- PREVIOUS PROJECTS --}}
+    <div class="w-full" id="history-container"></div>
+
+    {{-- HE WILL BE BACK --}}
+        <div class="w-full" style="background: linear-gradient(135deg, #0574F7 0%, #E61E2B 100%);">
+        <div class="flex flex-col md:flex-row items-stretch w-full">
+            
+            <!-- First Image (APM 1) - On desktop: Left | On mobile: Bottom -->
+            <div class="w-full order-2 md:order-1 md:w-1/2 overflow-hidden rounded-r-xl md:rounded-xl">
+            <img src="{{ asset('/assets/images/leaders/APM  1.png') }}"
+                alt="DPP Mission Image"
+                class="w-full h-full min-h-[200px] md:min-h-[300px] object-cover transition-transform hover:scale-105 duration-500">
+            </div>
+
+            <!-- Second Image (APM Vote) - On desktop: Right | On mobile: Top (shadow removed on mobile) -->
+            <div class="w-full order-1 md:order-2 md:w-2/5 md:ml-6 mt-6 md:mt-0 overflow-hidden rounded-xl md:shadow-2xl flex items-center justify-center">
+            <img src="{{ asset('/assets/images/APM_vote.png') }}" 
+                alt="Malawi Development Image"
+                class="max-w-[500px] w-full h-auto object-contain mx-auto transition-transform hover:scale-105 duration-500  !h-[350px] md:!h-auto">
+            </div>
+
+        </div>
     </div>
 
-    <!-- Second Image (APM Vote) - On desktop: Right | On mobile: Top (shadow removed on mobile) -->
-    <div class="w-full order-1 md:order-2 md:w-2/5 md:ml-6 mt-6 md:mt-0 overflow-hidden rounded-xl md:shadow-2xl flex items-center justify-center">
-      <img src="{{ asset('/assets/images/APM_vote.png') }}" 
-           alt="Malawi Development Image"
-           class="max-w-[500px] w-full h-auto object-contain mx-auto transition-transform hover:scale-105 duration-500  !h-[350px] md:!h-auto">
     </div>
-
-  </div>
-</div>
-
-  </div>
-</div>
+    </div>
 
 
 @endsection
