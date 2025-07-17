@@ -7,7 +7,7 @@ use App\Models\News;
 use App\Models\Music;
 use App\Models\Image;
 use App\Models\Event;
-
+use App\Models\MusicStatistics;
 
 class HomeController extends Controller
 {
@@ -42,9 +42,83 @@ class HomeController extends Controller
         // Fetch all music records, latest first
         $music = Music::orderBy('created_at', 'desc')->get();
 
+        // Get total statistics
+        $totalPlays = MusicStatistics::getTotalPlays();
+        $totalDownloads = MusicStatistics::getTotalDownloads();
+        $totalTracks = $music->count();
 
-        return view('frontend.components.music', compact('music'));
+        // Get individual music statistics
+        $musicStats = [];
+        foreach ($music as $track) {
+            $stats = MusicStatistics::getMusicStats($track->id);
+            $musicStats[$track->id] = [
+               'plays' => $stats ? $stats->plays : 0,
+               'downloads' => $stats ? $stats->downloads :0        ];
+        }
+
+        return view('frontend.components.music', compact('music', 'totalPlays', 'totalDownloads', 'totalTracks', 'musicStats'));
     }
+
+    /**
+     * Track music play
+     */
+    public function trackMusicPlay(Request $request)
+    {
+        $musicId = $request->input('music_id');
+        
+        if ($musicId) {
+            MusicStatistics::incrementPlays($musicId);
+            $stats = MusicStatistics::getMusicStats($musicId);
+            
+            return response()->json([
+               'success' => true,
+               'plays' => $stats ? $stats->plays : 0,
+               'total_plays' => MusicStatistics::getTotalPlays()
+            ]);
+        }
+
+        return response()->json([ 'success' => false], 400);
+    }
+
+    /**
+     * Track music download
+     */
+    public function trackMusicDownload(Request $request)
+    {
+        $musicId = $request->input('music_id');
+        
+        if ($musicId) {
+            MusicStatistics::incrementDownloads($musicId);
+            $stats = MusicStatistics::getMusicStats($musicId);
+            
+            return response()->json([
+               'success' => true,
+               'downloads' => $stats ? $stats->downloads : 0,
+               'total_downloads' => MusicStatistics::getTotalDownloads()
+            ]);
+        }
+
+        return response()->json([ 'success' => false], 400);
+    }
+
+    /**
+     * Download music file
+     */
+    public function downloadMusic($id)
+    {
+        $music = Music::findOrFail($id);
+        $filePath = storage_path('app/public/' . $music->file);
+        
+        if (file_exists($filePath)) {
+            // Track the download
+            MusicStatistics::incrementDownloads($music->id);
+            
+            return response()->download($filePath, $music->title . '.mp3');
+        }
+
+        abort(404, 'File not found');
+    }
+
     public function events()
     {
         $events = Event::latest()->get();
