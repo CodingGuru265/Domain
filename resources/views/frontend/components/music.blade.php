@@ -122,6 +122,9 @@
                 <button id="shuffle-btn" class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-random mr-2"></i>Shuffle
                 </button>
+                <button id="test-btn" class="px-6 py-3 bg-yellow-500/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-yellow-500/30 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-bug mr-2"></i>Test Audio
+                </button>
             </div>
         </div>
         
@@ -161,7 +164,8 @@
                         <div class="music-card bg-black/30 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/30 hover:bg-black/40 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-3xl animate-fade-in-up group" 
                              style="animation-delay: {{ $index * 0.1 }}s;"
                              data-track-title="{{ $track->title }}"
-                             data-track-artist="{{ $track->artist }}">
+                             data-track-artist="{{ $track->artist }}"
+                             data-track-id="{{ $track->id }}">
                             
                             <!-- Glow Effect -->
                             <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background: linear-gradient(to right, rgba(5, 116, 247, 0.2), rgba(230, 30, 43, 0.2));"></div>
@@ -236,17 +240,20 @@
                                         </div>
                                         
                                         <!-- Enhanced Progress Bar -->
-                                        <div class="relative mb-2">
+                                        <div class="relative mb-2 cursor-pointer" title="Click to seek">
                                             <div class="bg-white/50 rounded-full h-3 overflow-hidden shadow-inner">
                                                 <div class="progress-bar h-3 rounded-full transition-all duration-300 relative" style="width: 0%; background: linear-gradient(to right, #0574F7, #E61E2B);">
                                                     <div class="absolute inset-0 bg-white/30 animate-pulse"></div>
                                                 </div>
                                             </div>
                                             <input type="range" 
-                                                   class="absolute inset-0 w-full h-3 opacity-0 cursor-pointer" 
+                                                   class="absolute inset-0 w-full h-3 opacity-0 cursor-pointer z-10" 
                                                    min="0" 
                                                    max="100" 
-                                                   value="0">
+                                                   value="0"
+                                                   step="0.1">
+                                            <!-- Progress bar hover indicator -->
+                                            <div class="absolute inset-0 rounded-full h-3 bg-transparent hover:bg-white/10 transition-colors duration-200"></div>
                                         </div>
                                         
                                         <!-- Waveform Visualization -->
@@ -558,13 +565,16 @@
 
         // Enhanced Audio Player
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing music player...');
             const audioPlayers = document.querySelectorAll('.music-card');
+            console.log('Found', audioPlayers.length, 'music cards');
             let currentPlayingAudio = null;
             
             // Initialize audio visualizer
             initAudioVisualizer();
             
-            audioPlayers.forEach(player => {
+            audioPlayers.forEach((player, index) => {
+                console.log('Initializing player', index + 1);
                 const audio = player.querySelector('audio');
                 const playBtn = player.querySelector('.play-btn');
                 const progressBar = player.querySelector('.progress-bar');
@@ -574,6 +584,18 @@
                 const volumeBtn = player.querySelector('.volume-btn');
                 const waveformBars = player.querySelectorAll('.waveform-bar');
                 const equalizerBars = player.querySelectorAll('.equalizer-bar');
+                
+                console.log('Player', index + 1, 'elements found:', {
+                    audio: !!audio,
+                    playBtn: !!playBtn,
+                    progressBar: !!progressBar,
+                    progressInput: !!progressInput,
+                    currentTimeSpan: !!currentTimeSpan,
+                    durationSpan: !!durationSpan,
+                    volumeBtn: !!volumeBtn,
+                    waveformBars: waveformBars.length,
+                    equalizerBars: equalizerBars.length
+                });
                 
                 let isPlaying = false;
                 let animationId;
@@ -612,50 +634,98 @@
                 
                 // Update progress bar
                 function updateProgress() {
-                    const progress = (audio.currentTime / audio.duration) * 100;
-                    progressBar.style.width = progress + '%';
-                    progressInput.value = progress;
-                    currentTimeSpan.textContent = formatTime(audio.currentTime);
+                    if (audio.duration && !isNaN(audio.duration)) {
+                        const progress = (audio.currentTime / audio.duration) * 100;
+                        progressBar.style.width = progress + '%';
+                        progressInput.value = progress;
+                        currentTimeSpan.textContent = formatTime(audio.currentTime);
+                    }
                 }
                 
                 // Play/Pause functionality
                 playBtn.addEventListener('click', function() {
+                    console.log('Play button clicked, isPlaying:', isPlaying);
+                    
                     if (isPlaying) {
+                        // Pause functionality
                         audio.pause();
                         playBtn.innerHTML = '<i class="fas fa-play text-white ml-1"></i>';
                         cancelAnimationFrame(animationId);
                         animateEqualizer();
                         document.getElementById('audio-visualizer').classList.add('hidden');
+                        isPlaying = false;
                     } else {
+                        // Play functionality
                         // Pause all other audio players
                         if (currentPlayingAudio && currentPlayingAudio !== audio) {
                             currentPlayingAudio.pause();
                             const otherPlayBtn = currentPlayingAudio.parentElement.parentElement.parentElement.parentElement.querySelector('.play-btn');
-                            otherPlayBtn.innerHTML = '<i class="fas fa-play text-white ml-1"></i>';
+                            if (otherPlayBtn) {
+                                otherPlayBtn.innerHTML = '<i class="fas fa-play text-white ml-1"></i>';
+                            }
                         }
                         
                         // Connect to audio visualizer
                         if (audioContext && analyser) {
-                            const source = audioContext.createMediaElementSource(audio);
-                            source.connect(analyser);
-                            analyser.connect(audioContext.destination);
-                            drawVisualizer();
-                            document.getElementById('audio-visualizer').classList.remove('hidden');
+                            try {
+                                const source = audioContext.createMediaElementSource(audio);
+                                source.connect(analyser);
+                                analyser.connect(audioContext.destination);
+                                drawVisualizer();
+                                document.getElementById('audio-visualizer').classList.remove('hidden');
+                            } catch (error) {
+                                console.log('Audio visualizer already connected or not supported');
+                            }
                         }
                         
-                        audio.play();
-                        playBtn.innerHTML = '<i class="fas fa-pause text-white"></i>';
-                        currentPlayingAudio = audio;
-                        animateWaveform();
-                        animateEqualizer();
+                        // Play the audio
+                        audio.play().then(() => {
+                            console.log('Audio started playing successfully');
+                            playBtn.innerHTML = '<i class="fas fa-pause text-white"></i>';
+                            currentPlayingAudio = audio;
+                            animateWaveform();
+                            animateEqualizer();
+                            isPlaying = true;
+                        }).catch(error => {
+                            console.error('Error playing audio:', error);
+                            // Reset button state on error
+                            playBtn.innerHTML = '<i class="fas fa-play text-white ml-1"></i>';
+                            isPlaying = false;
+                        });
                     }
-                    isPlaying = !isPlaying;
                 });
                 
                 // Progress bar interaction
                 progressInput.addEventListener('input', function() {
-                    const time = (this.value / 100) * audio.duration;
-                    audio.currentTime = time;
+                    if (audio.duration && !isNaN(audio.duration)) {
+                        const time = (this.value / 100) * audio.duration;
+                        audio.currentTime = time;
+                        console.log('Seeking to:', formatTime(time));
+                    }
+                });
+                
+                // Also handle change event for better compatibility
+                progressInput.addEventListener('change', function() {
+                    if (audio.duration && !isNaN(audio.duration)) {
+                        const time = (this.value / 100) * audio.duration;
+                        audio.currentTime = time;
+                        console.log('Seeking to (change):', formatTime(time));
+                    }
+                });
+                
+                // Handle click on progress bar background
+                const progressContainer = progressInput.parentElement;
+                progressContainer.addEventListener('click', function(e) {
+                    if (audio.duration && !isNaN(audio.duration)) {
+                        const rect = this.getBoundingClientRect();
+                        const clickX = e.clientX - rect.left;
+                        const percentage = (clickX / rect.width) * 100;
+                        const time = (percentage / 100) * audio.duration;
+                        audio.currentTime = time;
+                        progressInput.value = percentage;
+                        progressBar.style.width = percentage + '%';
+                        console.log('Clicked seeking to:', formatTime(time));
+                    }
                 });
                 
                 // Volume control
@@ -671,12 +741,22 @@
                 
                 // Audio event listeners
                 audio.addEventListener('loadedmetadata', function() {
+                    console.log('Audio metadata loaded, duration:', audio.duration);
                     durationSpan.textContent = formatTime(audio.duration);
                 });
                 
                 audio.addEventListener('timeupdate', updateProgress);
                 
+                audio.addEventListener('play', function() {
+                    console.log('Audio play event triggered');
+                });
+                
+                audio.addEventListener('pause', function() {
+                    console.log('Audio pause event triggered');
+                });
+                
                 audio.addEventListener('ended', function() {
+                    console.log('Audio ended event triggered');
                     isPlaying = false;
                     playBtn.innerHTML = '<i class="fas fa-play text-white ml-1"></i>';
                     progressBar.style.width = '0%';
@@ -685,6 +765,10 @@
                     cancelAnimationFrame(animationId);
                     animateEqualizer();
                     document.getElementById('audio-visualizer').classList.add('hidden');
+                });
+                
+                audio.addEventListener('error', function(e) {
+                    console.error('Audio error:', e);
                 });
             });
             
@@ -703,6 +787,87 @@
                 const shuffled = musicCards.sort(() => Math.random() - 0.5);
                 const container = document.querySelector('.grid');
                 shuffled.forEach(card => container.appendChild(card));
+            });
+            
+            // Test functionality
+            document.getElementById('test-btn').addEventListener('click', function() {
+                console.log('=== AUDIO TEST ===');
+                const audioPlayers = document.querySelectorAll('.music-card');
+                console.log('Total audio players found:', audioPlayers.length);
+                
+                // Test browser audio support
+                console.log('Browser audio support:', {
+                    canPlayMP3: document.createElement('audio').canPlayType('audio/mpeg'),
+                    canPlayOGG: document.createElement('audio').canPlayType('audio/ogg'),
+                    canPlayWAV: document.createElement('audio').canPlayType('audio/wav')
+                });
+                
+                audioPlayers.forEach((player, index) => {
+                    const audio = player.querySelector('audio');
+                    const playBtn = player.querySelector('.play-btn');
+                    const trackId = player.getAttribute('data-track-id');
+                    
+                    console.log(`Player ${index + 1}:`, {
+                        trackId: trackId,
+                        hasAudio: !!audio,
+                        hasPlayBtn: !!playBtn,
+                        audioSrc: audio ? audio.querySelector('source').src : 'No source',
+                        audioReadyState: audio ? audio.readyState : 'No audio',
+                        audioNetworkState: audio ? audio.networkState : 'No audio'
+                    });
+                    
+                    // Test if audio can be loaded
+                    if (audio) {
+                        audio.addEventListener('canplay', function() {
+                            console.log(`Player ${index + 1} can play audio`);
+                        });
+                        
+                        audio.addEventListener('error', function(e) {
+                            console.error(`Player ${index + 1} audio error:`, e);
+                        });
+                        
+                        // Try to load the audio
+                        audio.load();
+                    }
+                });
+                
+                // Test first audio player
+                const firstAudio = document.querySelector('.music-card audio');
+                if (firstAudio) {
+                    console.log('Testing first audio player...');
+                    firstAudio.play().then(() => {
+                        console.log('First audio played successfully');
+                        
+                        // Test seeking after 2 seconds
+                        setTimeout(() => {
+                            if (firstAudio.duration && !isNaN(firstAudio.duration)) {
+                                const seekTime = firstAudio.duration * 0.5; // Seek to 50%
+                                firstAudio.currentTime = seekTime;
+                                console.log('Seeking to 50%:', formatTime(seekTime));
+                                
+                                // Pause after seeking
+                                setTimeout(() => {
+                                    firstAudio.pause();
+                                    console.log('Audio paused after seeking test');
+                                }, 1000);
+                            }
+                        }, 2000);
+                    }).catch(error => {
+                        console.error('First audio play failed:', error);
+                    });
+                }
+                
+                // Test progress bars
+                const progressInputs = document.querySelectorAll('input[type="range"]');
+                console.log('Progress bars found:', progressInputs.length);
+                progressInputs.forEach((input, index) => {
+                    console.log(`Progress bar ${index + 1}:`, {
+                        min: input.min,
+                        max: input.max,
+                        value: input.value,
+                        step: input.step
+                    });
+                });
             });
             
             // 3D Card Effect
@@ -744,9 +909,18 @@
                         .then(res => res.json())
                         .then(data => {
                             if (data.success) {
-                                card.querySelector('.track-plays').textContent = data.plays;
-                                document.querySelector('#total-plays').textContent = data.total_plays;
+                                const playsElement = card.querySelector('.track-plays[data-track-id="' + trackId + '"]');
+                                if (playsElement) {
+                                    playsElement.textContent = data.plays;
+                                }
+                                const totalPlaysElement = document.querySelector('.counter[data-target]');
+                                if (totalPlaysElement) {
+                                    totalPlaysElement.textContent = data.total_plays;
+                                }
                             }
+                        })
+                        .catch(error => {
+                            console.error('Error tracking play:', error);
                         });
                     });
                 }
@@ -766,9 +940,18 @@
                     .then(res => res.json())
                     .then(data => {
                         if (data.success) {
-                            document.querySelector('.track-downloads[data-track-id="' + trackId + '"]').textContent = data.downloads;
-                            document.querySelector('#total-downloads').textContent = data.total_downloads;
+                            const downloadsElement = document.querySelector('.track-downloads[data-track-id="' + trackId + '"]');
+                            if (downloadsElement) {
+                                downloadsElement.textContent = data.downloads;
+                            }
+                            const totalDownloadsElement = document.querySelector('.counter[data-target]');
+                            if (totalDownloadsElement) {
+                                totalDownloadsElement.textContent = data.total_downloads;
+                            }
                         }
+                    })
+                    .catch(error => {
+                        console.error('Error tracking download:', error);
                     });
                 });
             });
