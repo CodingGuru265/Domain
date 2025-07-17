@@ -209,6 +209,9 @@
 
         
         <li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4">
+            <div class="text-center mb-1">
+                <span class="text-xs font-bold uppercase tracking-wider">Count Down to 2025 Elections</span>
+            </div>
             <div class="flex gap-4 items-center justify-center">
                 <!-- Days -->
                 <div class="flex flex-col items-center">
@@ -243,30 +246,35 @@
 <!-- HAMBURGER + Countdown (Mobile Only) -->
 <div class="flex items-center gap-3 md:hidden">
     <!-- Countdown -->
-    <div class="flex gap-2 items-center border border-[var(--theme-color)] bg-[#E61E2B] rounded-md px-2 py-1 text-white text-[10px]">
-        <!-- Days -->
-        <div class="flex flex-col items-center">
-            <span class="text-xs font-bold leading-none">00 :</span>
-            <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
-            <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Days</span>
+    <div class="flex flex-col items-center border border-[var(--theme-color)] bg-[#E61E2B] rounded-md px-2 py-1 text-white text-[10px]">
+        <div class="text-center mb-1">
+            <span class="text-[8px] font-bold uppercase tracking-tight">Count Down to 2025 Elections</span>
         </div>
-        <!-- Hours -->
-        <div class="flex flex-col items-center">
-            <span class="text-xs font-bold leading-none">00 :</span>
-            <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
-            <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Hours</span>
-        </div>
-        <!-- Min -->
-        <div class="flex flex-col items-center">
-            <span class="text-xs font-bold leading-none">00 :</span>
-            <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
-            <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Min</span>
-        </div>
-        <!-- Sec -->
-        <div class="flex flex-col items-center">
-            <span class="text-xs font-bold leading-none">00</span>
-            <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
-            <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Sec</span>
+        <div class="flex gap-2 items-center">
+            <!-- Days -->
+            <div class="flex flex-col items-center">
+                <span class="text-xs font-bold leading-none">00 :</span>
+                <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
+                <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Days</span>
+            </div>
+            <!-- Hours -->
+            <div class="flex flex-col items-center">
+                <span class="text-xs font-bold leading-none">00 :</span>
+                <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
+                <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Hours</span>
+            </div>
+            <!-- Min -->
+            <div class="flex flex-col items-center">
+                <span class="text-xs font-bold leading-none">00 :</span>
+                <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
+                <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Min</span>
+            </div>
+            <!-- Sec -->
+            <div class="flex flex-col items-center">
+                <span class="text-xs font-bold leading-none">00</span>
+                <div class="w-4 bg-white my-0.5" style="height: 0.5px;"></div>
+                <span class="uppercase tracking-tight" style="font-size: 0.55rem;">Sec</span>
+            </div>
         </div>
     </div>
 
