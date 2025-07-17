@@ -286,8 +286,8 @@
 
 {{-- COUNT DOWN  Desktop--}}
 
-        
-        <li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4">
+        <!--li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4"-->
+        <li class="nav-link flex-shrink-0  rounded-lg px-4 py-2 text-white text-sm ml-4" style="background-color: #0574F7">
             <div class="text-center mb-1">
                 <span class="text-xs font-bold uppercase tracking-wider">Count Down to 2025 Elections</span>
             </div>

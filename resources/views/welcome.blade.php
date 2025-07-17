@@ -467,10 +467,10 @@
                 <div class="bg-white mx-8 mb-10 md:mb-0 md:mx-12 rounded-2xl">
                     <div class="grid grid-cols-5">
                         <div class="col-span-2">
-                            <img class="p-2" src="assets/images/food_security.png" />
+                            <img class="p-2" src="assets/images/tourism.png" />
                         </div>
                         <div class="col-span-3 pt-8 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Food Security</h1>
+                            <h1 class="font-bold text-2xl dpp_blue">Tourism</h1>
                             <h4>Making sure that Malawi produces enough food for her citizens and the region at large</h4>
                         </div>
                     </div>
@@ -492,7 +492,7 @@
                             <img class="p-2" src="assets/images/healthcare.png" />
                         </div>
                         <div class="col-span-3 pt-10 md:pt-10 px-7">
-                            <h1 class="font-bold text-2xl dpp_blue">Healthcare</h1>
+                            <h1 class="font-bold text-2xl dpp_blue">ICT and AI</h1>
                             <h4>Ensuring accessible and quality healthcare for all.</h4>
                         </div>
                     </div>
@@ -504,127 +504,71 @@
 
     
     {{-- FOCUS AREAS  --}}
-<section class="focus-areas relative py-5 bg-[#0574F7] text-white text-center">
-    <h2 class="text-4xl font-bold mt-2">Focus Area</h2>
+<section class="focus-areas relative py-5 bg-white text-white text-center">
+    <h2 class="text-4xl font-bold mt-2 " style='color: #197EC2' >Focus Area</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-8 gaps-4 gap-4 p-4">
      
     
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
             <div class="grid grid-cols-5">
-                <div class="col-span-2">
-                    <img class="p-2" src="assets/images/food_security.png" />
+                <div class="col-span-2 m-4 bg-white rounded-2xl">
+                    <img class="p-6" src="assets/images/food_security_2.png" />
                 </div>
-                <div class="col-span-3 pt-4 md:pt-8 px-7">
-                    <h1 class="font-bold text-2xl text-white">Food Security</h1>
-                    <h4 class="text-left">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
+                <div class="col-span-3 pt-8 pl-4 pr-6 md:pt-8 pr-8 px-7">
+                    <h1 class="font-bold text-base md:text-xl text-white text-left">Food Security</h1>
+                    <h4 class="text-left md:text-xs text-sm ">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-5">
+                <div class="col-span-2 m-4 bg-white rounded-2xl">
+                    <img class="p-6" src="assets/images/ecomonic.png" />
+                </div>
+                <div class="col-span-3 pt-8 pl-4 pr-6 md:pt-8 pr-8 px-7">
+                    <h1 class="font-bold text-xl text-white text-left">Economic Growth</h1>
+                    <h4 class="text-left md:text-xs text-sm ">Discussed under vision, mission, and aims. Focuses on job creation, macroeconomic growth, industrialization, export production, and reducing poverty</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-5">
+                <div class="col-span-2 m-4 bg-white rounded-2xl">
+                    <img class="p-6" src="assets/images/infrastructure.png" />
+                </div>
+                <div class="col-span-3 pt-8 pl-4 pr-8 md:pt-8 px-7">
+                    <h1 class="font-bold text-xl text-white text-left">Infrastructure Development</h1>
+                    <h4 class="text-left md:text-xs text-sm">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
                 </div>
             </div>
         </div>
       
-        {{-- Food Security --}}
-       <div class="group dpp_background border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
-            <div class="flex flex-col md:flex-row h-full">
-                <!-- Image -->
-                <div class="w-full md:w-1/3 h-48 md:h-auto">
-                    <img src="/assets/images/food security.png" alt="Food Security"
-                        class="w-full h-full object-cover rounded-md">
+        
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-5">
+                <div class="col-span-2 m-4 bg-white rounded-2xl">
+                    <img class="p-6" src="assets/images/unity.png" />
                 </div>
-
-                <!-- Content -->
-                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
-                    <h3 class="text-xl text-white font-semibold mb-2">Food Security</h3>
-                    <p class="text-sm text-white text-left">
-                        We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.
-                    </p>
+                <div class="col-span-3 pt-8 pl-4 pr-8 md:pt-8 px-7">
+                    <h1 class="font-bold text-xl text-white text-left">Unity and Peace</h1>
+                    <h4 class="text-left md:text-xs text-sm">We believe progress begins with unity. Across tribes, beliefs, and regions — we stand together in peace to shape a stable, inclusive, and forward-moving Malawi.</h4>
                 </div>
             </div>
         </div>
 
-        {{-- Economic growth--}}
-        <div class="group dpp_background border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
-            <div class="flex flex-col md:flex-row h-full">
-                
-                <!-- Image -->
-                <div class="w-full md:w-1/3 h-48 md:h-auto">
-                    <img src="/assets/images/economic.png" alt="Economic Growth"
-                        class="w-full h-full object-cover rounded-md">
+        
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-5">
+                <div class="col-span-2 m-4 bg-white rounded-2xl">
+                    <img class="p-6" src="assets/images/law.png" />
                 </div>
-
-                <!-- Content -->
-                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
-                    <h3 class="text-xl text-white font-semibold mb-2">Economic Growth & Wealth Creation</h3>
-                    <p class="text-sm text-white">
-                        Discussed under vision, mission, and aims. Focuses on job creation, macroeconomic growth, industrialization, export production, and reducing poverty.
-                    </p>
+                <div class="col-span-3 pt-8 pl-4 pr-8 md:pt-8 px-7">
+                    <h1 class="font-bold text-xl text-white text-left">Human Rights & Law</h1>
+                    <h4 class="text-left md:text-xs text-sm">Justice and dignity for every citizen. We uphold freedoms, protect the vulnerable, and enforce the rule of law so that every Malawian lives with respect and fairness.</h4>
                 </div>
-
-            </div>
-        </div>
-
-
-        {{-- infrastructure development --}}
-        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
-            <div class="flex flex-col md:flex-row h-full">
-
-                <!-- Image -->
-                <div class="w-full md:w-1/3 h-48 md:h-auto">
-                    <img src="/assets/images/infrastructure.jpg" alt="Infrastructure Development"
-                        class="w-full h-full object-cover rounded-md">
-                </div>
-
-                <!-- Content -->
-                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
-                    <h3 class="text-xl text-white font-semibold mb-2">Infrastructure Development</h3>
-                    <p class="text-sm text-white">
-                        We’re building tomorrow — roads, bridges, schools, and power systems that connect people, fuel businesses, and drive Malawi into the future with lasting progress.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        {{-- unity and peace --}}
-
-        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
-            <div class="flex flex-col md:flex-row h-full">
-
-                <!-- Image -->
-                <div class="w-full md:w-1/3 h-48 md:h-auto">
-                    <img src="/assets/images/unity-peace.jpg" alt="Unity and Peace"
-                        class="w-full h-full object-cover rounded-md">
-                </div>
-
-                <!-- Content -->
-                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
-                    <h3 class="text-xl text-white font-semibold mb-2">Unity and Peace</h3>
-                    <p class="text-sm text-white">
-                        We believe progress begins with unity. Across tribes, beliefs, and regions — we stand together in peace to shape a stable, inclusive, and forward-moving Malawi.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        {{-- human rights and rule of law --}}
-
-        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
-            <div class="flex flex-col md:flex-row h-full">
-
-                <!-- Image -->
-                <div class="w-full md:w-1/3 h-48 md:h-auto">
-                    <img src="/assets/images/human-rights.jpg" alt="Human Rights and Rule of Law"
-                        class="w-full h-full object-cover rounded-md">
-                </div>
-
-                <!-- Content -->
-                <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
-                    <h3 class="text-xl text-white font-semibold mb-2">Human Rights & Rule of Law</h3>
-                    <p class="text-sm text-white">
-                        Justice and dignity for every citizen. We uphold freedoms, protect the vulnerable, and enforce the rule of law so that every Malawian lives with respect and fairness.
-                    </p>
-                </div>
-
             </div>
         </div>
 
