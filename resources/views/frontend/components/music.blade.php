@@ -85,31 +85,31 @@
         <div class="relative z-10 text-center text-white px-4">
             <div class="mb-8">
                 <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text animate-text-glow" style="background: linear-gradient(to right, #0574F7, #E61E2B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px white; text-stroke: 2px white;">
-                    DPP PLAYLIST
+                    MUSIC PLAYLIST
                 </h1>
                 <div class="w-64 h-1 mx-auto mt-6 animate-pulse" style="background: linear-gradient(to right, #0574F7, #E61E2B);"></div>
             </div>
             
-            <div class="space-y-4 animate-fade-in-up">
+            <!-- <div class="space-y-4 animate-fade-in-up">
                 <p class="text-2xl md:text-3xl mb-2 text-white font-light">DPP Party Playlist</p>
                 <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                     Vibes Feel the rhythm, enjoy the beats, and celebrate with the 
                     <span class="text-yellow-300 font-bold animate-bounce">best </span> tunes!
                 </p>
-            </div>
+            </div> -->
             
             <!-- Animated Stats -->
             <div class="flex justify-center items-center space-x-8 mt-12 animate-fade-in-up" style="animation-delay: 0.5s;">
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white counter" data-target="{{ $music->count() }}">0</div>
+                    <div class="text-3xl font-bold text-white counter" data-target="{{ $totalTracks }}">0</div>
                     <div class="text-sm text-gray-300">Tracks</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white counter" data-target="24">0</div>
+                    <div class="text-3xl font-bold text-white counter" data-target="{{ $totalPlays }}">0</div>
                     <div class="text-sm text-gray-300">Hours</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white counter" data-target="1000">0</div>
+                    <div class="text-3xl font-bold text-white counter" data-target="{{ $totalDownloads }}">0</div>
                     <div class="text-sm text-gray-300">Fans</div>
                 </div>
             </div>
@@ -145,8 +145,8 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl">🎵 All Songs</h2>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto drop-shadow-lg">Discover the rhythm and feel the energy of DPP's music collection</p>
+                <!-- <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl">🎵 All Songs</h2> -->
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto drop-shadow-lg">Listen, Share & Download DPP's Music Collection & More</p>
             </div>
             
             @if ($music->isEmpty())
@@ -195,15 +195,28 @@
                                 <div class="flex-1 text-center lg:text-left">
                                     <h3 class="text-2xl font-bold text-white mb-2 hover:text-blue-200 transition-colors drop-shadow-lg">{{ $track->title }}</h3>
                                     <p class="text-lg text-blue-100 mb-1 drop-shadow-md">By <span class="font-semibold text-yellow-300 drop-shadow-lg">{{ $track->artist }}</span></p>
-                                    <p class="text-sm text-white bg-blue-500/30 rounded-full px-4 py-1 inline-block border border-blue-400/50">{{ $track->category }}</p>
-                                    
-                                    <!-- Download Button -->
-                                    <div class="flex items-center justify-center lg:justify-start mt-3">
-                                        <a href="{{ asset('storage/' . $track->file) }}" download 
-                                           class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border border-white/30">
+                                    <p class="text-sm text-white bg-blue-500/30 rounded-full px-4 py-1 inline-block border border-blue-400/50 mb-4">{{ $track->category }}</p>
+                                    <!-- Track Statistics -->
+                                    <div class="flex items-center justify-center lg:justify-start space-x-6 mb-4">
+                                        <div class="text-center">
+                                            <div class="text-lg font-bold text-white track-plays" data-track-id="{{ $track->id }}">{{ $musicStats[$track->id]['plays'] ?? 0 }}</div>
+                                            <div class="text-xs text-gray-300">Plays</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-lg font-bold text-white track-downloads" data-track-id="{{ $track->id }}">{{ $musicStats[$track->id]['downloads'] ?? 0 }}</div>
+                                            <div class="text-xs text-gray-300">Downloads</div>
+                                        </div>
+                                    </div>
+                                    <!-- Action Buttons -->
+                                    <div class="flex items-center justify-center lg:justify-start space-x-3">
+                                        <a href="{{ route('music.download', $track->id) }}" class="download-btn inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border border-white/30" data-track-id="{{ $track->id }}">
                                             <i class="fas fa-download mr-2"></i>
                                             Download
                                         </a>
+                                        <button class="share-btn inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20" data-track-title="{{ $track->title }}" data-track-artist="{{ $track->artist }}">
+                                            <i class="fas fa-share mr-2"></i>
+                                            Share
+                                        </button>
                                     </div>
                                 </div>
                                 
@@ -710,6 +723,72 @@
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                });
+            });
+
+            // Play tracking
+            document.querySelectorAll('.music-card').forEach(card => {
+                const audio = card.querySelector('audio');
+                const playBtn = card.querySelector('.play-btn');
+                const trackId = card.getAttribute('data-track-id');
+                if (audio && playBtn && trackId) {
+                    audio.addEventListener('play', function() {
+                        fetch("{{ route('music.trackPlay') }}", {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                            },
+                            body: JSON.stringify({ music_id: trackId })
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.success) {
+                                card.querySelector('.track-plays').textContent = data.plays;
+                                document.querySelector('#total-plays').textContent = data.total_plays;
+                            }
+                        });
+                    });
+                }
+            });
+            // Download tracking
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const trackId = this.getAttribute('data-track-id');
+                    fetch("{{ route('music.trackDownload') }}", {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: JSON.stringify({ music_id: trackId })
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            document.querySelector('.track-downloads[data-track-id="' + trackId + '"]').textContent = data.downloads;
+                            document.querySelector('#total-downloads').textContent = data.total_downloads;
+                        }
+                    });
+                });
+            });
+            // Share button
+            document.querySelectorAll('.share-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const title = this.getAttribute('data-track-title');
+                    const artist = this.getAttribute('data-track-artist');
+                    const url = window.location.href;
+                    if (navigator.share) {
+                        navigator.share({
+                            title: title,
+                            text: `Listen to ${title} by ${artist} on DPP Music!`,
+                            url: url
+                        });
+                    } else {
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link copied to clipboard!');
+                        });
+                    }
                 });
             });
         });
