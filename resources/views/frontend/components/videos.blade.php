@@ -65,6 +65,9 @@
                     <button id="fullscreen-btn" class="px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
                         <i class="fas fa-expand mr-2"></i>Fullscreen
                     </button>
+                    <button id="test-videos-btn" class="px-6 py-2 bg-yellow-500/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-yellow-500/30 transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-bug mr-2"></i>Test Videos
+                    </button>
                 </div>
             </div>
         </div>
@@ -113,7 +116,8 @@
                                 <div class="relative group/video">
                                     <video controls class="w-full rounded-2xl shadow-2xl bg-black" 
                                            poster="{{ asset('assets/images/videos/thumbnail.png') }}"
-                                           preload="metadata">
+                                           preload="metadata"
+                                           crossorigin="anonymous">
                                         <source src="{{ asset('assets/images/videos/' . $video) }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -288,6 +292,39 @@
         .shadow-3xl {
             box-shadow: 0 50px -12px rgba(0, 0, 0, 0.5);
         }
+        
+        /* Enhanced Video Controls */
+        video::-webkit-media-controls {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+        }
+        
+        video::-webkit-media-controls-panel {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+        }
+        
+        video::-webkit-media-controls-play-button {
+            background-color: rgba(5, 116, 247, 0.8);
+            border-radius: 50%;
+        }
+        
+        video::-webkit-media-controls-timeline {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+        
+        video::-webkit-media-controls-current-time-display,
+        video::-webkit-media-controls-time-remaining-display {
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Video hover effects */
+        .group\/video:hover video {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
     </style>
 
     <!-- Particles.js -->
@@ -363,15 +400,24 @@
 
         // Enhanced Video Player
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing video player...');
             const videos = document.querySelectorAll('video');
+            console.log('Found', videos.length, 'videos');
             let currentPlayingVideo = null;
             
             // Play All functionality
             document.getElementById('play-all-videos-btn').addEventListener('click', function() {
+                console.log('Play All button clicked');
                 const firstVideo = document.querySelector('video');
                 if (firstVideo) {
-                    firstVideo.play();
-                    currentPlayingVideo = firstVideo;
+                    firstVideo.play().then(() => {
+                        console.log('First video started playing');
+                        currentPlayingVideo = firstVideo;
+                    }).catch(error => {
+                        console.error('Error playing first video:', error);
+                    });
+                } else {
+                    console.log('No videos found');
                 }
             });
             
@@ -389,9 +435,80 @@
                 }
             });
             
+            // Test functionality
+            document.getElementById('test-videos-btn').addEventListener('click', function() {
+                console.log('=== VIDEO TEST ===');
+                const videos = document.querySelectorAll('video');
+                console.log('Total videos found:', videos.length);
+                
+                // Test browser video support
+                console.log('Browser video support:', {
+                    canPlayMP4: document.createElement('video').canPlayType('video/mp4'),
+                    canPlayWebM: document.createElement('video').canPlayType('video/webm'),
+                    canPlayOGG: document.createElement('video').canPlayType('video/ogg')
+                });
+                
+                videos.forEach((video, index) => {
+                    const source = video.querySelector('source');
+                    console.log(`Video ${index + 1}:`, {
+                        src: source ? source.src : 'No source',
+                        readyState: video.readyState,
+                        networkState: video.networkState,
+                        duration: video.duration,
+                        currentTime: video.currentTime,
+                        paused: video.paused,
+                        ended: video.ended,
+                        error: video.error
+                    });
+                    
+                    // Test if video can be loaded
+                    if (source) {
+                        video.addEventListener('canplay', function() {
+                            console.log(`Video ${index + 1} can play`);
+                        });
+                        
+                        video.addEventListener('error', function(e) {
+                            console.error(`Video ${index + 1} error:`, e);
+                        });
+                        
+                        // Try to load the video
+                        video.load();
+                    }
+                });
+                
+                // Test first video
+                const firstVideo = document.querySelector('video');
+                if (firstVideo) {
+                    console.log('Testing first video...');
+                    firstVideo.play().then(() => {
+                        console.log('First video played successfully');
+                        setTimeout(() => {
+                            firstVideo.pause();
+                            console.log('First video paused after test');
+                        }, 2000);
+                    }).catch(error => {
+                        console.error('First video play failed:', error);
+                    });
+                }
+            });
+            
             // Video event listeners
-            videos.forEach(video => {
+            videos.forEach((video, index) => {
+                console.log(`Initializing video ${index + 1}:`, {
+                    src: video.querySelector('source')?.src,
+                    readyState: video.readyState,
+                    networkState: video.networkState
+                });
+                
+                // Load metadata
+                video.addEventListener('loadedmetadata', function() {
+                    console.log(`Video ${index + 1} metadata loaded, duration:`, formatTime(video.duration));
+                });
+                
+                // Play event
                 video.addEventListener('play', function() {
+                    console.log(`Video ${index + 1} started playing`);
+                    
                     // Pause all other videos
                     videos.forEach(otherVideo => {
                         if (otherVideo !== video) {
@@ -404,6 +521,8 @@
                     const source = video.querySelector('source');
                     if (source) {
                         const filename = source.getAttribute('src').split('/').pop();
+                        console.log('Tracking view for:', filename);
+                        
                         fetch("{{ route('videos.trackView') }}", {
                             method: 'POST',
                             headers: {
@@ -415,26 +534,60 @@
                         .then(res => res.json())
                         .then(data => {
                             if (data.success) {
+                                console.log('View tracked successfully:', data);
                                 // Update view count in UI
                                 const statsDiv = video.closest('.video-card').querySelectorAll('.text-center');
                                 if (statsDiv.length > 0) {
                                     statsDiv[0].querySelector('div').textContent = data.views;
                                 }
-                                document.getElementById('total-views').textContent = data.total_views;
+                                const totalViewsElement = document.getElementById('total-views');
+                                if (totalViewsElement) {
+                                    totalViewsElement.textContent = data.total_views;
+                                }
                             }
+                        })
+                        .catch(error => {
+                            console.error('Error tracking view:', error);
                         });
                     }
                 });
                 
+                // Pause event
+                video.addEventListener('pause', function() {
+                    console.log(`Video ${index + 1} paused`);
+                });
+                
+                // Error event
+                video.addEventListener('error', function(e) {
+                    console.error(`Video ${index + 1} error:`, e);
+                });
+                
+                // Can play event
+                video.addEventListener('canplay', function() {
+                    console.log(`Video ${index + 1} can play`);
+                });
+                
+                // Ended event
                 video.addEventListener('ended', function() {
+                    console.log(`Video ${index + 1} ended`);
                     currentPlayingVideo = null;
                 });
             });
+            
+            // Helper function to format time
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return '0:00';
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
 
             // Download tracking
             document.querySelectorAll('.download-btn').forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     const filename = this.getAttribute('data-filename');
+                    console.log('Download button clicked for:', filename);
+                    
                     fetch("{{ route('videos.trackDownload') }}", {
                         method: 'POST',
                         headers: {
@@ -446,13 +599,20 @@
                     .then(res => res.json())
                     .then(data => {
                         if (data.success) {
+                            console.log('Download tracked successfully:', data);
                             // Update download count in UI
                             const statsDiv = this.closest('.video-card').querySelectorAll('.text-center');
                             if (statsDiv.length > 1) {
                                 statsDiv[1].querySelector('div').textContent = data.downloads;
                             }
-                            document.getElementById('total-downloads').textContent = data.total_downloads;
+                            const totalDownloadsElement = document.getElementById('total-downloads');
+                            if (totalDownloadsElement) {
+                                totalDownloadsElement.textContent = data.total_downloads;
+                            }
                         }
+                    })
+                    .catch(error => {
+                        console.error('Error tracking download:', error);
                     });
                 });
             });
