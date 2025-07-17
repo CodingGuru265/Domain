@@ -129,8 +129,8 @@
     <!-- ABOUT SECTION -->
 
     <div class="main-content">
-        <section id="about-section" class="w-full flex items-start py-16 px-10 bg-[var(--custom-white)]">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-auto h-auto">
+        <section id="about-section" class="w-full flex items-start py-5 px-10 bg-[var(--custom-white)]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-auto h-auto">
               <!-- Image Section -->
                 <div class="relative flex justify-center overflow-hidden max-w-[700px] w-full mx-auto">
                     <img src="{{ asset('assets/images/peter-1.jpeg') }}" alt="Candidate"
@@ -393,9 +393,8 @@
 
     
     {{-- FOCUS AREAS  --}}
-<section class="focus-areas relative py-24 bg-[#0574F7] text-white text-center">
-    <p class="text-sm uppercase">Focus Area</p>
-    <h2 class="text-4xl font-bold mt-2">How We Plan to Achieve a Better Country</h2>
+<section class="focus-areas relative py-10 bg-[#0574F7] text-white text-center">
+    <h2 class="text-4xl font-bold mt-2">Focus Area</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
      
