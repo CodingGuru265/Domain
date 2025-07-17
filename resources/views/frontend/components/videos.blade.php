@@ -123,7 +123,8 @@
                                     <!-- Video Overlay -->
                                     <div class="absolute inset-0 bg-black/20 rounded-2xl opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer video-overlay">
                                         <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                            <i class="fas fa-play text-white text-2xl"></i>
+                                            <i class="fas fa-play text-white text-2xl play-icon"></i>
+                                            <i class="fas fa-pause text-white text-2xl pause-icon hidden"></i>
                                         </div>
                                     </div>
                                     
@@ -134,6 +135,16 @@
                                     
                                     <!-- Custom Video Controls -->
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl custom-video-controls opacity-0 group-hover/video:opacity-100 transition-opacity duration-300">
+                                        <!-- Custom Play/Pause Button -->
+                                        <div class="flex items-center justify-center mb-3">
+                                            <button class="custom-play-btn w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 mr-4">
+                                                <i class="fas fa-play text-white text-lg"></i>
+                                            </button>
+                                            <button class="custom-pause-btn w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hidden">
+                                                <i class="fas fa-pause text-white text-lg"></i>
+                                            </button>
+                                        </div>
+                                        
                                         <!-- Custom Progress Bar -->
                                         <div class="relative mb-3 cursor-pointer" title="Click to seek">
                                             <div class="bg-white/30 rounded-full h-2 overflow-hidden">
@@ -470,7 +481,26 @@
                 }
             });
             
-
+            // Keyboard shortcuts for video control
+            document.addEventListener('keydown', function(e) {
+                // Spacebar to play/pause current video
+                if (e.code === 'Space' && currentPlayingVideo) {
+                    e.preventDefault();
+                    if (currentPlayingVideo.paused) {
+                        currentPlayingVideo.play();
+                    } else {
+                        currentPlayingVideo.pause();
+                    }
+                }
+                
+                // Escape to pause all videos
+                if (e.code === 'Escape') {
+                    document.querySelectorAll('video').forEach(video => {
+                        video.pause();
+                    });
+                    currentPlayingVideo = null;
+                }
+            });
             
             // Video event listeners
             videos.forEach((video, index) => {
@@ -505,6 +535,21 @@
                         statusElement.className = 'text-lg font-bold text-green-400 video-status';
                     }
                     
+                    // Update overlay icons
+                    const overlay = video.parentElement.querySelector('.video-overlay');
+                    if (overlay) {
+                        const playIcon = overlay.querySelector('.play-icon');
+                        const pauseIcon = overlay.querySelector('.pause-icon');
+                        if (playIcon) playIcon.classList.add('hidden');
+                        if (pauseIcon) pauseIcon.classList.remove('hidden');
+                    }
+                    
+                    // Update custom controls
+                    const customPlayBtn = video.parentElement.querySelector('.custom-play-btn');
+                    const customPauseBtn = video.parentElement.querySelector('.custom-pause-btn');
+                    if (customPlayBtn) customPlayBtn.classList.add('hidden');
+                    if (customPauseBtn) customPauseBtn.classList.remove('hidden');
+                    
                     // Pause all other videos
                     videos.forEach(otherVideo => {
                         if (otherVideo !== video) {
@@ -515,6 +560,21 @@
                                 otherStatusElement.textContent = 'Ready';
                                 otherStatusElement.className = 'text-lg font-bold text-yellow-300 video-status';
                             }
+                            
+                            // Reset other video overlay icons
+                            const otherOverlay = otherVideo.parentElement.querySelector('.video-overlay');
+                            if (otherOverlay) {
+                                const otherPlayIcon = otherOverlay.querySelector('.play-icon');
+                                const otherPauseIcon = otherOverlay.querySelector('.pause-icon');
+                                if (otherPlayIcon) otherPlayIcon.classList.remove('hidden');
+                                if (otherPauseIcon) otherPauseIcon.classList.add('hidden');
+                            }
+                            
+                            // Reset other video custom controls
+                            const otherCustomPlayBtn = otherVideo.parentElement.querySelector('.custom-play-btn');
+                            const otherCustomPauseBtn = otherVideo.parentElement.querySelector('.custom-pause-btn');
+                            if (otherCustomPlayBtn) otherCustomPlayBtn.classList.remove('hidden');
+                            if (otherCustomPauseBtn) otherCustomPauseBtn.classList.add('hidden');
                         }
                     });
                     currentPlayingVideo = video;
@@ -561,6 +621,21 @@
                         statusElement.textContent = 'Paused';
                         statusElement.className = 'text-lg font-bold text-orange-400 video-status';
                     }
+                    
+                    // Update overlay icons
+                    const overlay = video.parentElement.querySelector('.video-overlay');
+                    if (overlay) {
+                        const playIcon = overlay.querySelector('.play-icon');
+                        const pauseIcon = overlay.querySelector('.pause-icon');
+                        if (playIcon) playIcon.classList.remove('hidden');
+                        if (pauseIcon) pauseIcon.classList.add('hidden');
+                    }
+                    
+                    // Update custom controls
+                    const customPlayBtn = video.parentElement.querySelector('.custom-play-btn');
+                    const customPauseBtn = video.parentElement.querySelector('.custom-pause-btn');
+                    if (customPlayBtn) customPlayBtn.classList.remove('hidden');
+                    if (customPauseBtn) customPauseBtn.classList.add('hidden');
                 });
                 
                 // Error event
@@ -766,6 +841,47 @@
                 });
             });
             
+            // Custom play button functionality
+            document.querySelectorAll('.custom-play-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const video = this.closest('.group\\/video').querySelector('video');
+                    if (video) {
+                        console.log('Custom play button clicked, attempting to play video');
+                        
+                        // Pause all other videos first
+                        document.querySelectorAll('video').forEach(otherVideo => {
+                            if (otherVideo !== video) {
+                                otherVideo.pause();
+                            }
+                        });
+                        
+                        // Try to play the video
+                        video.play().then(() => {
+                            console.log('Video played successfully via custom play button');
+                        }).catch(error => {
+                            console.error('Error playing video via custom play button:', error);
+                        });
+                    }
+                });
+            });
+            
+            // Custom pause button functionality
+            document.querySelectorAll('.custom-pause-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const video = this.closest('.group\\/video').querySelector('video');
+                    if (video) {
+                        console.log('Custom pause button clicked, pausing video');
+                        video.pause();
+                    }
+                });
+            });
+            
             // Share button functionality
             document.querySelectorAll('.share-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
@@ -804,4 +920,4 @@
             });
         });
     </script>
-@endsection 
+@endsection
