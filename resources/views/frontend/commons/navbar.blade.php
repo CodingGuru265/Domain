@@ -186,7 +186,7 @@
                 
                 /* Enhanced popup styling */
                 .popup-content {
-                    background: linear-gradient(135deg,rgb(114, 110, 109) 0%,rgb(114, 110, 109) 100%);
+                    background: linear-gradient(135deg,rgba(118, 73, 145, 0.7) 0%,rgba(118, 73, 145, 0.7) 100%);
                     border: 1px solid rgba(230, 30, 43, 0.2);
                     box-shadow: 0 10px 30px rgba(213, 22, 22, 0.3);
                 }
