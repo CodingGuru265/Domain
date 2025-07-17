@@ -187,9 +187,12 @@
 
 
 
-         <li class="relative group">
-            <a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-4 py-2">Playlist</a>
-            
+            <li class="relative group">
+            <a href="#" class="nav-link block px-4 py-2">Playlist</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-2 z-50 w-[150px]">
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-4 py-2">Songs</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('videos') }}" class="block px-4 py-2">Videos</a></li>
+            </ul>
         </li>
 
         {{-- ABOUT --}}
