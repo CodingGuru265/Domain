@@ -314,8 +314,45 @@
         </section>
     </div>
 
+    <style>
+        .dpp_blue{
+            color: #197EC2;
+        }
+        .dpp_background{
+            background-color: #197EC2;
+        }
+        .button_styling {
+        background: linear-gradient(to right, rgba(5, 116, 247, 1), rgba(230, 30, 43, 1));
+        }
+        .button_styling_reverse {
+        background: linear-gradient(to left, rgba(5, 116, 247, 1), rgba(230, 30, 43, 1));
+        }
+    </style>
+
+    <div 
+        style="background: linear-gradient(to  right, rgba(5, 116, 247, 0.7), rgba(230, 30, 43, 0.7)), url(assets/images/become_a_member.png);"
+        
+    >
+        <div class=" py-16 md:py-30">
+            <h1 class="text-center font-extralight text-white text-3xl md:text-5xl mb-8">Become a member</h1>
+            <h1 class="text-center font-bold text-white text-4xl md:text-3xl">Our party is powered by contributions from supporters</h1>
+            <br/>
+            <div class="flex my-14 items-center justify-center">
+                <hr class="w-1/2"/>
+            </div>
+            <br/>
+            <div class="grid grid-cols-1 md:grid-cols-4">
+                <div class="flex items-center justify-center md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_1.png" /></div>
+                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_2.png" /></div>
+                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_3.png" /></div>
+                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_4.png" /></div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- BECOME A VOLUNTEER -->
-    <section class="volunteer-section">
+    <!--section class="volunteer-section">
         <div class="overlay"></div>
         <div class="content">
             <h2 class="slide-in text-[var(--theme-color)] font-bold"> Become a Member</h2>
@@ -325,9 +362,9 @@
             <div class="stats grid grid-cols-2 md:grid-cols-4 gap-">
                 
                 <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
-                    <!-- Icon inside perfectly centered circle -->
+
                     <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
-                        <!-- Example using Heroicons (adjust as needed) -->
+
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
@@ -340,9 +377,8 @@
                 </div>
 
                          <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
-                    <!-- Icon inside perfectly centered circle -->
+
                     <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
-                        <!-- Example using Heroicons (adjust as needed) -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
@@ -356,9 +392,9 @@
 
 
                          <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
-                    <!-- Icon inside perfectly centered circle -->
+
                     <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
-                        <!-- Example using Heroicons (adjust as needed) -->
+
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
@@ -370,10 +406,8 @@
                     </div>
                 </div>
 
-
-
                     <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
-                        <!-- Icon inside perfectly centered circle -->
+
                         <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -389,19 +423,108 @@
 
             </div>
         </div>
-    </section>
+    </section-->
+
+
+    <div class="dpp_background"  >
+        <div class="pt-10 pb-20 ">
+            <!--h1 class="text-center font-extralight text-white text-4xl md:text-3xl mb-8">Focus Areas</h1-->
+            <h1 class="text-center font-bold text-white text-4xl md:text-4xl">How We Plan to Achieve a Better Country</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 mt-8 gaps-4 gap-4 p-4">
+                <div class="bg-white m-8 md:m-12 rounded-2xl">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <img class="p-2" src="assets/images/healthcare.png" />
+                        </div>
+                        <div class="col-span-3 pt-10 md:pt-10 px-7">
+                            <h1 class="font-bold text-2xl dpp_blue">Healthcare</h1>
+                            <h4>Ensuring accessible and quality healthcare for all.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white m-8 md:m-12 rounded-2xl">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <img class="p-2" src="assets/images/education.png" />
+                        </div>
+                        <div class="col-span-3 pt-10 md:pt-10 px-7">
+                            <h1 class="font-bold text-2xl dpp_blue">Education</h1>
+                            <h4>Widening access to education for all, with special emphasis on girls and people with disabilities</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white m-8 md:m-12 rounded-2xl">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <img class="p-2" src="assets/images/agriculture.png" />
+                        </div>
+                        <div class="col-span-3 pt-10 md:pt-10 px-7">
+                            <h1 class="font-bold text-2xl dpp_blue">Agriculture</h1>
+                            <h4>Ensuring accessible and quality healthcare for all.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white mx-8 mb-10 md:mb-0 md:mx-12 rounded-2xl">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <img class="p-2" src="assets/images/food_security.png" />
+                        </div>
+                        <div class="col-span-3 pt-8 md:pt-10 px-7">
+                            <h1 class="font-bold text-2xl dpp_blue">Food Security</h1>
+                            <h4>Making sure that Malawi produces enough food for her citizens and the region at large</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white mx-8 mb-10 md:mb-0 md:mx-12 rounded-2xl">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <img class="p-2" src="assets/images/economy.png" />
+                        </div>
+                        <div class="col-span-3 pt-10 md:pt-10 px-7">
+                            <h1 class="font-bold text-2xl dpp_blue">Economy</h1>
+                            <h4>Building a strong economy that supports robust social development and promote entrepreneurial activities</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white mx-8 mb-0 md:mb-0 md:mx-12 rounded-2xl">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <img class="p-2" src="assets/images/healthcare.png" />
+                        </div>
+                        <div class="col-span-3 pt-10 md:pt-10 px-7">
+                            <h1 class="font-bold text-2xl dpp_blue">Healthcare</h1>
+                            <h4>Ensuring accessible and quality healthcare for all.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     
     {{-- FOCUS AREAS  --}}
-<section class="focus-areas relative py-24 bg-[#0574F7] text-white text-center">
-    <p class="text-sm uppercase">Focus Area</p>
-    <h2 class="text-4xl font-bold mt-2">How We Plan to Achieve a Better Country</h2>
+<section class="focus-areas relative bg-white py-8  text-white text-center">
+
+    <h2 class="text-4xl dpp_blue font-bold mt-2">Focus Area</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
      
+    
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-5">
+                <div class="col-span-2">
+                    <img class="p-2" src="assets/images/food_security.png" />
+                </div>
+                <div class="col-span-3 pt-4 md:pt-8 px-7">
+                    <h1 class="font-bold text-2xl text-white">Food Security</h1>
+                    <h4 class="text-left">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
+                </div>
+            </div>
+        </div>
       
         {{-- Food Security --}}
-       <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+       <div class="group dpp_background border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
             <div class="flex flex-col md:flex-row h-full">
                 <!-- Image -->
                 <div class="w-full md:w-1/3 h-48 md:h-auto">
@@ -412,7 +535,7 @@
                 <!-- Content -->
                 <div class="md:w-2/3 px-0 md:px-4 py-4 flex flex-col justify-center">
                     <h3 class="text-xl text-white font-semibold mb-2">Food Security</h3>
-                    <p class="text-sm text-white">
+                    <p class="text-sm text-white text-left">
                         We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.
                     </p>
                 </div>
@@ -420,7 +543,7 @@
         </div>
 
         {{-- Economic growth--}}
-        <div class="group bg-[#0574F7] border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+        <div class="group dpp_background border border-white p-4 rounded-lg hover:shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
             <div class="flex flex-col md:flex-row h-full">
                 
                 <!-- Image -->
