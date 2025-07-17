@@ -4,7 +4,7 @@
     <div class="max-w-8xl mx-auto px-6 lg:px-6">
 
         <!-- Top Footer Area with Logo and Content -->
-        <div
+        <!-- <div
             class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-opacity-20 border-white pb-8  border-b-2">
             <div class="mb-8 md:mb-0">
                 <div class="flex items-center space-x-4">
@@ -17,7 +17,7 @@
                 </p>
             </div>
            
-        </div>
+        </div> -->
 
         <!-- Main Footer Content -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -69,15 +69,15 @@
                             class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#E61E2B]  hover:bg-opacity-100 transition-all duration-300">
                             <i class="fas fa-envelope text-white text-sm"></i>
                         </div>
-                        <span class="text-white">contact@dpp.com</span>
+                        <span class="text-white">admin@dpp.mw</span>
                     </li>
-                    <li class="flex items-start space-x-3">
+                    <!-- <li class="flex items-start space-x-3">
                         <div
                             class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#E61E2B]  hover:bg-opacity-100 transition-all duration-300">
                             <i class="fas fa-phone-alt text-[var(--custom-white)] text-sm"></i>
                         </div>
                         <span class="text-white">+265-999-7890</span>
-                    </li>
+                    </li> -->
                     <li class="flex items-start space-x-3">
                         <div
                             class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#E61E2B]  hover:bg-opacity-100 transition-all duration-300">
@@ -118,9 +118,9 @@
             <!-- About Section -->
         <!-- Just wrap this specific section -->
             <div class="-mt-10"> <!-- You can adjust this value: -mt-4, -mt-6, -mt-10 -->
-            <div class="footer-section bg-white p-4 flex flex-row items-start">
+            <div class="footer-section bg-white p-2 flex flex-row items-start">
                 <div class="flex-1">
-                    <h3 class="text-xl font-bold mb-6 text-[var(--theme-color)] flex items-center relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-[var(--custom-orange)] after:-mb-2 hover:after:w-12 after:transition-all after:duration-500">
+                    <h3 class="text-xl font-bold mb-2 text-[var(--theme-color)] flex items-center relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-[var(--custom-orange)] after:-mb-2 hover:after:w-12 after:transition-all after:duration-500">
                         <i class="fas fa-bullseye text-4xl text-[#E61E2B] mr-3"></i>
                         Our Mission
                         </h3>
@@ -136,20 +136,12 @@
 
 
         <!-- Footer Divider -->
-        <div class="border-t border-white my-8"></div>
+        <div class="border-t border-white my-1"></div>
 
         <!-- Footer Bottom -->
-        <div class="flex flex-col  md:flex-row items-center justify-between footer-copyright py-4">
-            <p class="text-white">© 2025 Democratic Progressive Party. All rights reserved.</p>
-            <div class="mt-4 md:mt-0">
-                <ul class="flex space-x-6 text-sm">
-                    <li><a href="#privacy"
-                            class="text-white hover:text-[var(--theme-color)] transition-colors duration-300">Privacy
-                            Policy</a></li>
-                    <li><a href="#terms"
-                            class="text-white hover:text-[var(--theme-color)] transition-colors duration-300">Terms
-                            of Service</a></li>
-                </ul>
+        <div class="w-full flex justify-center">
+            <div class="footer-copyright py-1 text-center">
+                <p class="text-white">© 2025 Democratic Progressive Party. All rights reserved.</p>
             </div>
         </div>
     </div>
