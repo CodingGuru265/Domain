@@ -122,9 +122,7 @@
                 <button id="shuffle-btn" class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-random mr-2"></i>Shuffle
                 </button>
-                <button id="test-btn" class="px-6 py-3 bg-yellow-500/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-yellow-500/30 transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-bug mr-2"></i>Test Audio
-                </button>
+
             </div>
         </div>
         
@@ -789,86 +787,7 @@
                 shuffled.forEach(card => container.appendChild(card));
             });
             
-            // Test functionality
-            document.getElementById('test-btn').addEventListener('click', function() {
-                console.log('=== AUDIO TEST ===');
-                const audioPlayers = document.querySelectorAll('.music-card');
-                console.log('Total audio players found:', audioPlayers.length);
-                
-                // Test browser audio support
-                console.log('Browser audio support:', {
-                    canPlayMP3: document.createElement('audio').canPlayType('audio/mpeg'),
-                    canPlayOGG: document.createElement('audio').canPlayType('audio/ogg'),
-                    canPlayWAV: document.createElement('audio').canPlayType('audio/wav')
-                });
-                
-                audioPlayers.forEach((player, index) => {
-                    const audio = player.querySelector('audio');
-                    const playBtn = player.querySelector('.play-btn');
-                    const trackId = player.getAttribute('data-track-id');
-                    
-                    console.log(`Player ${index + 1}:`, {
-                        trackId: trackId,
-                        hasAudio: !!audio,
-                        hasPlayBtn: !!playBtn,
-                        audioSrc: audio ? audio.querySelector('source').src : 'No source',
-                        audioReadyState: audio ? audio.readyState : 'No audio',
-                        audioNetworkState: audio ? audio.networkState : 'No audio'
-                    });
-                    
-                    // Test if audio can be loaded
-                    if (audio) {
-                        audio.addEventListener('canplay', function() {
-                            console.log(`Player ${index + 1} can play audio`);
-                        });
-                        
-                        audio.addEventListener('error', function(e) {
-                            console.error(`Player ${index + 1} audio error:`, e);
-                        });
-                        
-                        // Try to load the audio
-                        audio.load();
-                    }
-                });
-                
-                // Test first audio player
-                const firstAudio = document.querySelector('.music-card audio');
-                if (firstAudio) {
-                    console.log('Testing first audio player...');
-                    firstAudio.play().then(() => {
-                        console.log('First audio played successfully');
-                        
-                        // Test seeking after 2 seconds
-                        setTimeout(() => {
-                            if (firstAudio.duration && !isNaN(firstAudio.duration)) {
-                                const seekTime = firstAudio.duration * 0.5; // Seek to 50%
-                                firstAudio.currentTime = seekTime;
-                                console.log('Seeking to 50%:', formatTime(seekTime));
-                                
-                                // Pause after seeking
-                                setTimeout(() => {
-                                    firstAudio.pause();
-                                    console.log('Audio paused after seeking test');
-                                }, 1000);
-                            }
-                        }, 2000);
-                    }).catch(error => {
-                        console.error('First audio play failed:', error);
-                    });
-                }
-                
-                // Test progress bars
-                const progressInputs = document.querySelectorAll('input[type="range"]');
-                console.log('Progress bars found:', progressInputs.length);
-                progressInputs.forEach((input, index) => {
-                    console.log(`Progress bar ${index + 1}:`, {
-                        min: input.min,
-                        max: input.max,
-                        value: input.value,
-                        step: input.step
-                    });
-                });
-            });
+
             
             // 3D Card Effect
             document.querySelectorAll('.music-card').forEach(card => {
