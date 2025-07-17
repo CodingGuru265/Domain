@@ -12,6 +12,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MusicController;
 use App\Http\Controllers\ThemeController;
+use App\Http\Controllers\VideoController;
 
 Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 
@@ -27,6 +28,11 @@ Route::get('/about', function () {
 Route::get('/apm', function () {
     return view('frontend.components.apm');
 })->name('apm');
+
+Route::get('/videos', [VideoController::class, 'index'])->name('videos');
+Route::post('/videos/track-view', [VideoController::class, 'trackView'])->name('videos.trackView');
+Route::post('/videos/track-download', [VideoController::class, 'trackDownload'])->name('videos.trackDownload');
+Route::get('/videos/download/{filename}', [VideoController::class, 'download'])->name('videos.download');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -60,6 +66,9 @@ Route::get('/membership', [HomeController::class, 'membership'])->name('membersh
 Route::get('/loadingscreen', [HomeController::class, 'loadingscreen'])->name('loading-screen');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contact');
 Route::get('/musics', [HomeController::class, 'music'])->name('music');
+Route::post('/music/track-play', [HomeController::class, 'trackMusicPlay'])->name('music.trackPlay');
+Route::post('/music/track-download', [HomeController::class, 'trackMusicDownload'])->name('music.trackDownload');
+Route::get('/music/download/{id}', [HomeController::class, 'downloadMusic'])->name('music.download');
 Route::get('/dpp_events', [HomeController::class, 'events'])->name('events');
 Route::get('/dpp_news', [HomeController::class, 'news'])->name('news');
 Route::get('/news_detail/{id}', [HomeController::class, 'news_detail'])->name('news_detail');
