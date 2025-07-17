@@ -393,7 +393,7 @@
 
     
     {{-- FOCUS AREAS  --}}
-<section class="focus-areas relative py-10 bg-[#0574F7] text-white text-center">
+<section class="focus-areas relative py-5 bg-[#0574F7] text-white text-center">
     <h2 class="text-4xl font-bold mt-2">Focus Area</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-10">
@@ -532,7 +532,7 @@
     </section> --}}
 
     {{-- music section
-    <section class="py-10 bg-white px-10">
+    <section class="py-5 bg-white px-10">
         <div class="py-4 flex flex-col items-center justify-center text-center h-full">
             <h2 class="text-md text-[var(--theme-color)] font-bold" id="music-title">DPP Music Vibes</h2>
             <p class="text-lg text-[var(--custom-black)] mt-2" id="music-subtitle">
