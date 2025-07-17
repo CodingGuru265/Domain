@@ -4,184 +4,43 @@
 <!-- Main Content -->
 <div class="donation-wrapper">
 
-    <!-- Payment Methods Section -->
-    <section class="payment-section">
-        <div class="container">
-            <div class="payment-header">
-                <div>
-                    <h2 class="section-title">Choose Your Payment Method</h2> 
-                </div>
-                <p class="section-description">Multiple secure options available for your convenience</p>
-                <div class="section-badge">Secure Payments</div>
-            </div>
 
-            <div class="payment-grid">
-                <!-- National Bank -->
-                <div class="payment-card bank-card">
-                    <div class="card-header">
-                        <div class="payment-logo">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <div class="payment-name">
-                            <h3>National Bank</h3>
-                            <span>Malawi</span>
-                        </div>
-                    </div>
-                    <div class="payment-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Account Name</span>
-                            <span class="detail-value">Democratic Progressive Party</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Account Number</span>
-                            <span class="detail-value">1234-5678-9012-3456</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Branch</span>
-                            <span class="detail-value">Main Branch, Lilongwe</span>
-                        </div>
-                    </div>
-                </div>
+<div class="grid grid-cols-1 h-[400px]" style=" background: linear-gradient(to bottom right, rgba(5, 116, 247, 0.6), rgba(230, 30, 43, 0.6)), url('assets/images/slider_img_3.png') " > 
+        <div class="grid grid-cols-1" >
+            <div class="flex items-center  justify-center" ><h1 class="text-5xl text-white font-bold" >Donate to Party</h1></div>
+        </div>
+    </div>
+    <div class="w-full px-4 py-10 max-w-7xl mx-auto">
 
-                <!-- Standard Bank -->
-                <div class="payment-card bank-card">
-                    <div class="card-header">
-                        <div class="payment-logo standard">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="payment-name">
-                            <h3>Standard Bank</h3>
-                            <span>Malawi</span>
-                        </div>
-                    </div>
-                    <div class="payment-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Account Name</span>
-                            <span class="detail-value">Democratic Progressive Party</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Account Number</span>
-                            <span class="detail-value">9876-5432-1098-7654</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Branch</span>
-                            <span class="detail-value">City Centre, Blantyre</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile Money -->
-                <div class="payment-card mobile-card">
-                    <div class="card-header">
-                        <div class="payment-logo mobile">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="payment-name">
-                            <h3>Mobile Money</h3>
-                            <span>TNM & Airtel</span>
-                        </div>
-                    </div>
-                    <div class="payment-details">
-                        <div class="detail-item">
-                            <span class="detail-label">TNM Mpamba</span>
-                            <span class="detail-value">0888-123-456</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Airtel Money</span>
-                            <span class="detail-value">0999-654-321</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Reference</span>
-                            <span class="detail-value">DPP Support</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PayPal -->
-                <div class="payment-card paypal-card">
-                    <div class="card-header">
-                        <div class="payment-logo paypal">
-                            <i class="fab fa-paypal"></i>
-                        </div>
-                        <div class="payment-name">
-                            <h3>PayPal</h3>
-                            <span>International</span>
-                        </div>
-                    </div>
-                    <div class="payment-details">
-                        <div class="detail-item">
-                            <span class="detail-label">PayPal Email</span>
-                            <span class="detail-value">donations@dpp.mw</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Reference</span>
-                            <span class="detail-value">DPP Donation</span>
-                        </div>
-                        <div class="security-note">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Secure international payments</span>
-                        </div>
-                    </div>
+    <!-- Information Cards -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-3  gap-4">
+        <!-- Address Card -->
+        <div class="bg-white p-10 rounded-xl shadow-md location-card">
+            <div class="flex items-start">
+                <div class="flex items-center justify-center">
+                    <img class="w-full " src="assets/images/fdh.png" />
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="donation-types-section">
-        <div class="container">
-            <div class="impact-header">
-                <h2 class="section-title">Ways to Contribute</h2>
-                <p class="section-description">Multiple avenues to support our democratic mission</p>
-            </div>
-
-            <div class="donation-features">
-                <!-- Monetary Donations -->
-                <div class="donation-feature"> 
-                    <div class="feature-icon monetary">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Monetary Donations</h3>
-                        <p>Direct financial contributions to support our operations and initiatives. These funds are allocated across all our programs based on priority needs.</p>
-                    </div>
-                </div>
-
-                <!-- Materials & Supplies -->
-                <div class="donation-feature">
-                    <div class="feature-icon materials">
-                        <i class="fas fa-boxes"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Materials & Supplies</h3>
-                        <p>Office equipment, stationery, and operational materials that keep our day-to-day activities running smoothly at all levels of the organization.</p>
-                    </div>
-                </div>
-
-                <!-- Machinery & Vehicles -->
-                <div class="donation-feature">
-                    <div class="feature-icon machinery">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Machinery & Vehicles</h3>
-                        <p>Transportation, generators, and heavy equipment that enable our campaign activities and logistical operations across the country.</p>
-                    </div>
-                </div>
-
-                <!-- Other Contributions -->
-                <div class="donation-feature">
-                    <div class="feature-icon other">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Other Contributions</h3>
-                        <p>Specialized items, services, or resources that can benefit our party affairs and programs. We evaluate all contributions for suitability.</p>
-                    </div>
+        
+        <!-- Contact Card -->
+        <div class="bg-white rounded-xl shadow-md location-card">
+            <div class="flex items-start pt-10 pl-8 ">
+                <div class="flex items-center justify-center">
+                    <img class="w-3/4 p-8 mt-4" src="assets/images/mpamba.png" />
                 </div>
             </div>
         </div>
-    </section>
+        <div class="bg-white rounded-xl shadow-md location-card">
+            <div class="flex items-start pt-10 pl-8 ">
+                <div class="flex items-center justify-center">
+                    <img class="w-3/4 p-8 mt-10" src="assets/images/airtel.png" />
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
 </div>
 
 <style>

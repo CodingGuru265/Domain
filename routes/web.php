@@ -16,6 +16,7 @@ use App\Http\Controllers\VideoController;
 
 Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 
+Route::get('/manifesto', [HomeController::class, 'manifesto_page'])->name('manifesto_page');
 
 Route::get('/full_history', function () {
     return view('partials.full_history');

@@ -13,6 +13,8 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="http://dpp.mw/build/assets/app-DvuD9cZD.js" defer></script>
+        <link rel="stylesheet" href="https://dpp.mw/assets/css/styles.css">
 
     </head>
     <body class="font-sans antialiased">

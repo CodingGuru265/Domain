@@ -59,6 +59,12 @@ class HomeController extends Controller
         return view('frontend.components.music', compact('music', 'totalPlays', 'totalDownloads', 'totalTracks', 'musicStats'));
     }
 
+    //manifesto
+    public function manifesto_page()
+    {
+        return view('frontend.components.manifesto');
+    }
+
     /**
      * Track music play
      */

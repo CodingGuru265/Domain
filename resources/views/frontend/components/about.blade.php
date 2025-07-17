@@ -502,4 +502,13 @@
         </section>
     </div>
 </div>
+
+<style>
+.text-blue-900{
+    color: #197EC2 !important;
+}
+.bg-blue-900{
+    background-color: #197EC2 !important;
+}
+</style>
 @endsection
