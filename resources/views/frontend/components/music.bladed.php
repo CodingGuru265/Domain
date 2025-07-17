@@ -65,7 +65,7 @@
     <div class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <!-- Animated Background -->
         <div class="absolute inset-0">
-            <img src="{{ asset('assets/images/music/playerbg.png') }}" 
+            <img src="{{ asset('assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg') }}" 
                  alt="Music Vibes" 
                  class="w-full h-full object-cover animate-pulse-slow">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/70 to-red-900/80 animate-gradient"></div>
@@ -84,14 +84,14 @@
         <!-- Hero Content -->
         <div class="relative z-10 text-center text-white px-4">
             <div class="mb-8">
-                <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text animate-text-glow" style="background: linear-gradient(to right, #0574F7, #E61E2B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px white; text-stroke: 2px white;">
-                    DPP PLAYLIST
+                <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-purple-200 to-red-200 animate-text-glow">
+                    DPP Music
                 </h1>
-                <div class="w-64 h-1 mx-auto mt-6 animate-pulse" style="background: linear-gradient(to right, #0574F7, #E61E2B);"></div>
+                <div class="w-64 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-red-400 mx-auto mt-6 animate-pulse"></div>
             </div>
             
             <div class="space-y-4 animate-fade-in-up">
-                <p class="text-2xl md:text-3xl mb-2 text-white font-light">DPP Party Playlist</p>
+                <p class="text-2xl md:text-3xl mb-2 text-white font-light">DPP Party Music</p>
                 <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                     Vibes Feel the rhythm, enjoy the beats, and celebrate with the 
                     <span class="text-yellow-300 font-bold animate-bounce">best </span> tunes!
@@ -101,22 +101,22 @@
             <!-- Animated Stats -->
             <div class="flex justify-center items-center space-x-8 mt-12 animate-fade-in-up" style="animation-delay: 0.5s;">
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white counter" data-target="{{ $music->count() }}">0</div>
+                    <div class="text-3xl font-bold text-blue-300 counter" data-target="{{ $music->count() }}">0</div>
                     <div class="text-sm text-gray-300">Tracks</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white counter" data-target="24">0</div>
+                    <div class="text-3xl font-bold text-purple-300 counter" data-target="24">0</div>
                     <div class="text-sm text-gray-300">Hours</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white counter" data-target="1000">0</div>
+                    <div class="text-3xl font-bold text-red-300 counter" data-target="1000">0</div>
                     <div class="text-sm text-gray-300">Fans</div>
                 </div>
             </div>
             
             <!-- Music Controls -->
-            <div class="mt-8 flex justify-center space-x-16 animate-fade-in-up" style="animation-delay: 1s;">
-                <button id="play-all-btn" class="px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg" style="background: linear-gradient(to right, #0574F7, #E61E2B);">
+            <div class="mt-8 flex justify-center space-x-4 animate-fade-in-up" style="animation-delay: 1s;">
+                <button id="play-all-btn" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                     <i class="fas fa-play mr-2"></i>Play All
                 </button>
                 <button id="shuffle-btn" class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
@@ -134,7 +134,7 @@
     </div>
 
     <!-- Music List Section with Enhanced Gradient Background -->
-    <div class="relative min-h-screen py-20 px-4 overflow-hidden" style="background: linear-gradient(to bottom, #0574F7, #E61E2B);">
+    <div class="relative min-h-screen bg-gradient-to-b from-blue-600 via-purple-600 to-red-600 py-20 px-4 overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0">
             <div class="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl animate-float"></div>
@@ -145,26 +145,26 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl">🎵 All Songs</h2>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto drop-shadow-lg">Discover the rhythm and feel the energy of DPP's music collection</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">🎵 Latest Tracks</h2>
+                <p class="text-xl text-blue-200 max-w-2xl mx-auto">Discover the rhythm and feel the energy of DPP's music collection</p>
             </div>
             
             @if ($music->isEmpty())
                 <div class="text-center text-white animate-fade-in-up">
-                    <div class="text-8xl mb-6 animate-bounce drop-shadow-2xl">🎵</div>
-                    <p class="text-2xl mb-4 drop-shadow-lg">No music found yet</p>
-                    <p class="text-lg text-blue-100 drop-shadow-md">We're working on some amazing tracks for you!</p>
+                    <div class="text-8xl mb-6 animate-bounce">🎵</div>
+                    <p class="text-2xl mb-4">No music found yet</p>
+                    <p class="text-lg text-blue-200">We're working on some amazing tracks for you!</p>
                 </div>
             @else
                 <div class="grid gap-8">
                     @foreach ($music as $index => $track)
-                        <div class="music-card bg-black/30 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/30 hover:bg-black/40 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-3xl animate-fade-in-up group" 
+                        <div class="music-card bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-3xl animate-fade-in-up group" 
                              style="animation-delay: {{ $index * 0.1 }}s;"
                              data-track-title="{{ $track->title }}"
                              data-track-artist="{{ $track->artist }}">
                             
                             <!-- Glow Effect -->
-                            <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background: linear-gradient(to right, rgba(5, 116, 247, 0.2), rgba(230, 30, 43, 0.2));"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-red-500/20 rounded-3xl blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                             
                             <!-- 3D Card Effect -->
                             <div class="card-3d-effect"></div>
@@ -173,12 +173,12 @@
                                 <!-- Enhanced Thumbnail -->
                                 <div class="flex-shrink-0 group">
                                     <div class="relative">
-                                        <div class="w-24 h-24 rounded-2xl overflow-hidden p-1 transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(to bottom right, #0574F7, #E61E2B);">
-                                            <img src="{{ asset('assets/images/music/dpp.jpg') }}" 
+                                        <div class="w-24 h-24 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-400 via-purple-500 to-red-500 p-1 transform hover:scale-110 transition-transform duration-300">
+                                            <img src="{{ asset('assets/images/music/portrait-happy-young-woman.jpg') }}" 
                                                  alt="Music Thumbnail" 
                                                  class="w-full h-full object-cover rounded-xl">
                                         </div>
-                                        <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center animate-pulse" style="background: linear-gradient(to right, #0574F7, #E61E2B);">
+                                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center animate-pulse">
                                             <i class="fas fa-music text-white text-sm"></i>
                                         </div>
                                         <!-- Equalizer Bars -->
@@ -193,39 +193,38 @@
                                 
                                 <!-- Enhanced Track Info -->
                                 <div class="flex-1 text-center lg:text-left">
-                                    <h3 class="text-2xl font-bold text-white mb-2 hover:text-blue-200 transition-colors drop-shadow-lg">{{ $track->title }}</h3>
-                                    <p class="text-lg text-blue-100 mb-1 drop-shadow-md">By <span class="font-semibold text-yellow-300 drop-shadow-lg">{{ $track->artist }}</span></p>
-                                    <p class="text-sm text-white bg-blue-500/30 rounded-full px-4 py-1 inline-block border border-blue-400/50">{{ $track->category }}</p>
+                                    <h3 class="text-2xl font-bold text-white mb-2 hover:text-blue-200 transition-colors">{{ $track->title }}</h3>
+                                    <p class="text-lg text-blue-200 mb-1">By <span class="font-semibold text-yellow-300">{{ $track->artist }}</span></p>
+                                    <p class="text-sm text-gray-300 bg-white/10 rounded-full px-4 py-1 inline-block">{{ $track->category }}</p>
                                     
-                                    <!-- Download Button -->
-                                    <div class="flex items-center justify-center lg:justify-start mt-3">
-                                        <a href="{{ asset('storage/' . $track->file) }}" download 
-                                           class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border border-white/30">
-                                            <i class="fas fa-download mr-2"></i>
-                                            Download
-                                        </a>
+                                    <!-- Track Rating -->
+                                    <div class="flex items-center justify-center lg:justify-start mt-3 space-x-1">
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                        @endfor
+                                        <span class="text-white/60 text-sm ml-2">({{ rand(80, 100) }}%)</span>
                                     </div>
                                 </div>
                                 
                                 <!-- Enhanced Custom Audio Player -->
                                 <div class="flex-1 max-w-lg">
-                                    <div class="bg-black/40 rounded-2xl p-6 backdrop-blur-sm border border-white/40 shadow-xl">
+                                    <div class="bg-white/20 rounded-2xl p-6 backdrop-blur-sm border border-white/30">
                                         <div class="flex items-center justify-between mb-4">
-                                            <button class="play-btn w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg" style="background: linear-gradient(to right, #0574F7, #E61E2B);">
+                                            <button class="play-btn w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 shadow-lg">
                                                 <i class="fas fa-play text-white ml-1"></i>
                                             </button>
                                             <div class="text-white text-sm font-medium">
                                                 <span class="current-time">0:00</span> / <span class="duration">0:00</span>
                                             </div>
-                                            <button class="volume-btn text-white hover:text-white/80 transition-colors transform hover:scale-110">
+                                            <button class="volume-btn text-white hover:text-blue-200 transition-colors transform hover:scale-110">
                                                 <i class="fas fa-volume-up text-lg"></i>
                                             </button>
                                         </div>
                                         
                                         <!-- Enhanced Progress Bar -->
                                         <div class="relative mb-2">
-                                            <div class="bg-white/50 rounded-full h-3 overflow-hidden shadow-inner">
-                                                <div class="progress-bar h-3 rounded-full transition-all duration-300 relative" style="width: 0%; background: linear-gradient(to right, #0574F7, #E61E2B);">
+                                            <div class="bg-white/30 rounded-full h-3 overflow-hidden">
+                                                <div class="progress-bar bg-gradient-to-r from-blue-400 via-purple-500 to-red-500 h-3 rounded-full transition-all duration-300 relative" style="width: 0%">
                                                     <div class="absolute inset-0 bg-white/30 animate-pulse"></div>
                                                 </div>
                                             </div>
@@ -239,7 +238,7 @@
                                         <!-- Waveform Visualization -->
                                         <div class="flex items-center justify-center space-x-1 h-8">
                                             @for ($i = 0; $i < 20; $i++)
-                                                <div class="w-1 bg-white/60 rounded-full waveform-bar shadow-sm" style="height: {{ rand(20, 80) }}%"></div>
+                                                <div class="w-1 bg-white/30 rounded-full waveform-bar" style="height: {{ rand(20, 80) }}%"></div>
                                             @endfor
                                         </div>
                                         
@@ -265,8 +264,8 @@
         }
         
         @keyframes text-glow {
-            0%, 100% { text-shadow: 0 0 20px rgba(5, 116, 247, 0.5); }
-            50% { text-shadow: 0 0 30px rgba(230, 30, 43, 0.8), 0 0 40px rgba(5, 116, 247, 0.6); }
+            0%, 100% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            50% { text-shadow: 0 0 30px rgba(147, 51, 234, 0.8), 0 0 40px rgba(239, 68, 68, 0.6); }
         }
         
         @keyframes gradient {
@@ -347,12 +346,12 @@
         /* Enhanced Player Styles */
         .play-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 10px 25px rgba(5, 116, 247, 0.6);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
         }
         
         .progress-bar {
             transition: width 0.1s ease;
-            box-shadow: 0 0 10px rgba(5, 116, 247, 0.5);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
         }
         
         .waveform-bar {
@@ -367,7 +366,6 @@
             position: relative;
             overflow: hidden;
             perspective: 1000px;
-            backdrop-filter: blur(10px);
         }
         
         .music-card::before {
@@ -409,12 +407,12 @@
         }
         
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #0574F7, #E61E2B);
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ef4444);
             border-radius: 5px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #0461d4, #cc1a26);
+            background: linear-gradient(to bottom, #2563eb, #7c3aed, #dc2626);
         }
         
         /* Shadow effects */
@@ -532,9 +530,9 @@
                 barHeight = dataArray[i] / 2;
                 
                 const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-                gradient.addColorStop(0, '#0574F7');
-                gradient.addColorStop(0.5, '#0574F7');
-                gradient.addColorStop(1, '#E61E2B');
+                gradient.addColorStop(0, '#3b82f6');
+                gradient.addColorStop(0.5, '#8b5cf6');
+                gradient.addColorStop(1, '#ef4444');
                 
                 ctx.fillStyle = gradient;
                 ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);

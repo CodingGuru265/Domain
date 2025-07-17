@@ -243,6 +243,9 @@
 
         
         <li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4">
+            <div class="text-center mb-1">
+                <span class="text-xs font-bold uppercase tracking-wider">Count Down to 2025 Elections</span>
+            </div>
             <div class="flex gap-4 items-center justify-center">
                 
                 <!-- Voting Icon  -->
