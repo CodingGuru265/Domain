@@ -65,7 +65,7 @@
     <div class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <!-- Animated Background -->
         <div class="absolute inset-0">
-            <img src="{{ asset('assets/images/music/charismatic-modern-young-attractive-africanamerican-girl-with-afro-haircut-listening-music-headph.jpg') }}" 
+            <img src="{{ asset('assets/images/music/playerbg.png') }}" 
                  alt="Music Vibes" 
                  class="w-full h-full object-cover animate-pulse-slow">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/70 to-red-900/80 animate-gradient"></div>
@@ -84,7 +84,7 @@
         <!-- Hero Content -->
         <div class="relative z-10 text-center text-white px-4">
             <div class="mb-8">
-                <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text animate-text-glow" style="background: linear-gradient(to right, #0574F7, #E61E2B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text animate-text-glow" style="background: linear-gradient(to right, #0574F7, #E61E2B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px white; text-stroke: 2px white;">
                     DPP PLAYLIST
                 </h1>
                 <div class="w-64 h-1 mx-auto mt-6 animate-pulse" style="background: linear-gradient(to right, #0574F7, #E61E2B);"></div>
