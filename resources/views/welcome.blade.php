@@ -322,13 +322,12 @@
             <p class="slide-in highlighted-text">Our party is powered by contributions <span
                     class="text-[var(--theme-color)]">from supporters.</span></p>
 
-            <div class="stats gap-2 justify-center items-center align-middle">
-                
+            <div class="stats flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
                 
                 <!-- Stats Card 1 -->
-                <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
+                <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-64 text-center">
                     <!-- Icon inside perfectly centered circle -->
-                    <div class="absolute -top-6 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
+                    <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
                         <!-- Example using Heroicons (adjust as needed) -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -340,12 +339,11 @@
                         <p class="text-white text-xs">Number of Shadow Mps</p>
                     </div>
                 </div>
-                <!-- Stats Card 1 -->
 
                 <!-- Stats Card 2 -->
-                <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-52 text-center mx-auto">
+                <div class="stat-item relative border border-gray-300 rounded-md pt-6 pb-3 w-64 text-center">
                     <!-- Icon inside perfectly centered circle -->
-                    <div class="absolute -top-6 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
+                    <div class="absolute -top-6 inset-x-0 mx-auto w-12 h-12 rounded-full bg-[#E61E2B] border border-[#E61E2B] shadow-md flex items-center justify-center">
                         <!-- Example using Heroicons (adjust as needed) -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -353,12 +351,10 @@
                     </div>
 
                     <div class="px-2">
-                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="472">0</span>+</h3>
+                        <h3 class="text-lg font-bold mt-2"><span class="counter" data-target="222">0</span>+</h3>
                         <p class="text-white text-xs">Number of councillors</p>
                     </div>
                 </div>
-                <!-- Stats Card 2 -->
-
 
             </div>
         </div>
