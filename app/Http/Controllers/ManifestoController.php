@@ -10,4 +10,20 @@ class ManifestoController extends Controller
     {
         return view('frontend.manifesto.agricultural_productivity');
     }
+
+      public function manifesto_industrialisation()
+    {
+        return view('frontend.manifesto.industrialisation');
+    }
+
+      public function manifesto_urbanisation()
+    {
+        return view('frontend.manifesto.urbanisation');
+    }
+
+      public function manifesto_decentralisation()
+    {
+        return view('frontend.manifesto.decentralisation');
+    }
+
 }

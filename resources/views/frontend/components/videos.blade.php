@@ -1,99 +1,103 @@
-@extends('layouts.front', ['pageTitle' => 'Dpp | Videos'])
+@extends('layouts.front', ['pageTitle' => 'DPP Videos'])
 
 @section('content')
-    <!-- Particle Background -->
-    <div id="particles-js" class="fixed inset-0 z-0"></div>
-    
-    <!-- Hero Section with Background Image -->
-    <div class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">     <!-- Animated Background -->
-        <div class="absolute inset-0">
-            <img src="{{ asset('assets/images/music/playerbg.png') }}" 
-                 alt="Video Vibes" 
-                 class="w-full h-full object-cover animate-pulse-slow">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900 to-red-900/80 animate-gradient"></div>
+    <!-- Modern Hero Section -->
+    <div class="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+        <!-- Animated Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(239, 68, 68, 0.3) 0%, transparent 50%);"></div>
         </div>
         
-        <!-- Floating Video Icons -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="floating-icon" style="--delay:0s; --left: 10%">📹</div>
-            <div class="floating-icon" style="--delay:2s; --left: 20%">🎬</div>
-            <div class="floating-icon" style="--delay:4s; --left: 30%">🎥</div>
-            <div class="floating-icon" style="--delay:1s; --left: 70%">📺</div>
-            <div class="floating-icon" style="--delay:3s; --left: 80%">🎭</div>
-            <div class="floating-icon" style="--delay:5s; --left: 90%">🎪</div>
+        <!-- Floating Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+            <div class="absolute top-40 right-40 w-3 h-3 bg-red-400 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-40 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping" style="animation-delay: 2s;"></div>
         </div>
         
         <!-- Hero Content -->
-        <div class="relative z-10 text-center text-white px-4">
-            <div class="mb-8">
-                <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text animate-text-glow" style="background: linear-gradient(to right, #0574F7, #E61E2B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px white; text-stroke: 2px white;">
-                    Videos Playlist
+        <div class="relative z-10 flex items-center justify-center min-h-screen px-4">
+            <div class="text-center max-w-5xl mx-auto">
+                <!-- Icon Badge -->
+                <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-8 shadow-2xl">
+                    <i class="fas fa-play text-4xl text-white"></i>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-7xl md:text-9xl font-black mb-8 text-white leading-none">
+                    DPP
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+                        VIDEOS
+                    </span>
                 </h1>
-                <div class="w-64 h-1 bg-white mt-6 animate-pulse" style="background: linear-gradient(to right, #0574F7, #E61E2B);"></div>
-            </div>
-            
-            <!-- <div class="space-y-4 animate-fade-in-up">
-                <p class="text-2xl md:text-3xl mb-2 text-white font-light"> Video Playlist</p>
-                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                    Watch the rhythm, feel the energy, and celebrate with the 
-                    <span class="text-yellow-300 font-bold animate-bounce">best </span> videos!
+                
+                <!-- Subtitle -->
+                <p class="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    Experience the energy and passion of DPP through our curated collection of music videos and campaign highlights
                 </p>
-            </div> -->
-            
-            <!-- Animated Stats -->
-            <div class="flex justify-center items-center space-x-8 mt-12 animate-fade-in-up" style="animation-delay: 0.5s;">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-white">{{ $totalVideos }}</div>
-                    <div class="text-sm text-gray-300">Videos</div>
+                
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl mb-4 mx-auto">
+                            <i class="fas fa-video text-2xl text-white"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-white mb-2">{{ $totalVideos }}</div>
+                        <div class="text-gray-400 font-medium">Videos</div>
+                    </div>
+                    
+                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl mb-4 mx-auto">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-white mb-2" id="total-views">{{ $totalViews }}</div>
+                        <div class="text-gray-400 font-medium">Views</div>
+                    </div>
+                    
+                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl mb-4 mx-auto">
+                            <i class="fas fa-download text-2xl text-white"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-white mb-2" id="total-downloads">{{ $totalDownloads }}</div>
+                        <div class="text-gray-400 font-medium">Downloads</div>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-white" id="total-downloads">{{ $totalDownloads }}</div>
-                    <div class="text-sm text-gray-300">Downloads</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-white" id="total-views">{{ $totalViews }}</div>
-                    <div class="text-sm text-gray-300">Views</div>
-                </div>
-            </div>
-            
-            <!-- Video Controls -->
-            <div class="mt-8 flex justify-center animate-fade-in-up" style="animation-delay: 1s;">
-                <div class="flex flex-row gap-16">
-                    <button id="play-all-videos-btn" class="px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg" style="background: linear-gradient(to right, #0574F7, #E61E2B);">
-                        <i class="fas fa-play mr-2"></i>Play All
-                    </button>
-                    <button id="fullscreen-btn" class="px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
-                        <i class="fas fa-expand mr-2"></i>Fullscreen
-                    </button>
-
-                </div>
+                
+                <!-- CTA Button -->
+                <button class="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-play mr-3 group-hover:animate-pulse"></i>
+                    Start Watching
+                </button>
             </div>
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1 animate-bounce">
-            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-                <div class="w-1 h-3 rounded-full mt-2 animate-scroll"></div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
             </div>
         </div>
     </div>
 
-    <!-- Video List Section with Enhanced Gradient Background -->
-    <div class="relative min-h-screen py-20 px-4 overflow-hidden" style="background: linear-gradient(to bottom, #0574F7, #E61E2B);">     <!-- Animated Background Elements -->
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl animate-float"></div>
-            <div class="absolute top-40 right-20 w-48 h-48 rounded-full blur-lg animate-float" style="animation-delay: 2s;"></div>
-            <div class="absolute bottom-40 left-20 w-56 h-56 bg-red-400 rounded-full blur-xl animate-float" style="animation-delay: 4s;"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Video Gallery Section -->
+    <div class="relative py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
             <!-- Section Header -->
-            <div class="text-center mb-6 animate-fade-in-up">
-                <!-- <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl"> All Videos</h2> -->
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto drop-shadow-lg">Watch, Share & download DPP's official music videos & more</p>
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-8 shadow-xl">
+                    <i class="fas fa-film text-3xl text-white"></i>
+                </div>
+                <h2 class="text-6xl md:text-7xl font-black text-gray-900 mb-8">
+                    Featured
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Videos</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Discover the latest music videos and campaign content from DPP
+                </p>
             </div>
             
-            <div class="grid gap-12">
+            <!-- Video Grid -->
+            <div class="grid gap-8">
                 @php
                     $videoFiles = [
                         'Sendera Sisters - Tikwasaka.mp4',
@@ -102,107 +106,93 @@
                     ];
                 @endphp
                 @foreach ($videoFiles as $index => $video)
-                    <div class="video-card bg-black/30 backdrop-blur-md rounded-3xl shadow-2xl border border-white/30 hover:bg-black/40 transition-all duration-500 transform hover:scale-[1.2] hover:shadow-3xl animate-fade-in-up" 
-                         style="animation-delay: {{ $index * 0.2 }}s;">
-                        
-                        <!-- Glow Effect -->
-                        <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background: linear-gradient(to right, rgba(56, 247, 0.2, 0.5), rgba(230, 30, 43, 0.5));"></div>
-                        
-                        <!-- Enhanced Video Player -->
-                        <div class="flex flex-col lg:flex-row items-center gap-8">
-                                                            <div class="flex-1">
-                                <div class="relative group/video">
-                                    <video controls class="w-full rounded-2xl shadow-2xl bg-black custom-video-player" 
+                    <div class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden hover:shadow-3xl transition-all duration-700 hover:-translate-y-4">
+                        <div class="flex flex-col lg:flex-row">
+                            <!-- Video Player Container -->
+                            <div class="lg:w-2/3 relative">
+                                <div class="relative overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none">
+                                    <video controls class="w-full h-80 lg:h-96 object-cover bg-gray-900 group-hover:scale-110 transition-transform duration-700" 
                                            poster="{{ asset('assets/images/videos/thumbnail.png') }}"
-                                           preload="metadata"
-                                           crossorigin="anonymous">
+                                           preload="metadata">
                                         <source src="{{ asset('assets/images/videos/' . $video) }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                     
-                                    <!-- Video Overlay -->
-                                    <div class="absolute inset-0 bg-black/20 rounded-2xl opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer video-overlay">
-                                        <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                            <i class="fas fa-play text-white text-2xl play-icon"></i>
-                                            <i class="fas fa-pause text-white text-2xl pause-icon hidden"></i>
+                                    <!-- Modern Badges -->
+                                    <div class="absolute top-6 right-6 flex flex-col gap-2">
+                                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full shadow-xl backdrop-blur-sm">
+                                            <i class="fas fa-hd-video mr-2"></i>HD
+                                        </div>
+                                        <div class="bg-black/80 text-white text-sm font-medium px-4 py-2 rounded-full backdrop-blur-sm border border-white/20">
+                                            <i class="fas fa-music mr-2"></i>Music
                                         </div>
                                     </div>
                                     
-                                    <!-- Video Duration Badge -->
-                                    <div class="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-full px-3 py-1">
-                                        <span class="text-white text-sm font-medium">HD</span>
+                                    <!-- Enhanced Play Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                                        <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform duration-300">
+                                            <i class="fas fa-play text-3xl text-white ml-2"></i>
+                                        </div>
                                     </div>
                                     
-                                    <!-- Custom Video Controls -->
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl custom-video-controls opacity-0 group-hover/video:opacity-100 transition-opacity duration-300">
-                                        <!-- Custom Play/Pause Button -->
-                                        <div class="flex items-center justify-center mb-3">
-                                            <button class="custom-play-btn w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 mr-4">
-                                                <i class="fas fa-play text-white text-lg"></i>
-                                            </button>
-                                            <button class="custom-pause-btn w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hidden">
-                                                <i class="fas fa-pause text-white text-lg"></i>
-                                            </button>
-                                        </div>
-                                        
-                                        <!-- Custom Progress Bar -->
-                                        <div class="relative mb-3 cursor-pointer" title="Click to seek">
-                                            <div class="bg-white/30 rounded-full h-2 overflow-hidden">
-                                                <div class="video-progress-bar h-2 rounded-full transition-all duration-300 relative" style="width: 0%; background: linear-gradient(to right, #0574F7, #E61E2B);">
-                                                    <div class="absolute inset-0 bg-white/30 animate-pulse"></div>
-                                                </div>
-                                            </div>
-                                            <input type="range" 
-                                                   class="absolute inset-0 w-full h-2 opacity-0 cursor-pointer z-10" 
-                                                   min="0" 
-                                                   max="100" 
-                                                   value="0"
-                                                   step="0.1">
-                                        </div>
-                                        
-                                        <!-- Time Display -->
-                                        <div class="flex items-center justify-between text-white text-sm">
-                                            <span class="video-current-time">0:00</span>
-                                            <span class="video-duration">0:00</span>
-                                        </div>
+                                    <!-- Progress Indicator -->
+                                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-800/50">
+                                        <div class="h-full bg-gradient-to-r from-blue-600 to-purple-600 w-0 group-hover:w-full transition-all duration-1000"></div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- Enhanced Video Info -->
-                            <div class="flex-1 text-center lg:text-left">
-                                <h3 class="text-3xl font-bold text-white mb-4 transition-colors drop-shadow-lg">{{ pathinfo($video, PATHINFO_FILENAME) }}</h3>
-                                <p class="text-lg text-blue-100 mb-3 drop-shadow-md">By <span class="font-semibold text-yellow-300 drop-shadow-lg">Sendera Sisters</span></p>
-                                <p class="text-sm text-white bg-blue-500 rounded-full px-4 py-1 inline-block border border-blue-400 mb-4">Music Video</p>                  
-                                <!-- Video Stats -->
-                                <div class="flex items-center justify-center lg:justify-start space-x-6 mb-6">
-                                    <div class="text-center">
-                                        <div class="text-2xl font-bold text-white video-views" data-filename="{{ $video }}">{{ $videoStats[$video]['views'] ?? 0 }}</div>
-                                        <div class="text-xs text-gray-300">Views</div>
+                            <!-- Content Section -->
+                            <div class="lg:w-1/3 p-8 lg:p-10 flex flex-col justify-between">
+                                <div>
+                                    <!-- Category Badge -->
+                                    <div class="flex items-center gap-3 mb-6">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                            <i class="fas fa-video text-white text-lg"></i>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-600 uppercase tracking-wider">Music Video</span>
                                     </div>
-                                    <div class="text-center">
-                                        <div class="text-2xl font-bold text-white video-downloads" data-filename="{{ $video }}">{{ $videoStats[$video]['downloads'] ?? 0 }}</div>
-                                        <div class="text-xs text-gray-300">Downloads</div>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="text-2xl font-bold text-white">{{ rand(15, 25) }} MB</div>
-                                        <div class="text-xs text-gray-300">Size</div>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="text-lg font-bold text-yellow-300 video-status" data-filename="{{ $video }}">Ready</div>
-                                        <div class="text-xs text-gray-300">Status</div>
+                                    
+                                    <!-- Title -->
+                                    <h3 class="text-4xl font-black text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                                        {{ pathinfo($video, PATHINFO_FILENAME) }}
+                                    </h3>
+                                    
+                                    <!-- Artist -->
+                                    <p class="text-xl text-gray-600 mb-8">
+                                        By <span class="font-bold text-blue-600">Sendera Sisters</span>
+                                    </p>
+                                    
+                                    <!-- Enhanced Stats -->
+                                    <div class="grid grid-cols-2 gap-4 mb-8">
+                                        <div class="text-center p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 group-hover:border-blue-300 transition-colors duration-300">
+                                            <div class="text-3xl font-black text-blue-600 video-views mb-2" data-filename="{{ $video }}">
+                                                {{ $videoStats[$video]['views'] ?? 0 }}
+                                            </div>
+                                            <div class="text-sm font-bold text-blue-700 uppercase tracking-wide">Views</div>
+                                        </div>
+                                        <div class="text-center p-5 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 group-hover:border-purple-300 transition-colors duration-300">
+                                            <div class="text-3xl font-black text-purple-600 video-downloads mb-2" data-filename="{{ $video }}">
+                                                {{ $videoStats[$video]['downloads'] ?? 0 }}
+                                            </div>
+                                            <div class="text-sm font-bold text-purple-700 uppercase tracking-wide">Downloads</div>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <!-- Download Button -->
-                                <div class="flex items-center justify-center lg:justify-start space-x-4">
-                                    <a href="{{ route('videos.download', ['filename' => $video]) }}" class="download-btn inline-flex items-center px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border border-white/30" data-filename="{{ $video }}">
-                                        <i class="fas fa-download mr-2"></i>
-                                        Download
+                                <!-- Action Buttons -->
+                                <div class="flex flex-col gap-4">
+                                    <a href="{{ route('videos.download', ['filename' => $video]) }}" 
+                                       class="download-btn group/btn inline-flex items-center justify-center px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl" 
+                                       data-filename="{{ $video }}">
+                                        <i class="fas fa-download mr-3 text-xl group-hover/btn:animate-bounce"></i>
+                                        Download Video
                                     </a>
-                                    <button class="share-btn inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20" data-video-title="{{ pathinfo($video, PATHINFO_FILENAME) }}" data-video-artist="Sendera Sisters">
-                                        <i class="fas fa-share mr-2"></i>
-                                        Share
+                                    <button class="share-btn group/btn inline-flex items-center justify-center px-8 py-5 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 font-bold rounded-2xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl" 
+                                            data-video-title="{{ pathinfo($video, PATHINFO_FILENAME) }}" 
+                                            data-video-artist="Sendera Sisters">
+                                        <i class="fas fa-share mr-3 text-xl group-hover/btn:animate-pulse"></i>
+                                        Share Video
                                     </button>
                                 </div>
                             </div>
@@ -213,31 +203,45 @@
         </div>
     </div>
 
+    <!-- Call to Action Section -->
+    <div class="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.3) 0%, transparent 50%);"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-12 shadow-2xl">
+                <i class="fas fa-heart text-4xl text-white"></i>
+            </div>
+            
+            <h3 class="text-5xl md:text-6xl font-black text-white mb-8">
+                Join the DPP
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Community</span>
+            </h3>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Stay connected with the latest videos, music, and campaign updates. Be part of the movement that's shaping Malawi's future.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button class="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-6 rounded-3xl text-xl font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-bell mr-4 group-hover:animate-pulse"></i>
+                    Subscribe Now
+                </button>
+                <button class="group bg-white/10 backdrop-blur-md text-white px-12 py-6 rounded-3xl text-xl font-bold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 shadow-2xl border border-white/20">
+                    <i class="fas fa-share mr-4 group-hover:animate-bounce"></i>
+                    Share Channel
+                </button>
+            </div>
+        </div>
+    </div>
+
     <style>
-        /* Custom Animations */
+        /* Modern Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes text-glow {
-            0%, 100% { text-shadow: 0 0 20px rgba(51, 165, 255, 0.8); }
-            50% { text-shadow: 0 0 30px rgba(230, 30, 43, 0.8), 0 0 40px rgba(51, 167, 255, 0.6); }
-        }
-        
-        @keyframes gradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes scroll {
-            0% { transform: translateY(0px); opacity: 0; }
-            100% { transform: translateY(20px); opacity: 1; }
-        }
-        
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
         }
         
         @keyframes fade-in-up {
@@ -245,26 +249,19 @@
             to { opacity: 1; transform: translateY(0px); }
         }
         
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200px 0; }
+            100% { background-position: calc(200px + 100%) 0; }
+        }
+        
         /* Animation Classes */
         .animate-float {
             animation: float 6s ease-in-out infinite;
-        }
-        
-        .animate-text-glow {
-            animation: text-glow 3s ease-in-out infinite;
-        }
-        
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient 15s infinite;
-        }
-        
-        .animate-scroll {
-            animation: scroll 2s ease-in-out infinite;
-        }
-        
-        .animate-pulse-slow {
-            animation: pulse-slow 4s ease-in-out infinite;
         }
         
         .animate-fade-in-up {
@@ -272,206 +269,241 @@
             opacity: 0;
         }
         
-        /* Floating Icons */
-        .floating-icon {
-            position: absolute;
-            font-size: 2em;
-            color: rgba(255, 255, 255, 0.3);
-            animation: float 8s ease-in-out infinite;
-            animation-delay: var(--delay);
-            left: var(--left);
-            top: 20%;
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
         }
         
-        /* Video Card Styles */
-        .video-card {
-            position: relative;
-            overflow: hidden;
-            perspective: 1000;
-            backdrop-filter: blur(10px);
+        /* Ultra Modern Video Player */
+        video {
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .video-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
-            transition: left 0.5s;
-        }
-        
-        .video-card:hover::before {
-            left: 100%;
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #574100, #cc1a26);
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #461, #cc1a26);
-        }
-        
-        /* Shadow effects */
-        .shadow-3xl {
-            box-shadow: 0 50px -12px rgba(0, 0, 0, 0.5);
+        video:hover {
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02);
         }
         
         /* Enhanced Video Controls */
         video::-webkit-media-controls {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9));
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         video::-webkit-media-controls-panel {
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.95));
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
         }
         
         video::-webkit-media-controls-play-button {
-            background-color: rgba(5, 116, 247, 0.8);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             border-radius: 50%;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
         video::-webkit-media-controls-timeline {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+            border-radius: 8px;
+            height: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         video::-webkit-media-controls-current-time-display,
         video::-webkit-media-controls-time-remaining-display {
             color: white;
             font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 14px;
         }
         
-        /* Video hover effects */
-        .group\/video:hover video {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
+        video::-webkit-media-controls-volume-slider {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Ultra Modern Hover Effects */
+        .group:hover {
+            transform: translateY(-8px);
+        }
+        
+        /* Enhanced Button Animations */
+        .download-btn, .share-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .download-btn::before, .share-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .download-btn:hover::before, .share-btn:hover::before {
+            left: 100%;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Stats Cards Enhancement */
+        .group:hover .bg-gradient-to-br {
+            transform: scale(1.08);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Play Overlay Enhancement */
+        .group:hover .absolute.inset-0.bg-gradient-to-t {
+            backdrop-filter: blur(4px);
+        }
+        
+        /* Badge Enhancement */
+        .bg-gradient-to-r.from-blue-600.to-purple-600 {
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 6px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        
+        /* Loading Animation */
+        .shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200px 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        /* Text Gradient Animation */
+        .text-gradient-animate {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+            background-size: 300% 300%;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* Card Glow Effect */
+        .card-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-glow:hover {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
         }
     </style>
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
     <script>
-        // Initialize Particles
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: '#ffffff' },
-                shape: { type: 'circle' },
-                opacity: { value: 0.3, random: false },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#ffffff',
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: { enable: true, mode: 'repulse' },
-                    onclick: { enable: true, mode: 'push' },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
-
-        // Counter Animation
-        function animateCounter(element) {
-            const target = parseInt(element.getAttribute('data-target'));
-            const duration = 2000;
-            const step = target / (duration / 16);
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += step;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.floor(current);
-            }, 16);
-        }
-
-        // Animate counters when they come into view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-
-        document.querySelectorAll('.counter').forEach(counter => {
-            observer.observe(counter);
-        });
-
-        // Enhanced Video Player
+        // Video Player Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, initializing video player...');
             const videos = document.querySelectorAll('video');
-            console.log('Found', videos.length, 'videos');
             let currentPlayingVideo = null;
             
-            // Play All functionality
-            document.getElementById('play-all-videos-btn').addEventListener('click', function() {
-                console.log('Play All button clicked');
-                const firstVideo = document.querySelector('video');
-                if (firstVideo) {
-                    console.log('First video details:', {
-                        src: firstVideo.querySelector('source')?.src,
-                        readyState: firstVideo.readyState,
-                        networkState: firstVideo.networkState,
-                        paused: firstVideo.paused,
-                        ended: firstVideo.ended,
-                        error: firstVideo.error
+            // Handle video play/pause
+            videos.forEach(video => {
+                video.addEventListener('play', function() {
+                    // Pause other videos when one starts playing
+                    videos.forEach(otherVideo => {
+                        if (otherVideo !== video && !otherVideo.paused) {
+                            otherVideo.pause();
+                        }
                     });
-                    
-                    firstVideo.play().then(() => {
-                        console.log('First video started playing');
-                        currentPlayingVideo = firstVideo;
-                    }).catch(error => {
-                        console.error('Error playing first video:', error);
-                    });
-                } else {
-                    console.log('No videos found');
-                }
+                    currentPlayingVideo = video;
+                });
+                
+                video.addEventListener('ended', function() {
+                    currentPlayingVideo = null;
+                });
             });
             
-            // Fullscreen functionality
-            document.getElementById('fullscreen-btn').addEventListener('click', function() {
-                const firstVideo = document.querySelector('video');
-                if (firstVideo) {
-                    if (firstVideo.requestFullscreen) {
+            // Download functionality
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const filename = this.getAttribute('data-filename');
+                    console.log('Downloading:', filename);
+                    
+                    // Update download count
+                    const downloadElement = document.querySelector(`[data-filename="${filename}"].video-downloads`);
+                    if (downloadElement) {
+                        const currentCount = parseInt(downloadElement.textContent) || 0;
+                        downloadElement.textContent = currentCount + 1;
+                    }
+                });
+            });
+            
+            // Share functionality
+            document.querySelectorAll('.share-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const title = this.getAttribute('data-video-title');
+                    const artist = this.getAttribute('data-video-artist');
+                    const url = window.location.href;
+                    
+                    if (navigator.share) {
+                        navigator.share({
+                            title: `${title} by ${artist}`,
+                            text: `Check out this DPP video: ${title}`,
+                            url: url
+                        });
+                    } else {
+                        // Fallback: copy to clipboard
+                        const shareText = `${title} by ${artist} - ${url}`;
+                        navigator.clipboard.writeText(shareText).then(() => {
+                            alert('Link copied to clipboard!');
+                        });
+                    }
+                });
+            });
+            
+            // View count tracking
+            videos.forEach(video => {
+                video.addEventListener('play', function() {
+                    const filename = this.querySelector('source').src.split('/').pop();
+                    const viewElement = document.querySelector(`[data-filename="${filename}"].video-views`);
+                    if (viewElement) {
+                        const currentViews = parseInt(viewElement.textContent) || 0;
+                        viewElement.textContent = currentViews + 1;
+                    }
+                });
+            });
+        });
                         firstVideo.requestFullscreen();
                     } else if (firstVideo.webkitRequestFullscreen) {
                         firstVideo.webkitRequestFullscreen();

@@ -1,5 +1,4 @@
 
-
 @extends('layouts.front', ['pageTitle' => 'Dpp | manfesto2025'])
 
 @section('content')
@@ -10,8 +9,8 @@
     <div class="background-container-documents">
         <div class="overlay"></div> <!-- Gradient Overlay -->
         <div class="text-container">
-            <div class="home-link">Agricultural Productivity</div>
-            <a href="/index.html" class="contact-text">Home /2025 Manifesto</a>
+            <div class="home-link">Decentralisation</div>
+            <a href="/index.html" class="contact-text">Home / 2025 Manifesto</a>
         </div>
     </div>
 
