@@ -49,7 +49,7 @@
                 <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 w-[280px] text-sm transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
                     
                     <li class="relative group/chapter4">
-                        <a href="#" class="block px-2 py-2 flex items-center justify-between hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">
+                        <a href="#" class="block flex items-center justify-between hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">
                             Pillars of Development 
                             <span class="ml-2 transform group-hover/chapter4:rotate-0 transition-all duration-300">
                                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
@@ -61,12 +61,12 @@
                         <!-- Enhanced popup for Pillars of Development -->
                         <div class="submenu-right bg-[var(--nav-bg-color)] absolute opacity-0 invisible group-hover/chapter4:opacity-100 group-hover/chapter4:visible popup-content text-white p-2 rounded-md shadow-lg z-60 w-[300px] transition-all duration-200 ease-in-out transform group-hover/chapter4:translate-y-0 translate-y-[-10px]">
                             <div class="space-y-2">
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Agricultural productivity
                                 </div>
                                 
                                 <div class="relative group/industrial">
-                                    <div class="popup-item p-2 rounded flex items-center justify-between cursor-pointer">
+                                    <div class="popup-item rounded flex items-center justify-between cursor-pointer">
                                         Industrialisation
                                         <svg class="w-3 h-3 transform group-hover/industrial:rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
@@ -75,16 +75,16 @@
                                     <!-- Nested submenu for Industrialisation -->
                                     <div class="submenu-right absolute opacity-0 invisible group-hover/industrial:opacity-100 group-hover/industrial:visible popup-content text-white p-3 rounded-md shadow-lg z-80 w-[320px] transition-all duration-200 ease-in-out transform group-hover/industrial:translate-y-0 translate-y-[-10px]">
                                         <div class="space-y-1">
-                                            <div class="popup-item p-2 rounded">Mining</div>
-                                            <div class="popup-item p-2 rounded">Transport infrastructure</div>
-                                            <div class="popup-item p-2 rounded">Energy</div>
-                                            <div class="popup-item p-2 rounded">ICT and artificial intelligence</div>
+                                            <div class="popup-item rounded">Mining</div>
+                                            <div class="popup-item rounded">Transport infrastructure</div>
+                                            <div class="popup-item rounded">Energy</div>
+                                            <div class="popup-item rounded">ICT and artificial intelligence</div>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="relative group/urban">
-                                    <div class="popup-item p-2 rounded flex items-center justify-between cursor-pointer">
+                                    <div class="popup-item rounded flex items-center justify-between cursor-pointer">
                                         Urbanisation
                                         <svg class="w-3 h-3 transform group-hover/urban:rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
@@ -93,14 +93,14 @@
                                     <!-- Nested submenu for Urbanisation -->
                                     <div class="submenu-right absolute opacity-0 invisible group-hover/urban:opacity-100 group-hover/urban:visible popup-content text-white p-3 rounded-md shadow-lg z-80 w-[280px] transition-all duration-200 ease-in-out transform group-hover/urban:translate-y-0 translate-y-[-10px]">
                                         <div class="space-y-1">
-                                            <div class="popup-item p-2 rounded">Tourism</div>
-                                            <div class="popup-item p-2 rounded">Creation of secondary cities</div>
-                                            <div class="popup-item p-2 rounded">Land, housing and water services</div>
+                                            <div class="popup-item rounded">Tourism</div>
+                                            <div class="popup-item rounded">Creation of secondary cities</div>
+                                            <div class="popup-item rounded">Land, housing and water services</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Decentralisation
                                 </div>
                             </div>
@@ -108,7 +108,7 @@
                     </li>
                     
                     <li class="relative group/chapter5">
-                        <a href="#" class="block px-3 py-2 flex items-center justify-between hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">
+                        <a href="#" class="block flex items-center justify-between hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">
                             Enablers 
                             <span class="ml-2 transform group-hover/chapter5:rotate-0 transition-all duration-300">
                                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
@@ -120,35 +120,35 @@
                         <!-- Enhanced popup for Enablers -->
                         <div class="submenu-right bg-[var(--nav-bg-color)] absolute opacity-0 invisible group-hover/chapter5:opacity-100 group-hover/chapter5:visible popup-content text-white p-2 rounded-md shadow-lg z-60 w-[300px] transition-all duration-200 ease-in-out transform group-hover/chapter5:translate-y-0 translate-y-[-10px]">
                             <div class="space-y-2">
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Mindset change
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Rule of law, governance and corruption
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Public service performance
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Private sector, industry and trade
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Human capital development
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Environmental sustainability and disaster risk management
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Non-state actors
                                 </div>
                                 
-                                <div class="popup-item p-2 rounded">
+                                <div class="popup-item rounded">
                                     Creative arts
                                 </div>
                             </div>
@@ -156,7 +156,7 @@
                     </li>
                     
                     <li class="border-t border-gray-600 pt-2 mt-2">
-                        <a href="#" class="block px-3 py-2 hover:bg-[rgba(230,30,43,0.7)] rounded">
+                        <a href="#" class="block hover:bg-[rgba(230,30,43,0.7)] rounded">
                             2025 Full Manifesto
                         </a>
                     </li>
