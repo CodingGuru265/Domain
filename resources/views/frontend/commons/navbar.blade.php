@@ -240,7 +240,7 @@
                 <!-- Previous Manifestos Dropdown -->
                 <li class="relative group/manifestos">
                     <a href="#" class="block px-3 py-2 flex items-center justify-between hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">
-                        2019
+                        Previous Manifestos
                         <span class="ml-2 transform group-hover/manifestos:rotate-0 transition-all duration-300">
                             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
@@ -249,16 +249,15 @@
                     </a>
                     
                     <!-- Enhanced popup for Previous Manifestos -->
-                    <!-- <div class="submenu-right absolute opacity-0 invisible group-hover/manifestos:opacity-100 group-hover/manifestos:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[320px] transition-all duration-200 ease-in-out transform group-hover/manifestos:translate-y-0 translate-y-[-10px]">
-                        <h3 class="popup-title pb-2 mb-3 text-sm">Previous Manifestos</h3>
+                    <div class="submenu-right absolute opacity-0 invisible group-hover/manifestos:opacity-100 group-hover/manifestos:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[320px] transition-all duration-200 ease-in-out transform group-hover/manifestos:translate-y-0 translate-y-[-10px]">
                         <div class="space-y-2 text-sm">
                             <div class="popup-item p-2 rounded text-sm">
                                 <a href="{{ route('loading-screen') }}?redirect={{ route('manifesto2019') }}" class="block text-sm">
-                                    <strong>Manifesto 2019</strong>
+                                    <strong>2019</strong>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </li>
             </ul>
         </li>
