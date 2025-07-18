@@ -1,7 +1,10 @@
 
 
+<!-- Sidebar Overlay -->
+<div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
+
 <!-- Sidebar -->
-<aside id="sidebar" class="bg-[var(--nav-bg-color)] fixed left-0 top-0 h-full w-64 shadow-lg z-50 transform -translate-x-full transition-transform duration-300">
+<aside id="sidebar" class="bg-[var(--nav-bg-color)] fixed left-0 top-0 h-full w-80 shadow-lg z-50 transform -translate-x-full transition-transform duration-300">
     <div class="p-4 h-full overflow-y-auto">
         <!-- Close Button -->
         <div class="flex justify-end mb-4">
@@ -174,16 +177,21 @@
     // Sidebar open/close functionality
     document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
         const closeBtn = document.getElementById('close-btn');
         
         // Function to open sidebar
         window.openSidebar = function() {
             sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
         
         // Function to close sidebar
         window.closeSidebar = function() {
             sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
         }
         
         // Close button event
@@ -191,16 +199,14 @@
             closeBtn.addEventListener('click', closeSidebar);
         }
         
-        // Close sidebar when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!sidebar.contains(e.target) && !e.target.closest('[onclick*="openSidebar"]')) {
-                closeSidebar();
-            }
-        });
+        // Close sidebar when clicking overlay
+        if (overlay) {
+            overlay.addEventListener('click', closeSidebar);
+        }
         
         // Close sidebar with Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
+            if (e.key === 'Escape' && !sidebar.classList.contains('-translate-x-full')) {
                 closeSidebar();
             }
         });
