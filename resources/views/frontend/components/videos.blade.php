@@ -1,103 +1,93 @@
-@extends('layouts.front', ['pageTitle' => 'DPP Videos'])
+@extends('layouts.front', ['pageTitle' => 'Dpp | Videos'])
 
 @section('content')
-    <!-- Modern Hero Section -->
-    <div class="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-        <!-- Animated Background Pattern -->
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(239, 68, 68, 0.3) 0%, transparent 50%);"></div>
+    <!-- Hero Section with Background Image -->
+    <div class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <img src="{{ asset('assets/images/music/playerbg.png') }}" 
+                 alt="Video Vibes" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-purple-900/85 to-red-900/95"></div>
         </div>
         
-        <!-- Floating Elements -->
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-            <div class="absolute top-40 right-40 w-3 h-3 bg-red-400 rounded-full animate-ping" style="animation-delay: 1s;"></div>
-            <div class="absolute bottom-40 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping" style="animation-delay: 2s;"></div>
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
+            <div class="absolute top-40 right-20 w-48 h-48 bg-blue-500/20 rounded-full blur-lg animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-40 left-20 w-56 h-56 bg-red-500/20 rounded-full blur-xl animate-float" style="animation-delay: 4s;"></div>
+            <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-yellow-500/15 rounded-full blur-md animate-float" style="animation-delay: 1s;"></div>
         </div>
         
         <!-- Hero Content -->
-        <div class="relative z-10 flex items-center justify-center min-h-screen px-4">
-            <div class="text-center max-w-5xl mx-auto">
-                <!-- Icon Badge -->
-                <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-8 shadow-2xl">
-                    <i class="fas fa-play text-4xl text-white"></i>
+        <div class="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+            <div class="mb-12">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/20">
+                    <i class="fas fa-play text-3xl text-white"></i>
                 </div>
-                
-                <!-- Main Title -->
-                <h1 class="text-7xl md:text-9xl font-black mb-8 text-white leading-none">
-                    DPP
-                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
-                        VIDEOS
-                    </span>
+                <h1 class="text-6xl md:text-8xl font-bold mb-8 text-white drop-shadow-2xl">
+                    DPP <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Videos</span>
                 </h1>
-                
-                <!-- Subtitle -->
-                <p class="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Experience the energy and passion of DPP through our curated collection of music videos and campaign highlights
+                <p class="text-2xl md:text-3xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed font-light">
+                    Watch official music videos, campaign highlights, and party events
                 </p>
-                
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl mb-4 mx-auto">
-                            <i class="fas fa-video text-2xl text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-white mb-2">{{ $totalVideos }}</div>
-                        <div class="text-gray-400 font-medium">Videos</div>
-                    </div>
-                    
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl mb-4 mx-auto">
-                            <i class="fas fa-eye text-2xl text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-white mb-2" id="total-views">{{ $totalViews }}</div>
-                        <div class="text-gray-400 font-medium">Views</div>
-                    </div>
-                    
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl mb-4 mx-auto">
-                            <i class="fas fa-download text-2xl text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-white mb-2" id="total-downloads">{{ $totalDownloads }}</div>
-                        <div class="text-gray-400 font-medium">Downloads</div>
-                    </div>
+                <div class="w-48 h-1 bg-gradient-to-r from-blue-500 via-yellow-500 to-red-500 mx-auto rounded-full shadow-lg"></div>
+            </div>
+            
+            <!-- Enhanced Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <div class="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500/30 rounded-full flex items-center justify-center">
+                            <i class="fas fa-video text-xl text-white"></i>
                 </div>
-                
-                <!-- CTA Button -->
-                <button class="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    <i class="fas fa-play mr-3 group-hover:animate-pulse"></i>
-                    Start Watching
-                </button>
+                </div>
+                    <div class="text-4xl font-bold text-white mb-2">{{ $totalVideos }}</div>
+                    <div class="text-blue-200 font-medium text-lg">Videos</div>
+                </div>
+                <div class="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/30 rounded-full flex items-center justify-center">
+                            <i class="fas fa-eye text-xl text-white"></i>
+            </div>
+                </div>
+                    <div class="text-4xl font-bold text-white mb-2" id="total-views">{{ $totalViews }}</div>
+                    <div class="text-blue-200 font-medium text-lg">Total Views</div>
+                </div>
+                <div class="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-500/30 rounded-full flex items-center justify-center">
+                            <i class="fas fa-download text-xl text-white"></i>
+                        </div>
+                    </div>
+                    <div class="text-4xl font-bold text-white mb-2" id="total-downloads">{{ $totalDownloads }}</div>
+                    <div class="text-blue-200 font-medium text-lg">Downloads</div>
+                </div>
             </div>
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center backdrop-blur-sm">
+                <div class="w-1 h-4 bg-white rounded-full mt-2 animate-scroll"></div>
             </div>
         </div>
     </div>
 
-    <!-- Video Gallery Section -->
-    <div class="relative py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- Video List Section -->
+    <div class="relative py-24 px-4 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+        <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-8 shadow-xl">
-                    <i class="fas fa-film text-3xl text-white"></i>
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-red-600 rounded-full mb-6">
+                    <i class="fas fa-play text-2xl text-white"></i>
                 </div>
-                <h2 class="text-6xl md:text-7xl font-black text-gray-900 mb-8">
-                    Featured
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Videos</span>
-                </h2>
-                <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Discover the latest music videos and campaign content from DPP
-                </p>
+                <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-8">Featured Videos</h2>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Watch official DPP music videos, campaign highlights, and party events</p>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mt-8 rounded-full"></div>
             </div>
             
-            <!-- Video Grid -->
-            <div class="grid gap-8">
+            <div class="grid gap-12">
                 @php
                     $videoFiles = [
                         'Sendera Sisters - Tikwasaka.mp4',
@@ -106,93 +96,84 @@
                     ];
                 @endphp
                 @foreach ($videoFiles as $index => $video)
-                    <div class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden hover:shadow-3xl transition-all duration-700 hover:-translate-y-4">
+                    <div class="group bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                         <div class="flex flex-col lg:flex-row">
-                            <!-- Video Player Container -->
-                            <div class="lg:w-2/3 relative">
-                                <div class="relative overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none">
-                                    <video controls class="w-full h-80 lg:h-96 object-cover bg-gray-900 group-hover:scale-110 transition-transform duration-700" 
+                            <!-- Video Player -->
+                            <div class="lg:w-2/3">
+                                <div class="relative overflow-hidden">
+                                    <video controls class="w-full h-72 lg:h-96 object-cover bg-gray-900 group-hover:scale-105 transition-transform duration-500" 
                                            poster="{{ asset('assets/images/videos/thumbnail.png') }}"
                                            preload="metadata">
                                         <source src="{{ asset('assets/images/videos/' . $video) }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                     
-                                    <!-- Modern Badges -->
-                                    <div class="absolute top-6 right-6 flex flex-col gap-2">
-                                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full shadow-xl backdrop-blur-sm">
-                                            <i class="fas fa-hd-video mr-2"></i>HD
+                                    <!-- Enhanced Badges -->
+                                    <div class="absolute top-4 right-4 flex gap-2">
+                                        <div class="bg-gradient-to-r from-blue-600 to-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                                            HD
                                         </div>
-                                        <div class="bg-black/80 text-white text-sm font-medium px-4 py-2 rounded-full backdrop-blur-sm border border-white/20">
-                                            <i class="fas fa-music mr-2"></i>Music
-                                        </div>
+                                        <div class="bg-black/70 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm">
+                                            <i class="fas fa-play mr-1"></i>Music
+                                    </div>
                                     </div>
                                     
-                                    <!-- Enhanced Play Overlay -->
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                                        <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform duration-300">
-                                            <i class="fas fa-play text-3xl text-white ml-2"></i>
+                                    <!-- Play Overlay -->
+                                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                            <i class="fas fa-play text-2xl text-white ml-1"></i>
                                         </div>
-                                    </div>
-                                    
-                                    <!-- Progress Indicator -->
-                                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-800/50">
-                                        <div class="h-full bg-gradient-to-r from-blue-600 to-purple-600 w-0 group-hover:w-full transition-all duration-1000"></div>
-                                    </div>
-                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                            <!-- Video Info -->
+                            <div class="lg:w-1/3 p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-red-600 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-video text-white text-sm"></i>
+                                        </div>
+                                        <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Music Video</span>
                             </div>
                             
-                            <!-- Content Section -->
-                            <div class="lg:w-1/3 p-8 lg:p-10 flex flex-col justify-between">
-                                <div>
-                                    <!-- Category Badge -->
-                                    <div class="flex items-center gap-3 mb-6">
-                                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                                            <i class="fas fa-video text-white text-lg"></i>
-                                        </div>
-                                        <span class="text-sm font-bold text-gray-600 uppercase tracking-wider">Music Video</span>
-                                    </div>
-                                    
-                                    <!-- Title -->
-                                    <h3 class="text-4xl font-black text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                                    <h3 class="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                                         {{ pathinfo($video, PATHINFO_FILENAME) }}
                                     </h3>
-                                    
-                                    <!-- Artist -->
-                                    <p class="text-xl text-gray-600 mb-8">
-                                        By <span class="font-bold text-blue-600">Sendera Sisters</span>
+                                    <p class="text-lg text-gray-600 mb-6">
+                                        By <span class="font-semibold text-blue-600">Sendera Sisters</span>
                                     </p>
                                     
-                                    <!-- Enhanced Stats -->
+                                    <!-- Enhanced Video Stats -->
                                     <div class="grid grid-cols-2 gap-4 mb-8">
-                                        <div class="text-center p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 group-hover:border-blue-300 transition-colors duration-300">
-                                            <div class="text-3xl font-black text-blue-600 video-views mb-2" data-filename="{{ $video }}">
+                                        <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+                                            <div class="text-2xl font-bold text-blue-600 video-views mb-1" data-filename="{{ $video }}">
                                                 {{ $videoStats[$video]['views'] ?? 0 }}
-                                            </div>
-                                            <div class="text-sm font-bold text-blue-700 uppercase tracking-wide">Views</div>
-                                        </div>
-                                        <div class="text-center p-5 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 group-hover:border-purple-300 transition-colors duration-300">
-                                            <div class="text-3xl font-black text-purple-600 video-downloads mb-2" data-filename="{{ $video }}">
+                                    </div>
+                                            <div class="text-sm text-blue-700 font-medium">Views</div>
+                                    </div>
+                                        <div class="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+                                            <div class="text-2xl font-bold text-green-600 video-downloads mb-1" data-filename="{{ $video }}">
                                                 {{ $videoStats[$video]['downloads'] ?? 0 }}
-                                            </div>
-                                            <div class="text-sm font-bold text-purple-700 uppercase tracking-wide">Downloads</div>
+                                    </div>
+                                            <div class="text-sm text-green-700 font-medium">Downloads</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <!-- Action Buttons -->
-                                <div class="flex flex-col gap-4">
+                                <!-- Enhanced Action Buttons -->
+                                <div class="flex flex-col sm:flex-row gap-4">
                                     <a href="{{ route('videos.download', ['filename' => $video]) }}" 
-                                       class="download-btn group/btn inline-flex items-center justify-center px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl" 
+                                       class="download-btn flex-1 inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg" 
                                        data-filename="{{ $video }}">
-                                        <i class="fas fa-download mr-3 text-xl group-hover/btn:animate-bounce"></i>
-                                        Download Video
+                                        <i class="fas fa-download mr-3 text-lg"></i>
+                                        Download
                                     </a>
-                                    <button class="share-btn group/btn inline-flex items-center justify-center px-8 py-5 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 font-bold rounded-2xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl" 
+                                    <button class="share-btn flex-1 inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 font-semibold rounded-xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg" 
                                             data-video-title="{{ pathinfo($video, PATHINFO_FILENAME) }}" 
                                             data-video-artist="Sendera Sisters">
-                                        <i class="fas fa-share mr-3 text-xl group-hover/btn:animate-pulse"></i>
-                                        Share Video
+                                        <i class="fas fa-share mr-3 text-lg"></i>
+                                        Share
                                     </button>
                                 </div>
                             </div>
@@ -203,42 +184,33 @@
         </div>
     </div>
 
-    <!-- Call to Action Section -->
-    <div class="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.3) 0%, transparent 50%);"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-            <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-12 shadow-2xl">
-                <i class="fas fa-heart text-4xl text-white"></i>
-            </div>
-            
-            <h3 class="text-5xl md:text-6xl font-black text-white mb-8">
-                Join the DPP
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Community</span>
-            </h3>
-            
-            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Stay connected with the latest videos, music, and campaign updates. Be part of the movement that's shaping Malawi's future.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <button class="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-6 rounded-3xl text-xl font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    <i class="fas fa-bell mr-4 group-hover:animate-pulse"></i>
-                    Subscribe Now
-                </button>
-                <button class="group bg-white/10 backdrop-blur-md text-white px-12 py-6 rounded-3xl text-xl font-bold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 shadow-2xl border border-white/20">
-                    <i class="fas fa-share mr-4 group-hover:animate-bounce"></i>
-                    Share Channel
-                </button>
+    <!-- Footer Section -->
+    <div class="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-red-600 rounded-full mb-8">
+                    <i class="fas fa-play text-2xl text-white"></i>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">Stay Connected with DPP</h3>
+                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Subscribe to our channel for the latest videos, music, and party updates
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-bell mr-3"></i>
+                        Subscribe
+                    </button>
+                    <button class="px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-share mr-3"></i>
+                        Share Channel
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <style>
-        /* Modern Animations */
+        /* Custom Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
@@ -249,14 +221,14 @@
             to { opacity: 1; transform: translateY(0px); }
         }
         
+        @keyframes scroll {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(20px); opacity: 0; }
+        }
+        
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
             50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
-        }
-        
-        @keyframes shimmer {
-            0% { background-position: -200px 0; }
-            100% { background-position: calc(200px + 100%) 0; }
         }
         
         /* Animation Classes */
@@ -269,168 +241,147 @@
             opacity: 0;
         }
         
+        .animate-scroll {
+            animation: scroll 2s ease-in-out infinite;
+        }
+        
         .animate-pulse-glow {
             animation: pulse-glow 2s ease-in-out infinite;
         }
         
-        /* Ultra Modern Video Player */
+        /* Enhanced Video Player */
         video {
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
         }
         
         video:hover {
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
         }
         
-        /* Enhanced Video Controls */
+        /* Custom Video Controls */
         video::-webkit-media-controls {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9));
-            border-radius: 16px;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
         
         video::-webkit-media-controls-panel {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.95));
-            border-radius: 16px;
-            backdrop-filter: blur(20px);
+            background-color: rgba(0, 0, 0, 0.95);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
         
         video::-webkit-media-controls-play-button {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             border-radius: 50%;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
         }
         
         video::-webkit-media-controls-timeline {
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-            border-radius: 8px;
-            height: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+            border-radius: 6px;
+            height: 6px;
         }
         
         video::-webkit-media-controls-current-time-display,
         video::-webkit-media-controls-time-remaining-display {
             color: white;
             font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            font-size: 14px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
         
         video::-webkit-media-controls-volume-slider {
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-            border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+            border-radius: 4px;
         }
         
-        /* Ultra Modern Hover Effects */
-        .group:hover {
-            transform: translateY(-8px);
+        /* Enhanced Hover Effects */
+        .group:hover video {
+            transform: scale(1.02);
         }
         
-        /* Enhanced Button Animations */
-        .download-btn, .share-btn {
+        /* Download Button Animation */
+        .download-btn {
             position: relative;
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .download-btn::before, .share-btn::before {
+        .download-btn::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
         }
         
-        .download-btn:hover::before, .share-btn:hover::before {
+        .download-btn:hover::before {
             left: 100%;
         }
         
         .download-btn:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
         
+        /* Share Button Animation */
         .share-btn:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
         
         /* Stats Cards Enhancement */
         .group:hover .bg-gradient-to-br {
-            transform: scale(1.08);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
         }
         
         /* Play Overlay Enhancement */
-        .group:hover .absolute.inset-0.bg-gradient-to-t {
-            backdrop-filter: blur(4px);
+        .group:hover .absolute.inset-0.bg-black\/20 {
+            backdrop-filter: blur(2px);
         }
         
         /* Badge Enhancement */
-        .bg-gradient-to-r.from-blue-600.to-purple-600 {
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .bg-gradient-to-r.from-blue-600.to-red-600 {
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
         
-        /* Modern Scrollbar */
+        /* Scrollbar Styling */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 8px;
         }
         
         ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
         }
         
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-radius: 6px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 4px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background: linear-gradient(135deg, #2563eb, #1e40af);
         }
         
         /* Loading Animation */
+        @keyframes shimmer {
+            0% { background-position: -200px 0; }
+            100% { background-position: calc(200px + 100%) 0; }
+        }
+        
         .shimmer {
             background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
             background-size: 200px 100%;
             animation: shimmer 1.5s infinite;
         }
-        
-        /* Text Gradient Animation */
-        .text-gradient-animate {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
-            background-size: 300% 300%;
-            animation: gradient-shift 3s ease infinite;
-        }
-        
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        /* Card Glow Effect */
-        .card-glow {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-        
-        .card-glow:hover {
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
-        }
     </style>
-
+    
     <script>
         // Video Player Functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -465,10 +416,10 @@
                     if (downloadElement) {
                         const currentCount = parseInt(downloadElement.textContent) || 0;
                         downloadElement.textContent = currentCount + 1;
-                    }
-                });
+                }
             });
-            
+        });
+
             // Share functionality
             document.querySelectorAll('.share-btn').forEach(btn => {
                 btn.addEventListener('click', function(e) {
@@ -481,8 +432,8 @@
                             title: `${title} by ${artist}`,
                             text: `Check out this DPP video: ${title}`,
                             url: url
-                        });
-                    } else {
+                    });
+                } else {
                         // Fallback: copy to clipboard
                         const shareText = `${title} by ${artist} - ${url}`;
                         navigator.clipboard.writeText(shareText).then(() => {
