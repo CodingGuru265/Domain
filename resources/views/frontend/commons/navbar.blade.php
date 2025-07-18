@@ -285,8 +285,8 @@
             <li class="relative group">
                 <a href="#" class="nav-link">Playlist</a>
                 <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[200px] text-sm transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
-                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block px-3 py-2 hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">Songs</a></li>
-                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('videos') }}" class="block px-3 py-2 hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">Videos</a></li>
+                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('music') }}" class="block hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">Songs</a></li>
+                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('videos') }}" class="block hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">Videos</a></li>
                 </ul>
             </li>
 
