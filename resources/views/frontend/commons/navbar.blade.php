@@ -59,7 +59,7 @@
                         </a>
                         
                         <!-- Enhanced popup for Pillars of Development -->
-                        <div class="submenu-right absolute opacity-0 invisible group-hover/chapter4:opacity-100 group-hover/chapter4:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[380px] transition-all duration-200 ease-in-out transform group-hover/chapter4:translate-y-0 translate-y-[-10px]">
+                        <div class="submenu-right bg-[var(--nav-bg-color)] absolute opacity-0 invisible group-hover/chapter4:opacity-100 group-hover/chapter4:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[380px] transition-all duration-200 ease-in-out transform group-hover/chapter4:translate-y-0 translate-y-[-10px]">
                             <div class="space-y-2 text-sm">
                                 <div class="popup-item p-1 rounded">
                                     <strong>Agricultural productivity</strong>
@@ -186,7 +186,7 @@
                 
                 /* Enhanced popup styling */
                 .popup-content {
-                    background: linear-gradient(135deg,rgba(118, 73, 145, 0.7) 0%,rgba(118, 73, 145, 0.7) 100%);
+                    background-color: var(--nav-bg-color);
                     border: 1px solid rgba(230, 30, 43, 0.2);
                     box-shadow: 0 10px 30px rgba(213, 22, 22, 0.3);
                 }
@@ -267,8 +267,8 @@
         <li class="relative group">
             <a href="#" class="nav-link">About</a>
             <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[200px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">Leadership</a></li>
                 <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">About DPP</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">Leadership</a></li>
             </ul>
         </li>
 
