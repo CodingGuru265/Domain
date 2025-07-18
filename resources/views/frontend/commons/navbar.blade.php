@@ -342,7 +342,7 @@
 
     <!-- Countdown Container (Right Side) -->
     <div class="hidden md:flex items-center">
-        {{-- COUNT DOWN  Desktop--}}
+{{-- COUNT DOWN  Desktop--}}
         <!--li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4"-->
         <li class="nav-link flex-shrink-0  rounded-lg px-4 py-2 text-white text-sm ml-4" style="background-color: #0574F7">
             <div class="text-center mb-1">
@@ -392,32 +392,32 @@
             <span class="text-xs font-bold uppercase tracking-wider">Count Down to 2025 Elections</span>
         </div>
         <div class="flex gap-2 items-center justify-center">
-            
-            <!-- Voting Icon -->
-            <div>
+        
+        <!-- Voting Icon -->
+        <div>
                 <img src="{{ asset('/assets/images/image 2.png') }}" alt="check icon" class="w-8 h-8 inline-block" />
-            </div>
+        </div>
 
-            <!-- Days -->
-            <div class="flex flex-col items-center">
+        <!-- Days -->
+        <div class="flex flex-col items-center">
                 <span id="days-mobile" class="text-sm font-bold">00 :</span>
                 <div class="w-3 bg-white my-0.5" style="height: 0.5px;"></div>
                 <span class="text-xs uppercase tracking-wide">Days</span>
-            </div>
-            <!-- Hours -->
-            <div class="flex flex-col items-center">
+        </div>
+        <!-- Hours -->
+        <div class="flex flex-col items-center">
                 <span id="hours-mobile" class="text-sm font-bold">00 :</span>
                 <div class="w-3 bg-white my-0.5" style="height: 0.5px;"></div>
                 <span class="text-xs uppercase tracking-wide">Hours</span>
-            </div>
+        </div>
             <!-- Minutes -->
-            <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center">
                 <span id="minutes-mobile" class="text-sm font-bold">00 :</span>
                 <div class="w-3 bg-white my-0.5" style="height: 0.5px;"></div>
                 <span class="text-xs uppercase tracking-wide">Min</span>
-            </div>
+        </div>
             <!-- Seconds -->
-            <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center">
                 <span id="seconds-mobile" class="text-sm font-bold">00</span>
                 <div class="w-3 bg-white my-0.5" style="height: 0.5px;"></div>
                 <span class="text-xs uppercase tracking-wide">Sec</span>
@@ -584,7 +584,7 @@
                 </li>
             </ul>
         </details>
-    </li>
+        </li>
 
     <!-- About -->
     <li>
@@ -610,7 +610,7 @@
         </a>
     </li>
 
-    </ul>
+</ul>
 </div>
 
 </nav>
