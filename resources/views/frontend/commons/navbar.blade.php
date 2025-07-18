@@ -187,15 +187,13 @@
                 /* Enhanced popup styling */
                 .popup-content {
                     background-color: var(--nav-bg-color);
-                    border: 1px solid rgba(230, 30, 43, 0.2);
+                    /* border: 1px solid rgba(230, 30, 43, 0.2); */
                     box-shadow: 0 10px 30px rgba(213, 22, 22, 0.3);
                 }
 
                 .popup-title {
-                    color: var(--theme-color);
-                    border-bottom: 1px solid rgba(230, 30, 43, 0.2);
-                    /* font-weight: 600; */
-                    /* font-size: 0.9rem; */
+                    border-bottom: 1px rgba(230, 30, 43, 0.2);
+                    
                 }
 
                 .popup-item {
