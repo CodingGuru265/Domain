@@ -4,7 +4,7 @@
 <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
 
 <!-- Sidebar -->
-<aside id="sidebar" class="bg-[var(--nav-bg-color)] fixed left-0 top-0 h-full w-80 shadow-lg z-50 transform -translate-x-full transition-transform duration-300">
+<aside id="sidebar" class="bg-[var(--nav-bg-color)] fixed left-0 top-0 h-full w-64 shadow-lg z-50 transform -translate-x-full transition-transform duration-300">
     <div class="p-4 h-full overflow-y-auto">
         <!-- Close Button -->
         <div class="flex justify-end mb-4">
@@ -23,15 +23,15 @@
         <ul class="space-y-2">
             <!-- Home -->
             <li>
-                <a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="flex items-center p-3 text-white hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
-                    <i class="fas fa-home mr-3"></i>
+                <a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="flex items-center text-white hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
+                    <i class="fas fa-home "></i>
                     <span>Home</span>
                 </a>
             </li>
 
             <!-- Manifesto -->
             <li>
-                <button onclick="toggleSidebarDropdown('manifesto')" class="flex justify-between items-center p-3 text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
+                <button onclick="toggleSidebarDropdown('manifesto')" class="flex justify-between items-center text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
                     <span><i class="fas fa-file-pdf mr-3"></i> Manifesto</span>
                     <i id="manifesto-arrow" class="fas fa-chevron-right transition-transform"></i>
                 </button>
@@ -39,24 +39,24 @@
                     
                     <!-- Pillars of Development -->
                     <li>
-                        <button onclick="toggleSidebarDropdown('pillars')" class="flex justify-between items-center p-2 text-white w-full hover:bg-[rgba(230,30,43,0.5)] rounded transition-colors">
+                        <button onclick="toggleSidebarDropdown('pillars')" class="flex justify-between items-center text-white w-full hover:bg-[rgba(230,30,43,0.5)] rounded transition-colors">
                             <span>Pillars of Development</span>
                             <i id="pillars-arrow" class="fas fa-chevron-right transition-transform"></i>
                         </button>
                         <ul id="pillars" class="pl-4 hidden space-y-1">
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Agricultural productivity</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Agricultural productivity</a></li>
                             
                             <!-- Industrialisation -->
                             <li>
-                                <button onclick="toggleSidebarDropdown('industrial')" class="flex justify-between items-center p-2 text-white w-full hover:bg-[rgba(230,30,43,0.3)] rounded transition-colors">
+                                <button onclick="toggleSidebarDropdown('industrial')" class="flex justify-between items-center text-white w-full hover:bg-[rgba(230,30,43,0.3)] rounded transition-colors">
                                     <span class="text-sm">Industrialisation</span>
                                     <i id="industrial-arrow" class="fas fa-chevron-right transition-transform"></i>
                                 </button>
                                 <ul id="industrial" class="pl-4 hidden space-y-1">
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Mining</a></li>
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Transport infrastructure</a></li>
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Energy</a></li>
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">ICT and artificial intelligence</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Mining</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Transport infrastructure</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Energy</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">ICT and artificial intelligence</a></li>
                                 </ul>
                             </li>
                             
@@ -67,13 +67,13 @@
                                     <i id="urban-arrow" class="fas fa-chevron-right transition-transform"></i>
                                 </button>
                                 <ul id="urban" class="pl-4 hidden space-y-1">
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Tourism</a></li>
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Creation of secondary cities</a></li>
-                                    <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Land, housing and water services</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Tourism</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Creation of secondary cities</a></li>
+                                    <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.2)] rounded text-sm">Land, housing and water services</a></li>
                                 </ul>
                             </li>
                             
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Decentralisation</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Decentralisation</a></li>
                         </ul>
                     </li>
                     
@@ -84,14 +84,14 @@
                             <i id="enablers-arrow" class="fas fa-chevron-right transition-transform"></i>
                         </button>
                         <ul id="enablers" class="pl-4 hidden space-y-1">
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Mindset change</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Rule of law, governance and corruption</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Public service performance</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Private sector, industry and trade</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Human capital development</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Environmental sustainability and disaster risk management</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Non-state actors</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Creative arts</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Mindset change</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Rule of law, governance and corruption</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Public service performance</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Private sector, industry and trade</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Human capital development</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Environmental sustainability and disaster risk management</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Non-state actors</a></li>
+                            <li><a href="#" class="block text-white hover:bg-[rgba(230,30,43,0.3)] rounded text-sm">Creative arts</a></li>
                         </ul>
                     </li>
                     
@@ -106,7 +106,7 @@
 
             <!-- Playlist -->
             <li>
-                <button onclick="toggleSidebarDropdown('playlist')" class="flex justify-between items-center p-3 text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
+                <button onclick="toggleSidebarDropdown('playlist')" class="flex justify-between items-center text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
                     <span><i class="fas fa-music mr-3"></i> Playlist</span>
                     <i id="playlist-arrow" class="fas fa-chevron-right transition-transform"></i>
                 </button>
@@ -118,7 +118,7 @@
 
             <!-- Archives -->
             <li>
-                <button onclick="toggleSidebarDropdown('archives')" class="flex justify-between items-center p-3 text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
+                <button onclick="toggleSidebarDropdown('archives')" class="flex justify-between items-center text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
                     <span><i class="fas fa-archive mr-3"></i> Archives</span>
                     <i id="archives-arrow" class="fas fa-chevron-right transition-transform"></i>
                 </button>
@@ -139,13 +139,13 @@
 
             <!-- About -->
             <li>
-                <button onclick="toggleSidebarDropdown('about')" class="flex justify-between items-center p-3 text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
+                <button onclick="toggleSidebarDropdown('about')" class="flex justify-between items-center text-white w-full hover:bg-[rgba(230,30,43,0.7)] rounded transition-colors">
                     <span><i class="fas fa-info-circle mr-3"></i> About</span>
                     <i id="about-arrow" class="fas fa-chevron-right transition-transform"></i>
                 </button>
                 <ul id="about" class="pl-6 hidden space-y-1">
-                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.5)] rounded">About DPP</a></li>
-                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block p-2 text-white hover:bg-[rgba(230,30,43,0.5)] rounded">Leadership</a></li>
+                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block text-white hover:bg-[rgba(230,30,43,0.5)] rounded">About DPP</a></li>
+                    <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block text-white hover:bg-[rgba(230,30,43,0.5)] rounded">Leadership</a></li>
                 </ul>
             </li>
         </ul>
