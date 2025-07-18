@@ -5,9 +5,9 @@
 <div class="donation-wrapper">
 
 
-<div class="grid grid-cols-1 h-[400px]" style=" background: linear-gradient(to bottom right, rgba(5, 116, 247, 0.6), rgba(230, 30, 43, 0.6)), url('assets/images/slider_img_3.png') " > 
+<div class="grid grid-cols-1" style="height: 100px; background: linear-gradient(to bottom right, rgba(230, 30, 43, 0.9), rgba(230, 30, 43, 0.9)), url('assets/images/slider_img_3.png') " > 
         <div class="grid grid-cols-1" >
-            <div class="flex items-center  justify-center" ><h1 class="text-5xl text-white font-bold" >Donate to Party</h1></div>
+            <div class="flex items-center  justify-center" ><h1 class="text-3xl pt-24 text-white font-bold" >Donations may be made through the following accounts</h1></div>
         </div>
     </div>
     <div class="w-full px-4 py-10 max-w-7xl mx-auto">
@@ -18,7 +18,7 @@
         <div class="bg-white p-10 rounded-xl shadow-md location-card">
             <div class="flex items-start">
                 <div class="flex items-center justify-center">
-                    <img class="w-full " src="assets/images/fdh.png" />
+                    <img class="w-full " src="{{ asset('assets/images/fdh.png')}}" />
                 </div>
             </div>
         </div>
@@ -27,14 +27,14 @@
         <div class="bg-white rounded-xl shadow-md location-card">
             <div class="flex items-start pt-10 pl-8 ">
                 <div class="flex items-center justify-center">
-                    <img class="w-3/4 p-8 mt-4" src="assets/images/mpamba.png" />
+                    <img class="w-3/4 p-8 mt-4" src="{{ asset('assets/images/mpamba.png')}}" />
                 </div>
             </div>
         </div>
         <div class="bg-white rounded-xl shadow-md location-card">
             <div class="flex items-start pt-10 pl-8 ">
                 <div class="flex items-center justify-center">
-                    <img class="w-3/4 p-8 mt-10" src="assets/images/airtel.png" />
+                    <img class="w-3/4 p-8 mt-10" src="{{ asset('assets/images/airtel.png')}}" />
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
 
     .donation-wrapper {
         background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
-        min-height: 100vh;
+        
     }
 
     /* Section Styles */

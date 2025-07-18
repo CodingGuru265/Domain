@@ -1,4 +1,3 @@
-
 <!-- Navbar -->
 <nav class="bg-[var(--nav-bg-color)] text-white px-5 py-3 flex justify-between items-center relative">
     <!-- Logo -->
@@ -10,7 +9,7 @@
     <ul class="hidden md:flex space-x-6 items-center ubuntu-regular flex-1 justify-center">
 
         <li class="relative group">
-            <a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="nav-link">Home</a>
+            <a href="{{ route('loading-screen') }}?redirect={{ route('welcome') }}" class="nav-link">Home</a>
         </li>
 
         

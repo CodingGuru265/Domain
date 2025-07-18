@@ -116,21 +116,6 @@
             </div>
 
             <!-- About Section -->
-        <!-- Just wrap this specific section -->
-            <div class="-mt-10"> <!-- You can adjust this value: -mt-4, -mt-6, -mt-10 -->
-            <div class="footer-section bg-white p-2 flex flex-row items-start">
-                <div class="flex-1">
-                    <h3 class="text-xl font-bold mb-2 text-[var(--theme-color)] flex items-center relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-[var(--custom-orange)] after:-mb-2 hover:after:w-12 after:transition-all after:duration-500">
-                        <i class="fas fa-bullseye text-4xl text-[#E61E2B] mr-3"></i>
-                        Our Mission
-                        </h3>
-
-                    <p class="mb-4 text-[var(--theme-color)]">
-                     Empowering Malawians to believe, save, invest, and thrive—driving growth, creating jobs, and transforming our economy for all.
-                    </p>
-                </div>
-            </div>
-            </div>
 
         </div>
 
