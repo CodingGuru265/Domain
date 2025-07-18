@@ -6,18 +6,18 @@
 <div class="min-h-screen bg-gray-50">
 
     <!-- Hero Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-r from-grey-900 to-blue-700 text-white relative">
+    <section class="py-16 md:py-24 bg-blue-700 text-white relative">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="container mx-auto px-4 max-w-6xl relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
                     <div class="text-center lg:text-left">
-                        <span class="inline-block px-4 py-2 bg-yellow-500 text-blue-900 text-sm font-bold rounded-full mb-4">
+                        <span class="inline-block px-4 py-2 bg-red-600 text-white text-sm font-bold rounded-full mb-4">
                             Party Leader
                         </span>
                         <h1 class="text-4xl md:text-6xl font-bold mb-6">
                             Professor Arthur Peter
-                            <span class="text-yellow-500">Mutharika</span>
+                            <span class="text-red-600">Mutharika</span>
                         </h1>
                         <p class="text-xl md:text-2xl text-blue-100 mb-8">
                             President of the Democratic Progressive Party (DPP)
