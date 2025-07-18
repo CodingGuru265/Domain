@@ -14,6 +14,7 @@ use App\Http\Controllers\MusicController;
 use App\Http\Controllers\ThemeController;
 use App\Http\Controllers\VideoController;
 
+Route::get('/web/leadership', [HomeController::class, 'leadership'])->name('leadership');
 Route::get('/web', [HomeController::class, 'welcome'])->name('welcome');
 
 Route::get('/web/manifesto', [HomeController::class, 'manifesto_page'])->name('manifesto_page');

@@ -37,6 +37,10 @@ class HomeController extends Controller
     {
         return view('frontend.components.loading-screen');
     }
+    public function leadership()
+    {
+        return view('frontend.components.leadership');
+    }
     public function contacts()
     {
         return view('frontend.components.contact');
