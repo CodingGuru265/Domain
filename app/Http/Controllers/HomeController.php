@@ -21,6 +21,10 @@ class HomeController extends Controller
     {
         return view('frontend.components.membership');
     }
+    public function manifesto_generic()
+    {
+        return view('frontend.components.manifesto_new');
+    }
     public function manifesto2019()
     {
         return view('frontend.components.manifesto2019');

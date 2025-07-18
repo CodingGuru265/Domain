@@ -342,10 +342,10 @@
             </div>
             <br/>
             <div class="grid grid-cols-1 md:grid-cols-4">
-                <div class="flex items-center justify-center md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_1.png" /></div>
-                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_2.png" /></div>
-                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_3.png" /></div>
-                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="assets/images/bm_4.png" /></div>
+                <div class="flex items-center justify-center md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="{{ asset('assets/images/bm_1.png')}}" /></div>
+                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="{{ asset('assets/images/bm_2.png')}}" /></div>
+                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="{{ asset('assets/images/bm_3.png')}}" /></div>
+                <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="{{ asset('assets/images/bm_4.png')}}" /></div>
             </div>
         </div>
     </div>
@@ -429,46 +429,46 @@
     <div class="dpp_background"  >
         <div class="pt-10 pb-10 ">
             <!--h1 class="text-center font-extralight text-white text-4xl md:text-3xl mb-8">Focus Areas</h1-->
-            <h1 class="text-center font-bold text-white text-4xl md:text-4xl">How We Plan to Achieve a Better Country</h1>
-                <div class="grid grid-cols-3 gap-4 mx-8 md:mx-12 my-8">
+            <h1 class="text-center font-bold text-white text-xl md:text-4xl">How We Plan to Achieve a Better Country</h1>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-8 md:mx-12 my-8">
                       <!-- Reusable card component -->
                 <div class="bg-white rounded-2xl shadow-md ml-6 mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/healthcare.png" alt="healthcare" />
+                        <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/healthcare.png') }}" alt="healthcare" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Healthcare</h1>
                         <h4 class="mt-2 text-gray-700 text-center">
-                            Ensuring accessible and quality healthcare for all.
+                        Improving the health and well-being of all Malawians remains a top priority for the DPP, with a focus on accessible, affordable, and quality services—especially for the vulnerable and underserved.
                         </h4>
                     </div>
                     </div>
                 </div>
                 <!-- Reusable card component -->
-                <div class="bg-white rounded-2xl shadow-md mr-4  p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md mr-4 md:ml-0 ml-6 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/must_2.png" alt="Education" />
+                        <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/must_2.png') }}" alt="Education" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Education</h1>
                         <h4 class="mt-2 text-gray-700 text-center">
-                        Widening access to education for all, with special emphasis on girls and people with disabilities.
+                        The DPP is committed to expanding access to quality education for all Malawians, with special focus on girls and persons with disabilities.
                         </h4>
                     </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md mr-4 p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/agriculture.png" alt="Agriculture" />
+                        <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/agriculture_1.png') }}" alt="Agriculture" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Agriculture</h1>
                         <h4 class="mt-2 text-gray-700 text-center">
-                        Transforming agriculture into a modern, diversified, and resilient sector to increase productivity and improve rural livelihoods.
+                        DPP promotes agricultural transformation through productivity, sustainability, and trade to boost food security and economic growth.
                         </h4>
                     </div>
                     </div>
@@ -477,7 +477,7 @@
                 <div class="bg-white rounded-2xl shadow-md p-4 ml-6 mr-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/tourism.png" alt="Tourism" />
+                        <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/tourism.png') }}" alt="Tourism" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Tourism</h1>
@@ -488,33 +488,76 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md mr-4 p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/rbm.png" alt="Economy" />
+                        <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/rbm.png') }}" alt="Economy" />
                     </div>
                     <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
                         <h1 class="font-bold text-2xl text-center text-dpp_blue">Economy</h1>
                         <h4 class="mt-2 text-gray-700 text-center">
-                        Building a strong economy that supports robust social development and promotes entrepreneurial activities.
+                        Strengthening Malawi’s economy is central to the DPP’s agenda, with focus on social development, job creation, and promoting entrepreneurship.
                         </h4>
                     </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md mr-4 p-4 md:p-6">
+                <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-5 items-center">
-                    <div class="md:col-span-2 flex justify-center">
-                        <img class="p-2 max-w-full h-auto" src="assets/images/ai.png" alt="Healthcare" />
-                    </div>
-                    <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
-                        <h1 class="font-bold text-2xl text-center text-dpp_blue">ICT and AI</h1>
-                        <h4 class="mt-2 text-gray-700 text-center">
-                        Promoting inclusive access to digital technologies and AI, with emphasis on innovation, skills development, and locally driven solutions.
-                        </h4>
-                    </div>
+                        <div class="md:col-span-2 flex justify-center">
+                            <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/ai.png') }}" alt="Healthcare" />
+                        </div>
+                        <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                            <h1 class="font-bold text-2xl text-center text-dpp_blue">ICT and AI</h1>
+                            <h4 class="mt-2 text-gray-700 text-center">
+                            The DPP is dedicated to promoting inclusive access to digital technologies and AI, with emphasis on innovation, skills development, and locally driven solutions.
+                            </h4>
+                        </div>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-2xl shadow-md p-4 ml-6 mr-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                        <div class="md:col-span-2 flex justify-center">
+                            <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/energy.png') }}" alt="Tourism" />
+                        </div>
+                        <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                            <h1 class="font-bold text-2xl text-center text-dpp_blue">Energy</h1>
+                            <h4 class="mt-2 text-gray-700 text-center">
+                            The DPP aims to transition Malawi from biomass reliance to a modern energy mix by promoting investment from Independent Power Producers in hydro, solar, wind, geothermal, natural gas, and other sources.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                        <div class="md:col-span-2 flex justify-center">
+                            <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/urbanisation.png') }}" alt="Healthcare" />
+                        </div>
+                        <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                            <h1 class="font-bold text-2xl text-center text-dpp_blue">Urbanization</h1>
+                            <h4 class="mt-2 text-gray-700 text-center">
+                            The DPP envisions world-class urban centers by bringing modern infrastructure and services to communities, reducing urban migration and improving quality of life across Malawi.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                        <div class="md:col-span-2 flex justify-center">
+                            <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/dec.png') }}" alt="Healthcare" />
+                        </div>
+                        <div class="md:col-span-3 mt-4 md:mt-0 px-2 md:px-6">
+                            <h1 class="font-bold text-2xl text-center text-dpp_blue">Decentralization</h1>
+                            <h4 class="mt-2 text-gray-700 text-center">
+                            The DPP will implement key reforms to ensure sustained financing, financial autonomy, capacity building, and a strong legal framework to strengthen effective and accountable decentralization across all levels of government.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
                 </div>
 
         </div>
@@ -524,73 +567,84 @@
     
     {{-- FOCUS AREAS  --}}
 <section class="focus-areas relative py-5 bg-white text-white text-center">
-    <h2 class="text-4xl font-bold mt-2 " style='color: #197EC2' >Focus Area</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mt-2 " style='color: #197EC2' >Focus Area</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 mt-8 gaps-4 gap-4 p-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 mt-8 gaps-6 gap-6 p-4">
      
     
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-5">
-                <div class="col-span-2 m-4 bg-white rounded-2xl">
-                    <img class="p-6" src="assets/images/food_security_2.png" />
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="col-span-2 m-4 bg-white rounded-2xl flex justify-center items-center">
+                    <img class="p-6 h-64" src="{{ asset('assets/images/food_security_2.png') }}" />
                 </div>
-                <div class="col-span-3 pt-8 pl-4 pr-6 md:pt-8 pr-8 px-7">
-                    <h1 class="font-bold text-base md:text-xl text-white text-left">Food Security</h1>
-                    <h4 class="text-left md:text-xs text-sm ">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-5">
-                <div class="col-span-2 m-4 bg-white rounded-2xl">
-                    <img class="p-6" src="assets/images/ecomonic.png" />
-                </div>
-                <div class="col-span-3 pt-8 pl-4 pr-6 md:pt-8 pr-8 px-7">
-                    <h1 class="font-bold text-xl text-white text-left">Economic Growth</h1>
-                    <h4 class="text-left md:text-xs text-sm ">Discussed under vision, mission, and aims. Focuses on job creation, macroeconomic growth, industrialization, export production, and reducing poverty</h4>
+                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
+                    <h1 class="font-bold pb-2 text-base md:text-xl text-white text-center md:text-left">Food Security</h1>
+                    <h4 class="text-center md:text-left md:text-xs text-sm">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
                 </div>
             </div>
         </div>
 
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-5">
-                <div class="col-span-2 m-4 bg-white rounded-2xl">
-                    <img class="p-6" src="assets/images/infrastructure.png" />
+            <div class="grid grid-cols-1 md:grid-cols-5">
+                <div class="col-span-2 m-4 bg-white rounded-2xl flex justify-center items-center">
+                    <img class="p-6  h-64" src="{{ asset('assets/images/ecomonic.png') }}" />
                 </div>
-                <div class="col-span-3 pt-8 pl-4 pr-8 md:pt-8 px-7">
-                    <h1 class="font-bold text-xl text-white text-left">Infrastructure Development</h1>
-                    <h4 class="text-left md:text-xs text-sm">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
+                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
+                    <h1 class="font-bold text-xl text-white text-center md:text-left">Economic Growth</h1>
+                    <h4 class="text-center md:text-left md:text-xs text-sm">Advancing Malawi’s economy through job creation, industrialization, exports, macroeconomic stability, and poverty reduction.</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-5">
+                <div class="col-span-2 m-4 bg-white flex justify-center items-center rounded-2xl">
+                    <img class="p-6 h-64" src="{{ asset('assets/images/infrastructure.png') }}" />
+                </div>
+                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
+                    <h1 class="font-bold text-xl text-white  text-center md:text-left">Infrastructure Development</h1>
+                    <h4 class="text-center md:text-left md:text-xs text-sm">Enhancing Malawi’s growth through quality roads, transport systems, energy, ICT, and public infrastructure to support economic activities.</h4>
                 </div>
             </div>
         </div>
       
         
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-5">
-                <div class="col-span-2 m-4 bg-white rounded-2xl">
-                    <img class="p-6" src="assets/images/unity.png" />
+            <div class="grid grid-cols-1 md:grid-cols-5">
+                <div class="col-span-2 m-4 bg-white flex justify-center items-center rounded-2xl">
+                    <img class="p-6 h-64" src="{{ asset('assets/images/unity.png') }}" />
                 </div>
-                <div class="col-span-3 pt-8 pl-4 pr-8 md:pt-8 px-7">
-                    <h1 class="font-bold text-xl text-white text-left">Unity and Peace</h1>
-                    <h4 class="text-left md:text-xs text-sm">We believe progress begins with unity. Across tribes, beliefs, and regions — we stand together in peace to shape a stable, inclusive, and forward-moving Malawi.</h4>
+                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
+                    <h1 class="font-bold text-xl text-white  text-center md:text-left">Unity and Peace</h1>
+                    <h4 class="text-center md:text-left md:text-xs text-sm">Promoting unity across tribes and regions to build a peaceful, inclusive, and progressive Malawi.</h4>
                 </div>
             </div>
         </div>
 
         
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-5">
-                <div class="col-span-2 m-4 bg-white rounded-2xl">
-                    <img class="p-6" src="assets/images/law.png" />
+            <div class="grid grid-cols-1 md:grid-cols-5">
+                <div class="col-span-2 m-4 bg-white flex justify-center items-center rounded-2xl">
+                    <img class="p-6 h-64" src="{{ asset('assets/images/law.png') }}" />
                 </div>
-                <div class="col-span-3 pt-8 pl-4 pr-8 md:pt-8 px-7">
-                    <h1 class="font-bold text-xl text-white text-left">Human Rights & Law</h1>
-                    <h4 class="text-left md:text-xs text-sm">Justice and dignity for every citizen. We uphold freedoms, protect the vulnerable, and enforce the rule of law so that every Malawian lives with respect and fairness.</h4>
+                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
+                    <h1 class="font-bold text-xl text-white  text-center md:text-left">Human Rights & Law</h1>
+                    <h4 class="text-center md:text-left md:text-xs text-sm">Upholding justice, freedoms, and dignity for all Malawians; protecting the vulnerable and enforcing the rule of law.</h4>
                 </div>
             </div>
         </div>
 
+        <div class="dpp_background m-8 md:m-8 rounded-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-5">
+                <div class="col-span-2 flex justify-center items-center m-4 bg-white rounded-2xl">
+                    <img class="p-6 h-64" src="{{ asset('assets/images/law.png') }}" />
+                </div>
+                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
+                    <h1 class="font-bold text-xl text-white  text-center md:text-left">Industrialisation</h1>
+                    <h4 class="text-center md:text-left md:text-xs text-sm">Driving Malawi’s growth through value addition, mining, transport infrastructure, energy access, and regional trade integration.</h4>
+                </div>
+            </div>
+        </div>
 
       
     </div>
