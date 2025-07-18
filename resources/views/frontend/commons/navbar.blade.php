@@ -118,13 +118,13 @@
                         </a>
                         
                         <!-- Enhanced popup for Enablers -->
-                        <div class="submenu-right absolute opacity-0 invisible group-hover/chapter5:opacity-100 group-hover/chapter5:visible popup-content text-white p-4 rounded-md shadow-lg z-60 w-[100px] transition-all duration-200 ease-in-out transform group-hover/chapter5:translate-y-0 translate-y-[-10px]">
+                        <div class="submenu-right bg-[var(--nav-bg-color)] absolute opacity-0 invisible group-hover/chapter5:opacity-100 group-hover/chapter5:visible popup-content text-white p-2 rounded-md shadow-lg z-60 w-[300px] transition-all duration-200 ease-in-out transform group-hover/chapter5:translate-y-0 translate-y-[-10px]">
                             <div class="space-y-2">
-                                <div class="popup-item rounded">
+                                <div class="popup-item p-2 rounded">
                                     Mindset change
                                 </div>
                                 
-                                <div class="popup-item rounded">
+                                <div class="popup-item p-2 rounded">
                                     Rule of law, governance and corruption
                                 </div>
                                 
