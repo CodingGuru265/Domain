@@ -641,6 +641,8 @@
             const minutesMobileElement = document.getElementById("minutes-mobile");
             const secondsMobileElement = document.getElementById("seconds-mobile");
             
+
+            
             if (daysElement) daysElement.innerHTML = "00 :";
             if (hoursElement) hoursElement.innerHTML = "00 :";
             if (minutesElement) minutesElement.innerHTML = "00 :";
@@ -650,6 +652,8 @@
             if (hoursMobileElement) hoursMobileElement.innerHTML = "00 :";
             if (minutesMobileElement) minutesMobileElement.innerHTML = "00 :";
             if (secondsMobileElement) secondsMobileElement.innerHTML = "00";
+            
+
             return;
         }
 
@@ -670,6 +674,8 @@
         const minutesMobileElement = document.getElementById("minutes-mobile");
         const secondsMobileElement = document.getElementById("seconds-mobile");
         
+
+        
         const timeString = (time) => (time < 10 ? "0" + time : time);
         
         if (daysElement) daysElement.innerHTML = timeString(days) + " :";
@@ -681,6 +687,8 @@
         if (hoursMobileElement) hoursMobileElement.innerHTML = timeString(hours) + " :";
         if (minutesMobileElement) minutesMobileElement.innerHTML = timeString(minutes) + " :";
         if (secondsMobileElement) secondsMobileElement.innerHTML = timeString(seconds);
+        
+
     }, 1000);
 // END COUNT DOWN SCRIPT
 
