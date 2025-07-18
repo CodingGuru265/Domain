@@ -267,8 +267,8 @@
         <li class="relative group">
             <a href="#" class="nav-link">About</a>
             <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[200px] text-[0.8rem] transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">DPP</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">APM</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">Leadership</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block px-3 py-2 hover:bg-[var(--theme-color)] rounded">About DPP</a></li>
             </ul>
         </li>
 
