@@ -28,8 +28,8 @@
         }
 
         .loading-image {
-            width: 110px;
-            height: 110px;
+            width: 180px;
+            height: 180px;
             opacity: 0;
             transform: scale(0.8);
             animation: fadeIn 0.8s ease-in-out forwards;
