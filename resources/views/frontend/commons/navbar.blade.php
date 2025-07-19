@@ -434,7 +434,7 @@
 
 
     <!-- Mobile Menu (full screen with close button) -->
-<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-60 text-white z-40 hidden transition-opacity duration-300">
+<div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-60 text-white z-40 hidden transition-opacity duration-300">
     <!-- Close Button -->
     <div class="flex justify-end p-4">
         <button id="mobile-close" class="text-2xl hover:text-[var(--theme-color)] transition-colors">
