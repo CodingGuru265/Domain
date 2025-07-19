@@ -1,3 +1,4 @@
+
 <!-- Navbar -->
 <nav class="bg-[var(--nav-bg-color)] text-white px-5 py-3 flex justify-between items-center relative">
     <!-- Logo -->
@@ -9,7 +10,7 @@
     <ul class="hidden md:flex space-x-6 items-center ubuntu-regular flex-1 justify-center">
 
         <li class="relative group">
-            <a href="{{ route('loading-screen') }}?redirect={{ route('welcome') }}" class="nav-link">Home</a>
+            <a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="nav-link">Home</a>
         </li>
 
         
@@ -433,7 +434,7 @@
 
 
     <!-- Mobile Menu (full screen with close button) -->
-<div id="mobile-menu" class="fixed inset-0 bg-[var(--nav-bg-color)] text-white hidden md:hidden z-50">
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-60 text-white hidden md:hidden z-50">
     <!-- Close Button -->
     <div class="flex justify-end p-4">
         <button id="mobile-close" class="text-2xl hover:text-[var(--theme-color)] transition-colors">
@@ -442,7 +443,7 @@
     </div>
     
     <!-- Menu Content -->
-    <ul class="px-5 py-5 space-y-4 ubuntu-regular overflow-y-auto h-full">
+    <ul class="px-5 py-5 ubuntu-regular overflow-y-auto h-full">
 
     <!-- Home -->
     <li><a href="{{ route('loading-screen') }}?redirect={{ url('/') }}" class="nav-link block py-2">Home</a></li>
