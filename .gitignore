@@ -2,7 +2,9 @@
 /node_modules
 /public/build
 /public/hot
-/public/storage
+/public/storage/app/private
+/public/storage/logs
+/public/storage/framework
 /storage/*.key
 /storage/pail
 /vendor
