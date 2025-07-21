@@ -1,4 +1,4 @@
-{{-- @extends('layouts.front', ['pageTitle' => 'Dpp | Contacts'])
+{{-- @extends('layouts.front', ['pageTitle' => 'DPP | Contacts'])
 
 @section('content')
 

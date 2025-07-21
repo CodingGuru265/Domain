@@ -15,6 +15,12 @@ use App\Http\Controllers\ThemeController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ManifestoController;
 
+
+Route::get('/', function () {
+    return view('coming_soon');
+})->name('coming_soon');
+
+
 Route::get('/web/leadership', [HomeController::class, 'leadership'])->name('leadership');
 Route::get('/web', [HomeController::class, 'welcome'])->name('welcome');
 

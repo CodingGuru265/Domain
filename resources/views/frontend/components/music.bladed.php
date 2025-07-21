@@ -1,4 +1,4 @@
-{{-- @extends('layouts.front', ['pageTitle' => 'Dpp | music'])
+{{-- @extends('layouts.front', ['pageTitle' => 'DPP | Music'])
 
 @section('content')
     <!-- Background Image Section with Overlay -->

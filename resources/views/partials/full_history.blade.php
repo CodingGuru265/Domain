@@ -74,7 +74,7 @@
                 </div>
 
                 <p class="text-lg leading-8 text-gray-700">
-                    A trained economist, Mutharika further focused on rebuilding Malawi's battered economy, helping the country attain the status of <span class="font-bold text-[var(--theme-color)]">world's second fastest growing economy in 2009</span>. The trickle down of that economic growth were the various infrastructural works that Mutharika delivered including roads, hospitals, schools, a world standard conference centre and a university campus.
+                    A trained economist, Mutharika further focused on rebuilding Malawi's battered economy, helping Malawi attain the status of <span class="font-bold text-[var(--theme-color)]">Malawi's second fastest growing economy in 2009</span>. The trickle down of that economic growth were the various infrastructural works that Mutharika delivered including roads, hospitals, schools, a world standard conference centre and a university campus.
                 </p>
 
                 <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
@@ -128,7 +128,7 @@
 
                 <div class="bg-purple-50 rounded-lg p-6 border-l-4 border-purple-500">
                     <p class="text-lg leading-8 text-gray-700">
-                        He crisscrossed the country, reviving hope in the millions of DPP supporters and Malawians in general. In <span class="font-semibold text-purple-600">April, 2013</span>, the DPP held its National Elective Conference at which APM was elected President and Presidential candidate for the Party. He led the party into victory in the election in <span class="font-bold text-purple-600">2014</span>.
+                        He crisscrossed Malawi, reviving hope in the millions of DPP supporters and Malawians in general. In <span class="font-semibold text-purple-600">April, 2013</span>, the DPP held its National Elective Conference at which APM was elected President and Presidential candidate for the Party. He led the party into victory in the election in <span class="font-bold text-purple-600">2014</span>.
                     </p>
                 </div>
 

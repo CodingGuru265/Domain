@@ -60,9 +60,11 @@
                         <!-- Enhanced popup for Pillars of Development -->
                         <div class="submenu-right bg-[var(--nav-bg-color)] absolute opacity-0 invisible group-hover/chapter4:opacity-100 group-hover/chapter4:visible popup-content text-white p-2 rounded-md shadow-lg z-60 w-[300px] transition-all duration-200 ease-in-out transform group-hover/chapter4:translate-y-0 translate-y-[-10px]">
                             <div class="space-y-2">
-                                <div class="popup-item rounded">
-                                    Agricultural productivity
-                                </div>
+                                <a href="{{route('manifesto.agricultural_productivity')}}">
+                                    <div class="popup-item rounded">
+                                        Agricultural productivity
+                                    </div>
+                                </a>
                                 
                                 <div class="relative group/industrial">
                                     <div class="popup-item rounded flex items-center justify-between cursor-pointer">
@@ -108,7 +110,7 @@
                     
                     <li class="relative group/chapter5">
                         <a href="#" class="block flex items-center justify-between hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">
-                            Enablers 
+                            Anchors 
                             <span class="ml-2 transform group-hover/chapter5:rotate-0 transition-all duration-300">
                                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
@@ -116,7 +118,7 @@
                             </span>
                         </a>
                         
-                        <!-- Enhanced popup for Enablers -->
+                        <!-- Enhanced popup for Anchors -->
                         <div class="submenu-right bg-[var(--nav-bg-color)] absolute opacity-0 invisible group-hover/chapter5:opacity-100 group-hover/chapter5:visible popup-content text-white p-2 rounded-md shadow-lg z-60 w-[300px] transition-all duration-200 ease-in-out transform group-hover/chapter5:translate-y-0 translate-y-[-10px]">
                             <div class="space-y-2">
                                 <div class="popup-item rounded">
@@ -326,11 +328,10 @@
             <a href="#" class="nav-link">About</a>
             <ul class="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[var(--nav-bg-color)] text-white mt-0 p-2 rounded-md shadow-lg space-y-1 z-50 w-[200px] text-sm transition-all duration-200 ease-in-out transform group-hover:translate-y-0 translate-y-[-10px]">
                 <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">About DPP</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">Leadership</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('leadership') }}" class="block hover:bg-[rgba(230,30,43,0.7)] rounded text-sm">Leadership</a></li>
             </ul>
         </li>
 
-        <!-- <li><a href="{{ route('loading-screen') }}?redirect={{ route('contact') }}" class="nav-link">Contacts</a></li> -->
         <li class="nav-link flex-shrink-0">
             <a href="{{ route('loading-screen') }}?redirect={{ route('donate') }}"
                 class="bg-[var(--theme-color)] hover:bg-[var(--hover-theme-color)] text-white font-bold py-2 px-6 rounded-full whitespace-nowrap">
@@ -343,7 +344,7 @@
     <div class="hidden md:flex items-center">
 {{-- COUNT DOWN  Desktop--}}
         <!--li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4"-->
-        <li class="nav-link flex-shrink-0  rounded-lg px-4 py-2 text-white text-sm ml-4" style="background-color: #0574F7">
+        <div class="nav-link flex-shrink-0  rounded-lg px-4 py-2 text-white text-sm ml-4" style="background-color: #0574F7">
             <div class="text-center mb-1">
                 <span class="text-xs font-bold uppercase tracking-wider">Count Down to 2025 Elections</span>
             </div>
@@ -379,7 +380,7 @@
                     <span  class="text-xs uppercase tracking-wide">Sec</span>
                 </div>
             </div>
-        </li>
+            </div>
     </div>
 </ul>
    
@@ -468,7 +469,7 @@
                             </svg>
                         </summary>
                         <ul class="ml-4 mt-1 space-y-1 border-l border-gray-600 pl-3">
-                            <li><a href="#" class="block py-1 text-sm">Agricultural productivity</a></li>
+                            <li><a href="{{route('manifesto.agricultural_productivity')}}" class="block py-1 text-sm">Agricultural productivity</a></li>
                             
                             <!-- Industrialisation -->
                             <li>
@@ -510,11 +511,11 @@
                     </details>
                 </li>
                 
-                <!-- Enablers -->
+                <!-- Anchors -->
                 <li>
                     <details class="mobile-subdropdown">
                         <summary class="cursor-pointer py-1 flex items-center justify-between">
-                            <span>Enablers</span>
+                            <span>Anchors</span>
                             <svg class="w-3 h-3 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                             </svg>
@@ -593,10 +594,10 @@
                 <svg class="w-4 h-4 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                 </svg>
-            </summary>
+            </summary> 
             <ul class="ml-4 mt-2 space-y-2 border-l-2 border-[var(--theme-color)] pl-4">
                 <li><a href="{{ route('loading-screen') }}?redirect={{ route('about') }}" class="block py-1">About DPP</a></li>
-                <li><a href="{{ route('loading-screen') }}?redirect={{ route('apm') }}" class="block py-1">Leadership</a></li>
+                <li><a href="{{ route('loading-screen') }}?redirect={{ route('leadership') }}" class="block py-1">Leadership</a></li>
             </ul>
         </details>
     </li>

@@ -1,4 +1,4 @@
-@include('frontend.commons.header', ['pageTitle' => 'Dpp | volunteer'])
+@include('frontend.commons.header', ['pageTitle' => 'DPP | Volunteer'])
 
 
 <body class="bg-[var(--custom-white)] flex flex-col min-h-screen ubuntu-light">

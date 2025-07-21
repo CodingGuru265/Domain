@@ -1,4 +1,4 @@
-@extends('layouts.front', ['pageTitle' => 'Dpp | Videos'])
+@extends('layouts.front', ['pageTitle' => 'DPP | Videos'])
 
 @section('content')
     <!-- Particle Background -->

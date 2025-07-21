@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Dpp admin | music center')
+@section('title', 'DPP admin | music center')
 
 @section('content')
     <div class="max-w-6xl mx-auto mt-10">

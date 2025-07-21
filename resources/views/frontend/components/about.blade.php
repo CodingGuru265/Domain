@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.front',['pageTitle' => 'DPP | About Party'])
 
 @section('title', 'About DPP - Democratic Progressive Party')
 
@@ -70,7 +70,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
-                    <img src="assets/images/rally.jpg" alt="DPP Values" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                    <img src="/assets/images/rally.jpg" alt="DPP Values" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 md:pl-8 order-2">
-                    <img src="assets/images/flagmw.webp" alt="Unity" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                    <img src="/assets/images/flagmw.webp" alt="Unity" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
-                    <img src="assets/images/light-bulb-electricity.jpg" alt="Vision" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                    <img src="/assets/images/light-bulb-electricity.jpg" alt="Vision" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
                 </div>
             </div>
 
@@ -139,7 +139,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 md:pl-8 order-2">
-                    <img src="assets/images/unity.jpg" alt="Pillars" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                    <img src="/assets/images/unity.jpg" alt="Pillars" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
                 </div>
             </div>
 
@@ -162,7 +162,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 md:pr-8 order-2 md:order-1">
-                    <img src="assets/images/peter-1.jpeg" alt="DPP Symbolism" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                    <img src="/assets/images/peter-1.jpeg" alt="DPP Symbolism" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
                 </div>
             </div>
 
@@ -185,7 +185,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 md:pl-8 order-2">
-                    <img src="assets/images/rally.jpg" alt="Rally" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
+                    <img src="/assets/images/rally.jpg" alt="Rally" class="w-full rounded-lg shadow-lg md:mt-0 mt-4">
                 </div>
             </div>
 
@@ -297,7 +297,7 @@
                             </div>
                             <h3 class="text-2xl font-bold text-blue-900 mb-4 pl-4">Our Vision</h3>
                             <p class="text-gray-700 pl-4">
-                                To see our country resume economic growth fast enough to bring about prosperity, to reduce poverty significantly, and to make life better for everyone; to produce enough food for all; to see that our country transforms from being a predominantly importing and consuming country to being a predominantly producing and exporting country; and to gradually emerge as an industrial nation capable of transforming our agricultural commodities, other raw materials and minerals, so as to create new wealth for our people.
+                                To see Malawi resume economic growth fast enough to bring about prosperity, to reduce poverty significantly, and to make life better for everyone; to produce enough food for all; to see that Malawi transforms from being a predominantly importing and consuming Malawi to being a predominantly producing and exporting country; and to gradually emerge as an industrial nation capable of transforming our agricultural commodities, other raw materials and minerals, so as to create new wealth for our people.
                             </p>
                         </div>
 
@@ -496,7 +496,7 @@
                 </div>
                 <div class="w-32 h-1 bg-yellow-500 mx-auto mb-8"></div>
                 <p class="text-lg italic">
-                    To provide sound economic and political leadership and to work with all Malawians, including those from other political parties, in the spirit of tolerance, understanding and reconciliation, thereby consolidating peace, harmony, security and stability as the basis for prosperity in our country.
+                    To provide sound economic and political leadership and to work with all Malawians, including those from other political parties, in the spirit of tolerance, understanding and reconciliation, thereby consolidating peace, harmony, security and stability as the basis for prosperity in Malawi.
                 </p>
             </div>
         </section>

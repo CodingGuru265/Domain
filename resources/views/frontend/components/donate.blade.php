@@ -1,4 +1,4 @@
-@extends('layouts.front', ['pageTitle' => 'Dpp | Donation'])
+@extends('layouts.front', ['pageTitle' => 'DPP | Donation'])
 @section('content')
 
 <!-- Main Content -->

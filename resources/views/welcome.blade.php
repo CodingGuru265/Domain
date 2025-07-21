@@ -1,4 +1,4 @@
-@extends('layouts.front',['pageTitle' => 'Dpp | HomePage'])
+@extends('layouts.front',['pageTitle' => 'DPP | Home'])
 
 @section('content')
 
@@ -32,7 +32,7 @@
                 <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
                     <div class="max-w-2xl mx-auto text-center">
                         <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                            Together, We Can Make a Change we want to see in the World
+                            Together, we can make the Malawi we want
                         </h1>
                         <p class="mt-4 text-lg md:px-12">
                             At the heart of democracy lies the power of the people.
@@ -59,7 +59,7 @@
                 <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
                     <div class="max-w-2xl mx-auto text-center">
                         <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                            The Return to proven Leadership
+                            The Return to Proven Leadership
                         </h1>
                         <p class="mt-4 text-lg md:px-12">
                             From grassroots initiatives to national campaigns, your contribution fuels
@@ -133,7 +133,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-auto h-auto">
               <!-- Image Section -->
                 <div class="relative flex justify-center overflow-hidden max-w-[700px] w-full mx-auto">
-                    <img src="{{ asset('assets/images/peter-1.jpeg') }}" alt="Candidate"
+                    <!--img src="{{ asset('assets/images/peter-1.jpeg') }}" alt="Candidate"
+                        class="max-w-full w-auto h-auto object-contain rounded-lg transition-transform duration-1000 ease-out"-->
+                    <img src="{{ asset('assets/images/apm_vote.jpg') }}" alt="Candidate"
                         class="max-w-full w-auto h-auto object-contain rounded-lg transition-transform duration-1000 ease-out">
 
                     <!-- Overlay -->
@@ -163,7 +165,7 @@
                             color: white;
                             margin: 0;
                         ">
-                            Our Pillars for Developement
+                            Our Pillars for Development
                         </h3>
                     </div>
                     
@@ -175,7 +177,7 @@
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Agricultural Productivity and Commercialization
+                            Agricultural Productivity and Commercialisation
                         </li>
                         <li class="flex items-center" id="agenda-goal-2">
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +185,7 @@
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            industrialization
+                            Industrialisation
                         </li>
                         <li class="flex items-center" id="agenda-goal-3">
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +193,7 @@
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Uburnisation
+                            Urbanisation
                         </li>
                         <li class="flex items-center" id="agenda-goal-4">
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +223,7 @@
                             color: white;
                             margin: 0;
                         ">
-                            Enablers
+                            Anchors
                         </h3>
                     </div>
                     
@@ -329,7 +331,7 @@
         }
     </style>
 
-    <div 
+    <!--div 
         style="background: linear-gradient(to  right, rgba(5, 116, 247, 0.7), rgba(230, 30, 43, 0.7)), url(assets/images/become_a_member.png);"
         
     >
@@ -348,7 +350,7 @@
                 <div class="flex items-center justify-center  md:mb-0 mb-10"><img class="w-1/2 md:w-2/3" src="{{ asset('assets/images/bm_4.png')}}" /></div>
             </div>
         </div>
-    </div>
+    </div-->
 
 
     <!-- BECOME A VOLUNTEER -->
@@ -429,11 +431,11 @@
     <div class="dpp_background"  >
         <div class="pt-10 pb-10 ">
             <!--h1 class="text-center font-extralight text-white text-4xl md:text-3xl mb-8">Focus Areas</h1-->
-            <h1 class="text-center font-bold text-white text-xl md:text-4xl">How We Plan to Achieve a Better Country</h1>
+            <h1 class="text-center font-bold text-white text-xl md:text-4xl">How We Plan to Achieve a Better Malawi</h1>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-8 md:mx-12 my-8">
                       <!-- Reusable card component -->
                 <div class="bg-white rounded-2xl shadow-md ml-6 mr-4 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/healthcare.png') }}" alt="healthcare" />
                     </div>
@@ -447,7 +449,7 @@
                 </div>
                 <!-- Reusable card component -->
                 <div class="bg-white rounded-2xl shadow-md mr-4 md:ml-0 ml-6 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/must_2.png') }}" alt="Education" />
                     </div>
@@ -461,7 +463,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md md:ml-0 lg:ml-0 mr-4 ml-6 sm:ml-4 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/agriculture_1.png') }}" alt="Agriculture" />
                     </div>
@@ -475,7 +477,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md p-4 md:ml-5  ml-6 mr-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/tourism.png') }}" alt="Tourism" />
                     </div>
@@ -489,7 +491,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                     <div class="md:col-span-2 flex justify-center">
                         <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/rbm.png') }}" alt="Economy" />
                     </div>
@@ -503,7 +505,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                         <div class="md:col-span-2 flex justify-center">
                             <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/ai.png') }}" alt="Healthcare" />
                         </div>
@@ -517,7 +519,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md p-4 ml-6 mr-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                         <div class="md:col-span-2 flex justify-center">
                             <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/energy.png') }}" alt="Tourism" />
                         </div>
@@ -531,7 +533,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                         <div class="md:col-span-2 flex justify-center">
                             <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/urbanisation.png') }}" alt="Healthcare" />
                         </div>
@@ -545,7 +547,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-md md:ml-0 ml-6 mr-4 p-4 md:p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                         <div class="md:col-span-2 flex justify-center">
                             <img class="p-2 max-w-full h-auto" src="{{ asset('assets/images/dec.png') }}" alt="Healthcare" />
                         </div>
@@ -577,71 +579,71 @@
                 <div class="col-span-2 m-4 bg-white rounded-2xl flex justify-center items-center">
                     <img class="p-6 h-64" src="{{ asset('assets/images/food_security_2.png') }}" />
                 </div>
-                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
-                    <h1 class="font-bold pb-2 text-base md:text-xl text-white text-center md:text-left">Food Security</h1>
-                    <h4 class="text-center md:text-left md:text-xs text-sm">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
+                <div class="col-span-3 pt-2 md:pl-6 pr-6 pl-6 md:pr-6 pb-4 md:pb-6 md:px-6 pb-6">
+                    <h1 class="font-bold pb-2 text-base md:text-xl text-white text-center md:text-center">Food Security</h1>
+                    <h4 class="text-center md:text-center md:text-base text-base">We prioritize local food production, aiming to end hunger through sustainable farming, maize support, and national food reserves.</h4>
                 </div>
             </div>
         </div>
 
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-5">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="col-span-2 m-4 bg-white rounded-2xl flex justify-center items-center">
                     <img class="p-6  h-64" src="{{ asset('assets/images/ecomonic.png') }}" />
                 </div>
-                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
-                    <h1 class="font-bold pb-2  text-xl text-white text-center md:text-left">Economic Growth</h1>
-                    <h4 class="text-center md:text-left md:text-xs text-sm">Advancing Malawi’s economy through job creation, industrialization, exports, macroeconomic stability, and poverty reduction.</h4>
+                <div class="col-span-3 pt-2 md:pl-6 pr-6 pl-6 md:pr-6 pb-4 md:pb-6 md:px-6 pb-6">
+                    <h1 class="font-bold pb-2  text-xl text-white text-center md:text-center">Economic Growth</h1>
+                    <h4 class="text-center md:text-center md:text-base text-base">Advancing Malawi’s economy through job creation, industrialization, exports, macroeconomic stability, and poverty reduction.</h4>
                 </div>
             </div>
         </div>
 
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-5">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="col-span-2 m-4 bg-white flex justify-center items-center rounded-2xl">
                     <img class="p-6 h-64" src="{{ asset('assets/images/infrastructure.png') }}" />
                 </div>
-                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
-                    <h1 class="font-bold pb-2  text-xl text-white  text-center md:text-left">Infrastructure Development</h1>
-                    <h4 class="text-center md:text-left md:text-xs text-sm">Enhancing Malawi’s growth through quality roads, transport systems, energy, ICT, and public infrastructure to support economic activities.</h4>
+                <div class="col-span-3 pt-2 md:pl-6 pr-6 pl-6 md:pr-6 pb-4 md:pb-6 md:px-6 pb-6">
+                    <h1 class="font-bold pb-2  text-xl text-white  text-center md:text-center">Infrastructure Development</h1>
+                    <h4 class="text-center md:text-center md:text-base text-base">Enhancing Malawi’s growth through quality roads, transport systems, energy, ICT, and public infrastructure to support economic activities.</h4>
                 </div>
             </div>
         </div>
       
         
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-5">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="col-span-2 m-4 bg-white flex justify-center items-center rounded-2xl">
                     <img class="p-6 h-64" src="{{ asset('assets/images/unity.png') }}" />
                 </div>
-                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
-                    <h1 class="font-bold  pb-2 text-xl text-white  text-center md:text-left">Unity and Peace</h1>
-                    <h4 class="text-center md:text-left md:text-xs text-sm">Promoting unity across tribes and regions to build a peaceful, inclusive, and progressive Malawi.</h4>
+                <div class="col-span-3 pt-2 md:pl-6 pr-6 pl-6 md:pr-6 pb-4 md:pb-6 md:px-6 pb-6">
+                    <h1 class="font-bold  pb-2 text-xl text-white  text-center md:text-center">Unity and Peace</h1>
+                    <h4 class="text-center md:text-center md:text-base text-base">Promoting unity across tribes and regions to build a peaceful, inclusive, and progressive Malawi.</h4>
                 </div>
             </div>
         </div>
 
         
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-5">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="col-span-2 m-4 bg-white flex justify-center items-center rounded-2xl">
                     <img class="p-6 h-64" src="{{ asset('assets/images/law.png') }}" />
                 </div>
-                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
-                    <h1 class="font-bold pb-2  text-xl text-white  text-center md:text-left">Human Rights & Law</h1>
-                    <h4 class="text-center md:text-left md:text-xs text-sm">Upholding justice, freedoms, and dignity for all Malawians; protecting the vulnerable and enforcing the rule of law.</h4>
+                <div class="col-span-3 pt-2 md:pl-6 pr-6 pl-6 md:pr-6 pb-4 md:pb-6 md:px-6 pb-6">
+                    <h1 class="font-bold pb-2  text-xl text-white  text-center md:text-center">Human Rights & Law</h1>
+                    <h4 class="text-center md:text-center md:text-base text-base">Upholding justice, freedoms, and dignity for all Malawians; protecting the vulnerable and enforcing the rule of law.</h4>
                 </div>
             </div>
         </div>
 
         <div class="dpp_background m-8 md:m-8 rounded-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-5">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="col-span-2 flex justify-center items-center m-4 bg-white rounded-2xl">
                     <img class="p-6 h-64" src="{{ asset('assets/images/industry_2.png') }}" />
                 </div>
-                <div class="col-span-3 pt-2 md:pl-4 pr-4 pl-4 md:pr-8 md:pt-8 pb-4 md:pb-0 md:px-7">
-                    <h1 class="font-bold pb-2 text-xl text-white  text-center md:text-left">Industrialisation</h1>
-                    <h4 class="text-center md:text-left md:text-xs text-sm">Driving Malawi’s growth through value addition, mining, transport infrastructure, energy access, and regional trade integration.</h4>
+                <div class="col-span-3 pt-2 md:pl-6 pr-6 pl-6 md:pr-6 pb-4 md:pb-6 md:px-6 pb-6">
+                    <h1 class="font-bold pb-2 text-xl text-white  text-center md:text-center">Industrialisation</h1>
+                    <h4 class="text-center md:text-center md:text-base text-base">Driving Malawi’s growth through value addition, mining, transport infrastructure, energy access, and regional trade integration.</h4>
                 </div>
             </div>
         </div>
@@ -732,7 +734,7 @@
 
             <!-- Second Image (APM Vote) - On desktop: Right | On mobile: Top (shadow removed on mobile) -->
             <div class="w-full order-1 md:order-2 md:w-2/5 md:ml-6 mt-6 md:mt-0 overflow-hidden rounded-xl md:shadow-2xl flex items-center justify-center">
-            <img src="{{ asset('/assets/images/APM_vote.png') }}" 
+            <img src="{{ asset('/assets/images/apm_2025.png') }}" 
                 alt="Malawi Development Image"
                 class="max-w-[500px] w-full h-auto object-contain mx-auto transition-transform hover:scale-105 duration-500  !h-[350px] md:!h-auto">
             </div>

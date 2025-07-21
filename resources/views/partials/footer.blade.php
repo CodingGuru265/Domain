@@ -1,154 +1,88 @@
-<!-- FOOTER -->
-<footer class="bg-[var(--nav-bg-color)] text-white pt-8" id="footer-container">
-    
-    <div class="max-w-8xl mx-auto px-6 lg:px-6">
-
-        <!-- Top Footer Area with Logo and Content -->
-        <!-- <div
-            class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-opacity-20 border-white pb-8  border-b-2">
-            <div class="mb-8 md:mb-0">
-                <div class="flex items-center space-x-4">
-                   
-                    <h2 class="text-3xl font-bold text-white ">Democratic Progressive Party</h2>
-                </div>
-                <p class="text-gray-300 mt-4 max-w-md">
-                    Committed to transforming Malawi through progressive governance, economic empowerment, and
-                    social welfare.
-                </p>
-            </div>
-           
-        </div> -->
-
-        <!-- Main Footer Content -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            <!-- Quick Links Section -->
-       <div class="footer-section">
-            <h3
-                class="text-xl font-bold mb-6 text-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-[var(--custom-orange)] after:-mb-2 hover:after:w-12 after:transition-all after:duration-500">
-                Quick Links
-            </h3>
-            <ul class="space-y-4">
-              <li>
-                    <a href="https://www.facebook.com/share/1GBQjtjcai/?mibextid=wwXIfr" target="_blank"
-                        class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
-                        Follow APM on Facebook
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://x.com/apmutharika?s=11&t=mKnaaGmJjy-sr-HCaBH0hQ" target="_blank"
-                        class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
-                        Follow APM on Instagram
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ url('donate') }}"
-                        class="text-white hover:text-[#E61E2B] transition-colors duration-200 flex items-center group">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-white mr-2 group-hover:w-2 group-hover:h-2 transition-all duration-200"></span>
-                        Make a Donation
-                    </a>
-                </li>
+<footer class="bg-blue-500 p-4 grid gap-2">
+    <div class="grid gap-4 lg:grid-cols-3 lg:place-items-center text-white lg:px-10">
+        <!-- Quick Links Section -->
+        <div class="grid gap-2">
+            <h1 class="capitalize font-medium lg:text-lg">Quick Links</h1>
+            <ul class="text-sm capitalize text-white hover:cursor-pointer">
+                <a href="{{route('about')}}">
+                    <li class="ml-[2px] relative before:content-['•'] before:absolute before:-left-3 before:text-white hover:cursor-pointer">
+                        About DPP
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="ml-[2px] relative before:content-['•'] before:absolute before:-left-3 before:text-white hover:cursor-pointer">
+                      2025 Manifesto
+                    </li>
+                </a>
+                <a href="{{route('donate')}}">
+                    <li class="ml-[2px] relative before:content-['•'] before:absolute before:-left-3 before:text-white hover:cursor-pointer">
+                    Donate
+                    </li>
+                </a>
+                <a href="{{route('videos')}}">
+                    <li class="ml-[2px] relative before:content-['•'] before:absolute before:-left-3 before:text-white hover:cursor-pointer">
+                    Videos
+                    </li>
+                </a>
             </ul>
         </div>
 
-
-            <!-- Contact Information Section -->
-            <div class="footer-section">
-                <h3
-                    class="text-xl font-bold mb-6 text-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-[var(--custom-orange)] after:-mb-2 hover:after:w-12 after:transition-all after:duration-500">
-                    Contact Us</h3>
-                <ul class="space-y-4">
-                    <li class="flex items-start space-x-3">
-                        <div
-                            class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#E61E2B]  hover:bg-opacity-100 transition-all duration-300">
-                            <i class="fas fa-envelope text-white text-sm"></i>
-                        </div>
-                        <span class="text-white">admin@dpp.mw</span>
-                    </li>
-                    <!-- <li class="flex items-start space-x-3">
-                        <div
-                            class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#E61E2B]  hover:bg-opacity-100 transition-all duration-300">
-                            <i class="fas fa-phone-alt text-[var(--custom-white)] text-sm"></i>
-                        </div>
-                        <span class="text-white">+265-999-7890</span>
-                    </li> -->
-                    <li class="flex items-start space-x-3">
-                        <div
-                            class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#E61E2B]  hover:bg-opacity-100 transition-all duration-300">
-                            <i class="fas fa-map-marker-alt text-[var(--custom-white)] text-sm"></i>
-                        </div>
-                        <span class="text-white">Mandala Road, Blantyre, Malawi</span>
-                    </li>
-                </ul>
+        <!-- Contact Us Section -->
+        <div class="grid gap-2">
+            <h1 class="capitalize font-medium lg:text-lg">Contact Us</h1>
+            <div class="grid gap-1">
+                <p class="flex gap-1 text-sm items-center">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" class="w-6 h-6 bg-red-500 rounded-full p-1">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#ffffff"></path>
+                    </svg>
+                    <span>admin@dpp.mw</span>
+                </p>
+                <p class="flex gap-1 text-sm items-center">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" class="w-6 h-6 bg-red-500 rounded-full p-1">
+                        <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>Mandala Road, Blantyre, Malawi</span>
+                </p>
             </div>
-
-            <!-- Social Media Links Section -->
-            <div class="footer-section">
-                <h3
-                    class="text-xl font-bold mb-6 text-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-[var(--custom-orange)] after:-mb-2 hover:after:w-12 after:transition-all after:duration-500">
-                    Connect With Us</h3>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://facebook.com"
-                        class="w-10 h-10 rounded-full bg-[#E61E2B] hover:bg-opacity-80 flex items-center justify-center transition-all duration-300 hover:scale-110 transform"
-                        target="_blank">
-                        <i class="fab fa-facebook-f text-white"></i>
-                    </a>
-                    <a href="https://twitter.com"
-                        class="w-10 h-10 rounded-full bg-[#E61E2B] hover:bg-opacity-80 flex items-center justify-center transition-all duration-300 hover:scale-110 transform"
-                        target="_blank">
-                        <i class="fab fa-twitter text-white"></i>
-                    </a>
-                    <a href="https://instagram.com"
-                        class="w-10 h-10 rounded-full bg-[#E61E2B] hover:bg-opacity-80 flex items-center justify-center transition-all duration-300 hover:scale-110 transform"
-                        target="_blank">
-                        <i class="fab fa-instagram text-white"></i>
-                    </a>
-                   
-                </div>
-                <p class="mt-6 text-white">Follow us on social media for updates on party activities, events, and
-                    announcements.</p>
-            </div>
-
-            <!-- About Section -->
-
         </div>
 
+        <!-- Connect With Us Section -->
+        <div class="grid gap-2">
+            <h1 class="capitalize font-medium lg:text-lg">Connect With Us</h1>
+            <div class="flex gap-2 lg:justify-center lg:items-center">
+                <a href="https://www.facebook.com/DemocraticProgressivePartyMalawi/">
+                    <svg viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" class="w-6 h-6 bg-red-500 rounded-full p-1">
+                        <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(-385.000000, -7399.000000)" fill="#ffffff">
+                                <g transform="translate(56.000000, 160.000000)">
+                                    <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
 
-        <!-- Footer Divider -->
-        <div class="border-t border-white my-1"></div>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" class="w-6 h-6 bg-red-500 rounded-full p-1">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ffffff"></path>
+                    <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#ffffff"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#ffffff"></path>
+                </svg>
 
-        <!-- Footer Bottom -->
-        <div class="w-full flex justify-center">
-            <div class="footer-copyright py-1 text-center">
-                <p class="text-white">© 2025 Democratic Progressive Party. All rights reserved.</p>
+                <svg height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-46.1 -46.1 553.20 553.20" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-46.1" y="-46.1" width="553.20" height="553.20" rx="276.6" fill="#ffffff" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F61C0D;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path> </g> </g></svg>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256" class="w-6 h-6 bg-red-500 rounded-full p-1">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none">
+                        <g transform="scale(5.12,5.12)">
+                            <path d="M5.91992,6l14.66211,21.375l-14.35156,16.625h3.17969l12.57617,-14.57812l10,14.57813h12.01367l-15.31836,-22.33008l13.51758,-15.66992h-3.16992l-11.75391,13.61719l-9.3418,-13.61719zM9.7168,8h7.16406l23.32227,34h-7.16406z"></path>
+                        </g>
+                    </g>
+                </svg>
             </div>
         </div>
     </div>
+
+    <p class="text-white text-sm text-center mt-8">
+        &copy; 2025 Democratic Progressive Party. All rights reserved.
+    </p>
 </footer>
-
-<style>
-    /* Pulse animation for logo */
-    @keyframes pulse {
-
-        0%,
-        100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        50% {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-    }
-
-    .logo-pulse {
-        animation: pulse 2s ease-in-out infinite;
-    }
-</style>

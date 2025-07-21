@@ -1,6 +1,6 @@
 
 
-@extends('layouts.front', ['pageTitle' => 'Dpp | manfesto2025'])
+@extends('layouts.front', ['pageTitle' => 'DPP | Manfesto2025'])
 
 @section('content')
 

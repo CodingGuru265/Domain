@@ -1,4 +1,4 @@
-@extends('layouts.front', ['pageTitle' => 'Dpp | Membership'])
+@extends('layouts.front', ['pageTitle' => 'DPP | Membership'])
 
 @section('content')
 
@@ -21,7 +21,7 @@
                 <h2 class="text-3xl font-bold mt-2 text-gray-600">Get in Touch and Become a Member <span
                         class="text-[var(--theme-color)]">with Us</span></h2>
                 <p class="text-gray-600 mt-4 font-normal">
-                    Be the change you wish to see in the world. Every great movement begins with a single step,
+                    Be the change you wish to see in Malawi. Every great movement begins with a single step,
                     and that step starts with you. By becoming a member, you join a community of passionate individuals
                     who
                     are committed to creating real, lasting change. Together, we can tackle challenges, inspire
