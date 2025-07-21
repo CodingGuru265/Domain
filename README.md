@@ -8,6 +8,8 @@ This is a web application built using Laravel as the backend,. The system provid
 - **Tailwind CSS** for styling
 - **Optimized for performance and security**
 
+<!-- Download Xampp Latest or any with php above 8.2.1 above -->
+
 ## Installation
 Follow these steps to set up the project locally:
 
