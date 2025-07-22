@@ -64,7 +64,7 @@
                                 <a href="{{route('manifesto.agricultural_productivity')}}">
                                     <div class="popup-item rounded">
                                         Agricultural productivity
-                                    </div>
+                                </div>
                                 </a>
                                 
                                 <div class="relative group/industrial">
