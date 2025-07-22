@@ -106,7 +106,8 @@
                          style="animation-delay: {{ $index * 0.2 }}s;">
                         
                         <!-- Glow Effect -->
-                        <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background: linear-gradient(to right, rgba(56, 247, 0.2, 0.5), rgba(230, 30, 43, 0.5));"></div>
+                        <!-- Removed overlay div to prevent hover overlay on video -->
+                        <!-- <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background: linear-gradient(to right, rgba(56, 247, 0.2, 0.5), rgba(230, 30, 43, 0.5));"></div> -->
                         
                         <!-- Enhanced Video Player -->
                         <div class="flex flex-col lg:flex-row items-center gap-8">
@@ -344,10 +345,10 @@
         }
         
         /* Video hover effects */
-        .group\/video:hover video {
+        /* .group\/video:hover video {
             transform: scale(1.02);
             transition: transform 0.3s ease;
-        }
+        } */
     </style>
 
     <!-- Particles.js -->
