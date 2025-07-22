@@ -7,7 +7,7 @@
 
 <div class="grid grid-cols-1" style="height: 100px; background: linear-gradient(to bottom right, rgba(230, 30, 43, 0.9), rgba(230, 30, 43, 0.9)), url('assets/images/slider_img_3.png') " > 
         <div class="grid grid-cols-1" >
-            <div class="flex items-center  justify-center" ><h1 class="text-3xl pt-24 text-white font-bold" >Donations may be made through the following accounts</h1></div>
+            <div class="flex items-center  justify-center" ><h1 class=" text-xl text-center md:text-2xl pt-3 text-white font-bold" >Donations may be made through the following accounts</h1></div>
         </div>
     </div>
     <div class="w-full px-4 py-10 max-w-7xl mx-auto">
@@ -25,16 +25,16 @@
         
         <!-- Contact Card -->
         <div class="bg-white rounded-xl shadow-md location-card">
-            <div class="flex items-start pt-10 pl-8 ">
+            <div class="flex items-start pt-4 md:pt-10 pl-3 md:pl-8 ">
                 <div class="flex items-center justify-center">
-                    <img class="w-3/4 p-8 mt-4" src="{{ asset('assets/images/mpamba.png')}}" />
+                    <img class="w-3/4 p-8 mt-1 md:mt-4" src="{{ asset('assets/images/mpamba.png')}}" />
                 </div>
             </div>
         </div>
         <div class="bg-white rounded-xl shadow-md location-card">
-            <div class="flex items-start pt-10 pl-8 ">
+            <div class="flex items-start pt-0 md:pt-10 pl-4 md:pl-8 ">
                 <div class="flex items-center justify-center">
-                    <img class="w-3/4 p-8 mt-10" src="{{ asset('assets/images/airtel.png')}}" />
+                    <img class="w-3/4 p-8 mt-5 md:mt-10" src="{{ asset('assets/images/airtel.png')}}" />
                 </div>
             </div>
         </div>

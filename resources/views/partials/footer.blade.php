@@ -1,8 +1,8 @@
 <footer class="bg-blue-500 p-4 grid gap-2">
     <div class="grid gap-4 lg:grid-cols-3 lg:place-items-center text-white lg:px-10">
         <!-- Quick Links Section -->
-        <div class="grid gap-2">
-            <h1 class="capitalize font-medium lg:text-lg">Quick Links</h1>
+        <div class="grid gap-2 ">
+            <h1 class="capitalize font-medium lg:text-lg md-text-left text-center">Quick Links</h1>
             <ul class="text-sm capitalize text-white hover:cursor-pointer">
                 <a href="{{route('about')}}">
                     <li class="ml-[2px] relative before:content-['•'] before:absolute before:-left-3 before:text-white hover:cursor-pointer">
@@ -29,8 +29,8 @@
 
         <!-- Contact Us Section -->
         <div class="grid gap-2">
-            <h1 class="capitalize font-medium lg:text-lg">Contact Us</h1>
-            <div class="grid gap-1">
+            <h1 class="capitalize font-medium lg:text-lg md-text-left text-center">Contact Us</h1>
+            <div class="md:grid md:gap-1 flex gap-2 justify-center items-center">
                 <p class="flex gap-1 text-sm items-center">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" class="w-6 h-6 bg-red-500 rounded-full p-1">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#ffffff"></path>
@@ -49,8 +49,8 @@
 
         <!-- Connect With Us Section -->
         <div class="grid gap-2">
-            <h1 class="capitalize font-medium lg:text-lg">Connect With Us</h1>
-            <div class="flex gap-2 lg:justify-center lg:items-center">
+            <h1 class="capitalize font-medium lg:text-lg md-text-left text-center">Connect With Us</h1>
+            <div class="flex gap-2 justify-center items-center">
                 <a href="https://www.facebook.com/DemocraticProgressivePartyMalawi/">
                     <svg viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" class="w-6 h-6 bg-red-500 rounded-full p-1">
                         <g fill="none" fill-rule="evenodd">

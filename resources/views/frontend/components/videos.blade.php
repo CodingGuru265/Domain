@@ -96,9 +96,9 @@
             <div class="grid gap-12">
                 @php
                     $videoFiles = [
-                        'Sendera Sisters - Tikwasaka.mp4',
-                        'Sendera Sisters - Akufuna Ndani.mp4',
-                        'Sendera Sisters - Abetcha Lowa.mp4',
+                        'DPP Sisters - Tukwasaka.mp4',
+                        'DPP Sisters - Akufuna Ndani.mp4',
+                        'DPP Sisters - Abetcha Loya.mp4',
                     ];
                 @endphp
                 @foreach ($videoFiles as $index => $video)
@@ -125,7 +125,7 @@
                             <!-- Enhanced Video Info -->
                             <div class="flex-1 text-center lg:text-left">
                                 <h3 class="text-3xl font-bold text-white mb-4 transition-colors drop-shadow-lg">{{ pathinfo($video, PATHINFO_FILENAME) }}</h3>
-                                <p class="text-lg text-blue-100 mb-3 drop-shadow-md">By <span class="font-semibold text-yellow-300 drop-shadow-lg">Sendera Sisters</span></p>
+                                <p class="text-lg text-blue-100 mb-3 drop-shadow-md">By <span class="font-semibold text-yellow-300 drop-shadow-lg">DPP Sisters</span></p>
                                 <p class="text-sm text-white bg-blue-500 rounded-full px-4 py-1 inline-block border border-blue-400 mb-4">Music Video</p>                  
                                 <!-- Video Stats -->
                                 <div class="flex items-center justify-center lg:justify-start space-x-6 mb-6">
@@ -153,7 +153,7 @@
                                         <i class="fas fa-download mr-2"></i>
                                         Download
                                     </a>
-                                    <button class="share-btn inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20" data-video-title="{{ pathinfo($video, PATHINFO_FILENAME) }}" data-video-artist="Sendera Sisters">
+                                    <button class="share-btn inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20" data-video-title="{{ pathinfo($video, PATHINFO_FILENAME) }}" data-video-artist="DPP Sisters">
                                         <i class="fas fa-share mr-2"></i>
                                         Share
                                     </button>

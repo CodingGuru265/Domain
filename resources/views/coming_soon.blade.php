@@ -32,7 +32,7 @@
         color: #197EC2;
     }
     .dpp_background{
-        background-color: #0f1010;
+        background-color: #197ec2;
     }
     .button_styling {
     background: linear-gradient(to right, rgba(5, 116, 247, 1), rgba(230, 30, 43, 1));
@@ -54,7 +54,7 @@
                 <div class=" md:flex flex justify-center items-center">
                     {{-- COUNT DOWN  Desktop--}}
                     <!--li class="nav-link flex-shrink-0 border border-[var(--theme-color)] bg-[#E61E2B] rounded-lg px-4 py-2 text-white text-sm ml-4"-->
-                    <div class="nav-link flex-shrink-0  rounded-lg px-4 py-2 text-white text-sm ml-4" style="background-color: #0574F7">
+                    <div class="nav-link flex-shrink-0  rounded-lg px-4 py-2 text-white text-sm ml-4" style="background-color: #197ec2; border: 2px white solid">
                         <div class="text-center mb-1">
                             <span class="text-xs font-bold uppercase tracking-wider">Count Down to 2025 Elections</span>
                         </div>

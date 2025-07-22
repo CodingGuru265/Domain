@@ -32,7 +32,7 @@
                 <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
                     <div class="max-w-2xl mx-auto text-center">
                         <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                            Together, we can make the Malawi we want
+                            Together, We Can Make The Malawi We Want
                         </h1>
                         <p class="mt-4 text-lg md:px-12">
                             At the heart of democracy lies the power of the people.
@@ -46,8 +46,8 @@
             <!-- Slide 2 -->
             <div class="absolute inset-0 flex duration-700 ease-in-out opacity-0" data-carousel-item>
                 <div class="w-full flex items-center justify-center px-6 relative z-20 text-white">
-                    <div class="max-w-2xl mx-auto text-center h-full flex items-center">
-                        <img src="{{ asset('/assets/images/image 2.png') }}" 
+                    <div class="max-w-2xl m-10 mx-auto text-center h-full flex items-center">
+                        <img src="{{ asset('/assets/images/are_you_ready_to_vote.png') }}" 
                              alt="Join Us Visual"
                              class="max-h-full max-w-full object-contain">
                     </div>
@@ -569,9 +569,9 @@
     
     {{-- FOCUS AREAS  --}}
 <section class="focus-areas relative py-5 bg-white text-white text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mt-2 " style='color: #197EC2' >Focus Area</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mt-4 " style='color: #197EC2' >Focus Area</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-8 gaps-6 gap-6 p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-1 gaps-6 gap-6 px-4 pb-4">
      
     
         <div class="dpp_background m-8 md:m-8 rounded-2xl">

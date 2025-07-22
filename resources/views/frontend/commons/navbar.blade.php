@@ -3,7 +3,7 @@
 <nav class="bg-[var(--nav-bg-color)] text-white px-5 py-3 flex justify-between items-center relative">
     <!-- Logo -->
     <a href="{{ url('/') }}" class="flex items-center gap-2">
-        <img src="{{ asset('assets/images/DPP-1-removebg-preview (2).png') }}" alt="Logo" class="h-14 w-auto md:max-w-3xs ">
+        <img src="{{ asset('assets/images/DPP-1-removebg-preview (2).png') }}" alt="Logo" class="h-24 w-auto md:max-w-3xs ">
     </a>
 
     <!-- Desktop Menu -->

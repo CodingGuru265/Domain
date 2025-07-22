@@ -30,10 +30,10 @@
                         </div>
                         <div class="flex items-center space-x-4 mt-4 md:mt-0">
                             <audio controls class="w-64">
-                                <source src="{{ asset('storage/' . $track->file) }}" type="audio/mpeg">
+                                <source src="{{ asset('web/' . $track->file) }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
-                            {{-- <a href="{{ asset('storage/' . $track->file) }}" download
+                            {{-- <a href="{{ asset( $track->file) }}" download
                                 class="text-green-600 hover:text-green-800" title="Download">
                                 <i class="fas fa-download text-xl"></i>
                             </a> --}}
@@ -50,7 +50,7 @@
 
 
 
-@extends('layouts.front', ['pageTitle' => 'Dpp | music'])
+@extends('layouts.front', ['pageTitle' => 'DPP | Music'])
 
 @section('content')
     <!-- Particle Background -->
@@ -263,7 +263,7 @@
                                         
                                         <!-- Hidden Audio Element -->
                                         <audio class="hidden" preload="metadata">
-                                            <source src="{{ asset('storage/' . $track->file) }}" type="audio/mpeg">
+                                            <source src="{{ asset('/assets/'. $track->file) }}" type="audio/mpeg">
                                         </audio>
                                     </div>
                                 </div>
