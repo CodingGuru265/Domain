@@ -67,17 +67,23 @@
                                 </div>
                                 </a>
                                 
-                                <div class="popup-item rounded">
-                                    Industrialisation
-                                </div>
+                                <a href="{{route('manifesto.industrialisation')}}">
+                                    <div class="popup-item rounded">
+                                        Industrialisation
+                                    </div>
+                                </a>
                                 
-                                <div class="popup-item rounded">
-                                    Urbanisation                                   
-                                </div>
+                                <a href="{{route('manifesto.urbanisation')}}">
+                                    <div class="popup-item rounded">
+                                        Urbanisation                                   
+                                    </div>
+                                </a>
                                 
-                                <div class="popup-item rounded">
-                                    Decentralisation
-                                </div>
+                                <a href="{{route('manifesto.decentralisation')}}">
+                                    <div class="popup-item rounded">
+                                        Decentralisation
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -445,42 +451,11 @@
                         <ul class="ml-4 mt-1 space-y-1 border-l border-gray-600 pl-3">
                             <li><a href="{{route('manifesto.agricultural_productivity')}}" class="block py-1 text-sm">Agricultural productivity</a></li>
                             
-                            <!-- Industrialisation -->
-                            <li>
-                                <details class="mobile-subsubdropdown">
-                                    <summary class="cursor-pointer py-1 flex items-center justify-between text-sm">
-                                        <span>Industrialisation</span>
-                                        <svg class="w-3 h-3 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </summary>
-                                    <ul class="ml-4 mt-1 space-y-1 border-l border-gray-500 pl-3">
-                                        <li><a href="#" class="block py-1 text-sm">Mining</a></li>
-                                        <li><a href="#" class="block py-1 text-sm">Transport infrastructure</a></li>
-                                        <li><a href="#" class="block py-1 text-sm">Energy</a></li>
-                                        <li><a href="#" class="block py-1 text-sm">ICT and artificial intelligence</a></li>
-                                    </ul>
-                                </details>
-                            </li>
+                            <li><a href="{{route('manifesto.industrialisation')}}" class="block py-1 text-sm">Industrialisation</a></li>
                             
-                            <!-- Urbanisation -->
-                            <li>
-                                <details class="mobile-subsubdropdown">
-                                    <summary class="cursor-pointer py-1 flex items-center justify-between text-sm">
-                                        <span>Urbanisation</span>
-                                        <svg class="w-3 h-3 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </summary>
-                                    <ul class="ml-4 mt-1 space-y-1 border-l border-gray-500 pl-3">
-                                        <li><a href="#" class="block py-1 text-sm">Tourism</a></li>
-                                        <li><a href="#" class="block py-1 text-sm">Creation of secondary cities</a></li>
-                                        <li><a href="#" class="block py-1 text-sm">Land, housing and water services</a></li>
-                                    </ul>
-                                </details>
-                            </li>
+                            <li><a href="{{route('manifesto.urbanisation')}}" class="block py-1 text-sm">Urbanisation</a></li>
                             
-                            <li><a href="#" class="block py-1 text-sm">Decentralisation</a></li>
+                            <li><a href="{{route('manifesto.decentralisation')}}" class="block py-1 text-sm">Decentralisation</a></li>
                         </ul>
                     </details>
                 </li>

@@ -25,9 +25,10 @@ Route::get('/web/leadership', [HomeController::class, 'leadership'])->name('lead
 Route::get('/web', [HomeController::class, 'welcome'])->name('welcome');
 
 
-Route::get('/web/manifesto/agriculture_productivity', [ManifestoController::class, 'manifesto_agricultural_productivity'])->name('manifesto.agricultural_productivity');
+Route::get('/web/manifesto/agriculture.productivity', [ManifestoController::class, 'manifesto_agricultural_productivity'])->name('manifesto.agricultural_productivity');
 Route::get('/web/manifesto/industrialisation', [ManifestoController::class, 'manifesto_industrialisation'])->name('manifesto.industrialisation');
 Route::get('/web/manifesto/urbanisation', [ManifestoController::class, 'manifesto_urbanisation'])->name('manifesto.urbanisation');
+Route::get('/web/manifesto/decentralisation', [ManifestoController::class, 'manifesto_decentralisation'])->name('manifesto.decentralisation');
 Route::get('/web/manifesto', [HomeController::class, 'manifesto_page'])->name('manifesto_page');
 Route::get('/web/manifesto_2025', [HomeController::class, 'manifesto_generic'])->name('manifesto_generic');
 
