@@ -67,39 +67,12 @@
                                 </div>
                                 </a>
                                 
-                                <div class="relative group/industrial">
-                                    <div class="popup-item rounded flex items-center justify-between cursor-pointer">
-                                        Industrialisation
-                                        <svg class="w-3 h-3 transform group-hover/industrial:rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <!-- Nested submenu for Industrialisation -->
-                                    <div class="submenu-right absolute opacity-0 invisible group-hover/industrial:opacity-100 group-hover/industrial:visible popup-content text-white p-3 rounded-md shadow-lg z-80 w-[320px] transition-all duration-200 ease-in-out transform group-hover/industrial:translate-y-0 translate-y-[-10px]">
-                                        <div class="space-y-1">
-                                            <div class="popup-item rounded">Mining</div>
-                                            <div class="popup-item rounded">Transport infrastructure</div>
-                                            <div class="popup-item rounded">Energy</div>
-                                            <div class="popup-item rounded">ICT and artificial intelligence</div>
-                                        </div>
-                                    </div>
+                                <div class="popup-item rounded">
+                                    Industrialisation
                                 </div>
                                 
-                                <div class="relative group/urban">
-                                    <div class="popup-item rounded flex items-center justify-between cursor-pointer">
-                                        Urbanisation
-                                        <svg class="w-3 h-3 transform group-hover/urban:rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <!-- Nested submenu for Urbanisation -->
-                                    <div class="submenu-right absolute opacity-0 invisible group-hover/urban:opacity-100 group-hover/urban:visible popup-content text-white p-3 rounded-md shadow-lg z-80 w-[280px] transition-all duration-200 ease-in-out transform group-hover/urban:translate-y-0 translate-y-[-10px]">
-                                        <div class="space-y-1">
-                                            <div class="popup-item rounded">Tourism</div>
-                                            <div class="popup-item rounded">Creation of secondary cities</div>
-                                            <div class="popup-item rounded">Land, housing and water services</div>
-                                        </div>
-                                    </div>
+                                <div class="popup-item rounded">
+                                    Urbanisation                                   
                                 </div>
                                 
                                 <div class="popup-item rounded">
