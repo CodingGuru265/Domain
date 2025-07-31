@@ -173,6 +173,7 @@
                                 <!-- Enhanced Thumbnail -->
                                 <div class="flex-shrink-0 group">
                                     <div class="relative">
+                                        <p>{{$track}}
                                         <div class="w-24 h-24 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-400 via-purple-500 to-red-500 p-1 transform hover:scale-110 transition-transform duration-300">
                                             <img src="{{ asset('assets/images/music/portrait-happy-young-woman.jpg') }}" 
                                                  alt="Music Thumbnail" 

@@ -1,15 +1,12 @@
-
-@extends('layouts.front', ['pageTitle' => 'DPP | Manfesto2025'])
+@extends('layouts.front', ['pageTitle' => 'DPP | Manifesto2025'])
 
 @section('content')
-
-
 
     <!-- Background Image Section with Overlay -->
     <div class="background-container-documents">
         <div class="overlay"></div> <!-- Gradient Overlay -->
         <div class="text-container">
-            <div class="home-link">Decentralisation</div>
+            <div class="home-link">Decentralization</div>
             <a href="/index.html" class="contact-text">Home / 2025 Manifesto</a>
         </div>
     </div>
@@ -33,7 +30,5 @@
             <i class="fas fa-download"></i> Download Manifesto
         </a>
     </div>
-
-
 
 @endsection
